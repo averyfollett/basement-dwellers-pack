@@ -16,9 +16,7 @@ public class Conveyer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-        xBounds = this.transform.position.x + 0.25f - this.transform.position.x;
+        xBounds = this.transform.position.x + 0.23f - this.transform.position.x;
         yBounds = this.transform.position.y + 0.25f - this.transform.position.y;
         zBounds = this.transform.position.z - this.transform.position.z;
 
@@ -73,14 +71,25 @@ public class Conveyer : MonoBehaviour
 
     void checkBounds()
     {
-        if(box.transform.localPosition.x <= -0.25f)
+        float off = -0.23f;
+        if (this.transform.rotation != nextConv.transform.rotation)
         {
-            if(nextConv != null)
-                nextConv.GetComponent<Conveyer>().hasBox = true;
-            box.SetActive(false);
-            isMoving = false;
-            hasBox = false;
+            off = -0.35f;
         }
+            if (box.transform.localPosition.x <= off)
+            {
+                if(nextConv != null)
+                {
+
+                    if (this.transform.rotation != nextConv.transform.rotation)
+                        nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.10f - this.transform.position.x, yBounds, zBounds);
+                    nextConv.GetComponent<Conveyer>().hasBox = true;
+                    box.SetActive(false);
+
+                }
+                isMoving = false;
+                hasBox = false;
+            }
     }
 
     public void animate()
