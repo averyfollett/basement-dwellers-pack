@@ -29,6 +29,11 @@ public class GameTimer : MonoBehaviour
         timeRemaining = timerStartingTime;
     }
 
+    public float GetTimeRemaining()
+    {
+        return timeRemaining;
+    }
+
     private void Update()
     {
         if (isTimerRunning && timeRemaining > 0)
