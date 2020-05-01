@@ -9,11 +9,15 @@ public class Conveyer : MonoBehaviour
     public bool hasBox = false, isMoving = false;
     public Vector3 startPos, endPos;
     public float xVel = 0;
+    //public GameObject[] prevConv = new GameObject[3];
+    public GameObject nextConv;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
+
         xBounds = this.transform.position.x + 0.25f - this.transform.position.x;
         yBounds = this.transform.position.y + 0.25f - this.transform.position.y;
         zBounds = this.transform.position.z - this.transform.position.z;
@@ -22,6 +26,8 @@ public class Conveyer : MonoBehaviour
         endPos = new Vector3(xBounds - 0.5f, yBounds, zBounds);
 
         box.SetActive(false);
+
+        checkSurroundings();
 
         //box.transform.localPosition = startPos;
     }
@@ -38,6 +44,28 @@ public class Conveyer : MonoBehaviour
 
     }
 
+    void checkSurroundings()
+    {
+        Debug.DrawLine(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.position + Vector3.left, Color.yellow, 900f);
+        Debug.DrawLine(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.position + Vector3.right, Color.yellow, 900f);
+        //Debug.Log("fuck me harder");
+
+        RaycastHit hit;
+        LayerMask mask = LayerMask.GetMask("Conveyer");
+        if(Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.left), out hit, 2f))
+        {
+            nextConv = hit.collider.gameObject;
+        }
+        /*
+        if (Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.right), out hit, 2f))
+        {
+            prevConv = hit.collider.gameObject;
+        }
+        */
+
+
+    }
+
     void moveBox()
     {
         box.transform.localPosition += new Vector3(xVel, 0, 0);
@@ -47,6 +75,8 @@ public class Conveyer : MonoBehaviour
     {
         if(box.transform.localPosition.x <= -0.25f)
         {
+            if(nextConv != null)
+                nextConv.GetComponent<Conveyer>().hasBox = true;
             box.SetActive(false);
             isMoving = false;
             hasBox = false;
