@@ -13,7 +13,7 @@ public class PickupItem : MonoBehaviour
         // if within and press e, add box to the top
 		if (Input.GetMouseButtonDown(0) && trigger == true)
         {
-			if(count < 10)
+			if(count < 8)
 			{
 				inventory[count] = col.gameObject;
 				count += 1;
