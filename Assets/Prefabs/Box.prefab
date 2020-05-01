@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8695107017400563036}
   - component: {fileID: 8695107017400563037}
   - component: {fileID: 4785633350550129242}
+  - component: {fileID: 3788712604590246098}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -108,3 +109,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a180fce41de6c4b91dd3ac720034f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orderList: 
+  itemUnitValue: 020000000200000002000000030000000300000003000000030000000200000002000000
+--- !u!114 &3788712604590246098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695107017400563035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5959038197cd0b145b66d1ef34c76a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxBoxCapacity: 5
+  currentBoxCapacity: 0
