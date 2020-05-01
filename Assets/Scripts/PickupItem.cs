@@ -27,13 +27,19 @@ public class PickupItem : MonoBehaviour
 	
 	public void OnTriggerEnter(Collider other)
     {
-		trigger = true;
-		col = other;
+		if(other.gameObject.layer == 11) 
+		{
+			trigger = true;
+			col = other;
+		}
     }
 	
 	public void OnTriggerExit(Collider other)
     {
-		trigger = false;
-		col = other;
+		if(other.gameObject.layer == 11) 
+		{
+			trigger = false;
+			col = other;
+		}
     }
 }
