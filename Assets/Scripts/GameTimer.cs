@@ -31,9 +31,10 @@ public class GameTimer : MonoBehaviour
 
     private void Update()
     {
-        if (isTimerRunning)
+        if (isTimerRunning && timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
         }
+        Debug.Log(timeRemaining);
     }
 }
