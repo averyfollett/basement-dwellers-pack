@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Conveyer : MonoBehaviour
 {
+    public GameObject boxNode;
     public GameObject box;
     public float xBounds, yBounds, zBounds;
-    public bool hasBox = false, isMoving = false;
+    public bool hasBox = false, isMoving = false, initialized = false;
     public Vector3 startPos, endPos;
     public float xVel = 0;
     //public GameObject[] prevConv = new GameObject[3];
@@ -17,22 +18,26 @@ public class Conveyer : MonoBehaviour
     void Start()
     {
         xBounds = this.transform.position.x + 0.23f - this.transform.position.x;
-        yBounds = this.transform.position.y + 0.25f - this.transform.position.y;
+        yBounds = this.transform.position.y + 0.17f - this.transform.position.y;
         zBounds = this.transform.position.z - this.transform.position.z;
 
         startPos = new Vector3(xBounds, yBounds, zBounds);
         endPos = new Vector3(xBounds - 0.5f, yBounds, zBounds);
 
-        box.SetActive(false);
-
         checkSurroundings();
-
-        //box.transform.localPosition = startPos;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (box != null && initialized == false)
+        {
+            box.transform.SetParent(boxNode.transform);
+            box.transform.localPosition = new Vector3(0, 0, 0);
+            hasBox = true;
+            initialized = true;
+        }
+
         if (hasBox == true)
         {
             animate();
@@ -44,10 +49,6 @@ public class Conveyer : MonoBehaviour
 
     void checkSurroundings()
     {
-        Debug.DrawLine(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.position + Vector3.left, Color.yellow, 900f);
-        Debug.DrawLine(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.position + Vector3.right, Color.yellow, 900f);
-        //Debug.Log("fuck me harder");
-
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Conveyer");
         if(Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.left), out hit, 2f))
@@ -66,7 +67,7 @@ public class Conveyer : MonoBehaviour
 
     void moveBox()
     {
-        box.transform.localPosition += new Vector3(xVel, 0, 0);
+        boxNode.transform.localPosition += new Vector3(xVel, 0, 0);
     }
 
     void checkBounds()
@@ -76,19 +77,23 @@ public class Conveyer : MonoBehaviour
         {
             off = -0.35f;
         }
-            if (box.transform.localPosition.x <= off)
+            if (boxNode.transform.localPosition.x <= off)
             {
                 if(nextConv != null)
                 {
 
                     if (this.transform.rotation != nextConv.transform.rotation)
+                    {
                         nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.10f - this.transform.position.x, yBounds, zBounds);
-                    nextConv.GetComponent<Conveyer>().hasBox = true;
-                    box.SetActive(false);
-
+                    }  
+                    nextConv.GetComponent<Conveyer>().box = this.box;
+                    this.box = null;
+                    boxNode.SetActive(false);
+                    
                 }
                 isMoving = false;
                 hasBox = false;
+                initialized = false;    
             }
     }
 
@@ -96,10 +101,10 @@ public class Conveyer : MonoBehaviour
     {
         if(isMoving == false)
         {
-            box.SetActive(true);
+            boxNode.SetActive(true);
             isMoving = true;
-            box.transform.localPosition = startPos;
-            xVel = -0.001f;
+            boxNode.transform.localPosition = startPos;
+            xVel = -0.0001f;
         }
     }
 }
