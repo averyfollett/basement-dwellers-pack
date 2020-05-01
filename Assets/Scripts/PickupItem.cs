@@ -7,16 +7,21 @@ public class PickupItem : MonoBehaviour
 	public bool trigger = false;
 	public bool holding = false;
 	public Collider col;
+	public Transform child;
     void Update()
     {
         // if within and press e, add box to the top
 		if (Input.GetMouseButtonDown(0) && trigger == true && holding == false)
         {
 			holding = true;
-			col.transform.position += new Vector3(0, 1,0);
-        } else if (Input.GetMouseButtonDown(0) && trigger == true && holding == true) {
+			col.transform.SetParent(this.transform);
+			child = col.transform.parent;
+			col.transform.localPosition = new Vector3(0,1,0);
+        } else if (Input.GetMouseButtonDown(0) && holding == true) { // && trigger
 			holding = false;
-			col.transform.position += new Vector3(0, -1,0);
+			col.transform.parent = null;
+			child = col.transform.parent;
+			//col.transform.position += new Vector3(0, -1,0);
 		}
     }
 	
