@@ -17,7 +17,7 @@ public class Conveyer : MonoBehaviour
     void Start()
     {
         xBounds = this.transform.position.x + 0.23f - this.transform.position.x;
-        yBounds = this.transform.position.y + 0.25f - this.transform.position.y;
+        yBounds = this.transform.position.y + 0.17f - this.transform.position.y;
         zBounds = this.transform.position.z - this.transform.position.z;
 
         startPos = new Vector3(xBounds, yBounds, zBounds);
@@ -44,10 +44,6 @@ public class Conveyer : MonoBehaviour
 
     void checkSurroundings()
     {
-        Debug.DrawLine(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.position + Vector3.left, Color.yellow, 900f);
-        Debug.DrawLine(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.position + Vector3.right, Color.yellow, 900f);
-        //Debug.Log("fuck me harder");
-
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Conveyer");
         if(Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.left), out hit, 2f))
@@ -99,7 +95,7 @@ public class Conveyer : MonoBehaviour
             box.SetActive(true);
             isMoving = true;
             box.transform.localPosition = startPos;
-            xVel = -0.001f;
+            xVel = -0.0001f;
         }
     }
 }
