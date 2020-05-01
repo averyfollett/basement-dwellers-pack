@@ -3,25 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickupItem : MonoBehaviour
-{
+{	
+	public GameObject[] inventory = new GameObject[8];
 	public bool trigger = false;
-	public bool holding = false;
 	public Collider col;
-	public Transform child;
+	public int count = 0;
     void Update()
     {
         // if within and press e, add box to the top
-		if (Input.GetMouseButtonDown(0) && trigger == true && holding == false)
+		if (Input.GetMouseButtonDown(0) && trigger == true)
         {
-			holding = true;
-			col.transform.SetParent(this.transform);
-			child = col.transform.parent;
-			col.transform.localPosition = new Vector3(0,1,0);
-        } else if (Input.GetMouseButtonDown(0) && holding == true) { // && trigger
-			holding = false;
-			col.transform.parent = null;
-			child = col.transform.parent;
-			//col.transform.position += new Vector3(0, -1,0);
+			if(count < 10)
+			{
+				inventory[count] = col.gameObject;
+				count += 1;
+			}
+        } 
+		if (Input.GetMouseButtonDown(1)) 
+		{
+			if(count > 0)
+			{
+				count = count - 1;
+				Vector3 pos = transform.position;
+				Instantiate(inventory[count], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+				inventory[count] = null;
+			}
 		}
     }
 	
@@ -34,6 +40,6 @@ public class PickupItem : MonoBehaviour
 	public void OnTriggerExit(Collider other)
     {
 		trigger = false;
-		col = other;
+		col = null;
     }
 }
