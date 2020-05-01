@@ -14,10 +14,10 @@ TagManager:
   - 
   - 
   - Conveyer
-  - Box
+  - ColliderBox
   - Player
-  - 
-  - 
+  - AmazonBox
+  - Floor
   - 
   - 
   - 
