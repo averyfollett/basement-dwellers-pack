@@ -20,6 +20,12 @@ public class OrderText : MonoBehaviour
     {
         order = GetComponent<OrderSystem>().orderList;
         UpdateOrderText();
+		if(order.Count == 0)
+		{
+			this.GetComponent<BoxController>().orderCompleted = true;
+		} else {
+			this.GetComponent<BoxController>().orderCompleted = false;
+		}
     }
 
     public void UpdateOrderText()
