@@ -6,6 +6,7 @@ public class PickupItem : MonoBehaviour
 {	
 	public GameObject[] lookupTable = new GameObject[8];
 	public int[,] inventory = new int[8,10];
+	public int[] inventorySize = new int[10];
 	public bool trigger = false;
 	public Collider col;
 	public int count = 0;
@@ -46,16 +47,27 @@ public class PickupItem : MonoBehaviour
 			print(tag);
 			if(tag == "TestNumber") 
 			{
-				// keep the size of the [0][a] a in the first index of the 2d
-				int count = inventory[0,0];
+				int count = inventorySize[0];
 				if(count < inventory.GetLength(1))
 				{
 					inventory[0,count] = 1;
 					count += 1;
 				}
-				inventory[0,0] = count;
+				inventorySize[0] = count;
 			}
-			Debug.Log(inventory[0,0]);
+        } 
+		
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+			int num = 0;
+			int change = inventorySize[num];
+			Vector3 pos = transform.position;
+			if(inventorySize[num] > 0) 
+			{
+				Instantiate(lookupTable[num], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+				inventory[num,change] = 0;
+				inventorySize[num] = inventorySize[num] - 1;
+			}
         } 
     }
 	
