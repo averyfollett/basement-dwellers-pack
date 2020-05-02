@@ -443,7 +443,7 @@ MonoBehaviour:
   boxPrefab: {fileID: 8695107017400563035, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
   startConv: {fileID: 363565943}
   numBoxes: 2
-  interval: 10
+  interval: 15
   sendingBoxes: 0
 --- !u!1001 &798320039
 PrefabInstance:

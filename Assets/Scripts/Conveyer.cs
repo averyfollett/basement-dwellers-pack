@@ -17,8 +17,8 @@ public class Conveyer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        xBounds = this.transform.position.x + 0.23f - this.transform.position.x;
-        yBounds = this.transform.position.y + 0.17f - this.transform.position.y;
+        xBounds = this.transform.position.x + 1.25f - this.transform.position.x;
+        yBounds = this.transform.position.y + 1.25f - this.transform.position.y;
         zBounds = this.transform.position.z - this.transform.position.z;
 
         startPos = new Vector3(xBounds, yBounds, zBounds);
@@ -51,7 +51,7 @@ public class Conveyer : MonoBehaviour
     {
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Conveyer");
-        if(Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.left), out hit, 2f))
+        if(Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.left), out hit, 5f))
         {
             nextConv = hit.collider.gameObject;
         }
@@ -72,10 +72,10 @@ public class Conveyer : MonoBehaviour
 
     void checkBounds()
     {
-        float off = -0.23f;
+        float off = -1.25f;
         if (this.transform.rotation != nextConv.transform.rotation)
         {
-            off = -0.35f;
+            off = -1.5f;
         }
             if (boxNode.transform.localPosition.x <= off)
             {
@@ -104,7 +104,7 @@ public class Conveyer : MonoBehaviour
             boxNode.SetActive(true);
             isMoving = true;
             boxNode.transform.localPosition = startPos;
-            xVel = -0.0001f;
+            xVel = -0.001f;
         }
     }
 }
