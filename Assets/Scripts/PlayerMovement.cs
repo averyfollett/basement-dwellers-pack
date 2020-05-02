@@ -5,36 +5,60 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Animator anim;
-    public float movementSpeed;
+    [SerializeField]
+    float moveSpeed = 2f;
 
-    private void Start()
+    Vector3 forward, right;
+
+    void Start()
     {
-        // anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        forward = Camera.main.transform.forward;
+        forward.y = 0;
+        forward = Vector3.Normalize(forward);
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
     }
 
     void Update()
     {
-        if (Input.GetButton("Horizontal"))
+        if (Input.anyKey)
         {
-            GetComponent<Rigidbody>().AddForce(new Vector3(Input.GetAxis("Horizontal") * movementSpeed, 0, -Input.GetAxis("Horizontal") * movementSpeed));
-            // anim.SetBool("isMoving", true);
+            anim.SetBool("isMoving", true);
+            Move();
         }
+        else
+            anim.SetBool("isMoving", false);
+    }
 
-        if (Input.GetButton("Vertical"))
+    void Move()
+    {
+        if ((Input.GetKey(KeyCode.W)) && (Input.GetKey(KeyCode.A)) ||
+            (Input.GetKey(KeyCode.W)) && (Input.GetKey(KeyCode.D)) ||
+            (Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.A)) ||
+            (Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.D)))
         {
-            GetComponent<Rigidbody>().AddForce(new Vector3(Input.GetAxis("Vertical") * movementSpeed, 0, Input.GetAxis("Vertical") * movementSpeed));
-            // anim.SetBool("isMoving", true);
-        }
+            Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey") / 1.5f;
+            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey") / 1.5f;
 
-        if (!Input.GetButton("Horizontal") && !Input.GetButton("Vertical"))
+            Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+
+            transform.right = -heading;
+            transform.position += rightMovement;
+            transform.position += upMovement;
+
+        }
+        else
         {
-            // anim.SetBool("isMoving", false);
+            Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
+            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+
+            Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+
+            transform.right = -heading;
+            transform.position += rightMovement;
+            transform.position += upMovement;
         }
-
-        Vector3 movement = new Vector3(-Input.GetAxisRaw("Horizontal"), 0.0f, -Input.GetAxisRaw("Vertical"));
-        if (movement != Vector3.zero)
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement.normalized), 0.5F);
-
-        transform.Translate(movement * movementSpeed * Time.deltaTime, Space.World);
     }
 }
