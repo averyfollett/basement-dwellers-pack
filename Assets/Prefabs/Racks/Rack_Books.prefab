@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2200723105207729366}
   - component: {fileID: 5599666941996122159}
   - component: {fileID: 2786382850846249548}
+  - component: {fileID: 7907257657158640933}
   m_Layer: 0
   m_Name: Rack_Books
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +101,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.4873772, y: 2.8468974, z: 1.1161718}
   m_Center: {x: 0.0049114227, y: 1.1571838, z: 0.008569241}
+--- !u!114 &7907257657158640933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163973678095627507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16dc5a303abae6144a8ea8ae2638c8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  wasDropped: 0
 --- !u!1001 &2105147270437551172
 PrefabInstance:
   m_ObjectHideFlags: 0
