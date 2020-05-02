@@ -162,6 +162,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2579505613978599022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6465097001238539779}
+  m_Layer: 0
+  m_Name: BoxNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6465097001238539779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579505613978599022}
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.23688316, y: 1.2000463, z: 2.0200253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9087544272847305719}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3049242318196721182
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +364,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9087544272847305719}
   - component: {fileID: 4280607196100931846}
+  - component: {fileID: 530373502472052057}
+  - component: {fileID: 3578477049505052455}
   m_Layer: 0
   m_Name: SM_ConveyerBelt_Anim
   m_TagString: Untagged
@@ -350,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 5207894577912220132}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.304165, y: 1.078589, z: 2.1727972}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8519381997717110100}
   - {fileID: 8707539725572166717}
@@ -361,6 +393,7 @@ Transform:
   - {fileID: 8438206874805115433}
   - {fileID: 5679630031311062725}
   - {fileID: 5500971997254090543}
+  - {fileID: 6465097001238539779}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -383,6 +416,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &530373502472052057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207894577912220132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da9acb35d9abd042bb0f46d065ba3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxNode: {fileID: 2579505613978599022}
+  box: {fileID: 0}
+  xBounds: 0
+  yBounds: 0
+  zBounds: 0
+  hasBox: 0
+  isMoving: 0
+  initialized: 0
+  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
+  xVel: 0
+  nextConv: {fileID: 0}
+--- !u!65 &3578477049505052455
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207894577912220132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3633585, y: 0.71689844, z: 1.184709}
+  m_Center: {x: -0.0041177273, y: 0.64696765, z: -0.018135726}
 --- !u!1 &6225991045481636405
 GameObject:
   m_ObjectHideFlags: 0

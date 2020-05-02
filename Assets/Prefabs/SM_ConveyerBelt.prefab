@@ -411,7 +411,7 @@ Transform:
   m_GameObject: {fileID: 6866223294996527633}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.85, y: -0.94423103, z: -0.03}
-  m_LocalScale: {x: 6.002236, y: 6.002236, z: 6.002236}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1781966447090856347}
   - {fileID: 7004643306414706337}
@@ -455,6 +455,7 @@ MonoBehaviour:
   zBounds: 0
   hasBox: 0
   isMoving: 0
+  initialized: 0
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   xVel: 0
