@@ -24,4 +24,19 @@ public class ItemController : MonoBehaviour
 
     public bool GetWasDropped() { return wasDropped; }
     public void setWasDropped(bool b) { wasDropped = b; }
+
+
+
+
+    public void test()
+    {
+        KeyCode[] arr = new KeyCode[9] {KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9};
+
+        for(int i = 0; i < 9; i++)
+        {
+            if(Input.GetKeyDown(arr[i]))
+            {
+            }
+        }
+    }
 }
