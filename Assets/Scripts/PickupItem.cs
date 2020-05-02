@@ -42,7 +42,24 @@ public class PickupItem : MonoBehaviour
 		
 		for(int i = 0; i < 9; i++)
 		{
-			if(Input.GetKeyDown(arr[i])) // if key down is 1-9, based on KeyCode array above
+			if(col != null && Input.GetKeyDown(arr[i]) && col.tag == "Box") // if key down is 1-9, based on KeyCode array above
+			{
+				int change = inventorySize[i];
+				Vector3 pos = transform.position;
+				int amount = col.gameObject.GetComponent<OrderSystem>().itemUnitValue[i];
+				int currBox = col.gameObject.GetComponent<BoxController>().currentBoxCapacity;
+				int boxCap = col.gameObject.GetComponent<BoxController>().maxBoxCapacity;
+				if(inventorySize[i] > 0 && currBox != boxCap) // while there are items to drop
+				{
+					if(currBox + amount <= boxCap)
+					{
+						currBox = currBox + amount;
+						col.gameObject.GetComponent<BoxController>().currentBoxCapacity = currBox;
+					}
+					inventory[i,change - 1] = 0;
+					inventorySize[i] = inventorySize[i] - 1;
+				}
+			}else if(Input.GetKeyDown(arr[i])) // if key down is 1-9, based on KeyCode array above
 			{
 				int change = inventorySize[i];
 				Vector3 pos = transform.position;
