@@ -43,3 +43,7 @@ public class PickupItem : MonoBehaviour
 		col = null;
     }
 }
+
+// add 9 specific objects, with a specific amount total
+// count needs to be based on inventory size 
+// if it was picked off the shelf and dropped, when picked up, delete it off the ground
