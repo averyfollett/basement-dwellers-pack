@@ -118,10 +118,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8695107017400563035}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5959038197cd0b145b66d1ef34c76a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxBoxCapacity: 5
   currentBoxCapacity: 0
+  smallBoxMesh: {fileID: 0}
+  mediumBoxMesh: {fileID: 0}
+  largeBoxMesh: {fileID: 0}
