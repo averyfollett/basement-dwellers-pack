@@ -45,7 +45,6 @@ public class PickupItem : MonoBehaviour
 			if(col != null && Input.GetKeyDown(arr[i]) && col.tag == "Box") // if key down is 1-9, based on KeyCode array above
 			{
 				int change = inventorySize[i];
-				Vector3 pos = transform.position;
 				int amount = col.gameObject.GetComponent<OrderSystem>().itemUnitValue[i];
 				int currBox = col.gameObject.GetComponent<BoxController>().currentBoxCapacity;
 				int boxCap = col.gameObject.GetComponent<BoxController>().maxBoxCapacity;
@@ -55,6 +54,13 @@ public class PickupItem : MonoBehaviour
 					{
 						currBox = currBox + amount;
 						col.gameObject.GetComponent<BoxController>().currentBoxCapacity = currBox;
+						col.gameObject.GetComponent<OrderSystem>().orderList.Remove(i);
+						List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
+						foreach(GameObject g in spawnedSprites)
+						{
+							Destroy(g);
+						}
+						col.gameObject.GetComponent<OrderText>().spawnedSprites = new List<GameObject>();
 					}
 					inventory[i,change - 1] = 0;
 					inventorySize[i] = inventorySize[i] - 1;

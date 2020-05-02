@@ -8,7 +8,7 @@ public class OrderText : MonoBehaviour
     private GameObject[] lookupTable;
     public List<int> order;
     public GameObject[] spritePrefabs;
-    private List<GameObject> spawnedSprites = new List<GameObject>();
+    public List<GameObject> spawnedSprites = new List<GameObject>();
 
     private void Start()
     {
@@ -22,14 +22,8 @@ public class OrderText : MonoBehaviour
         UpdateOrderText();
     }
 
-    private void UpdateOrderText()
+    public void UpdateOrderText()
     {
-        //for (int i = 0; i < spawnedSprites.Count; i++)
-        //{
-        //    GameObject.Destroy(spawnedSprites[i]);
-        //    spawnedSprites.RemoveAt(i);
-        //}
-
         float spawnLocValue = (order.Count * 0.15f) * -1.0f;
 
         if (spawnedSprites.Count == 0)
