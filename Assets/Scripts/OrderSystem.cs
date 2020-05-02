@@ -7,17 +7,18 @@ public class OrderSystem : MonoBehaviour
     public List<int> orderList;
     public List<int> itemUnitValue;
 
-    private void Start()
+    public void GenerateOrder()
     {
-        GenerateOrder();
-    }
+        GetComponent<BoxController>().currentBoxCapacity = 0;
 
-    private void GenerateOrder()
-    {
         while (GetComponent<BoxController>().currentBoxCapacity < GetComponent<BoxController>().maxBoxCapacity)
         {
             int remainingBoxSpace = GetComponent<BoxController>().maxBoxCapacity - GetComponent<BoxController>().currentBoxCapacity;
             int itemToAdd = Random.Range(0, 5);
+
+            Debug.Log("Adding item #" + itemToAdd);
+            Debug.Log("Remaining space: " + remainingBoxSpace);
+
             if (itemUnitValue[itemToAdd] <= remainingBoxSpace)
             {
                 orderList.Add(itemToAdd);
@@ -25,6 +26,7 @@ public class OrderSystem : MonoBehaviour
             }
             else
             {
+                Debug.Log("Item " + itemToAdd + " couldnt be added. Remaining space was " + remainingBoxSpace + " and item value was " + itemUnitValue[itemToAdd]);
                 break;
             }
         }

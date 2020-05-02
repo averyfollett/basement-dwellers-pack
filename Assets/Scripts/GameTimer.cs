@@ -40,6 +40,6 @@ public class GameTimer : MonoBehaviour
         {
             timeRemaining -= Time.deltaTime;
         }
-        Debug.Log(timeRemaining);
+        //Debug.Log(timeRemaining);
     }
 }

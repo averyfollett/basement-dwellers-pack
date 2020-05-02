@@ -12,6 +12,7 @@ public class BoxController : MonoBehaviour
 
     private void Start()
     {
+        maxBoxCapacity = Random.Range(3, 20);
         if (maxBoxCapacity <= 5)
         {
             // Small Box
@@ -27,5 +28,7 @@ public class BoxController : MonoBehaviour
             // Large Box
             GetComponent<MeshFilter>().mesh = largeBoxMesh;
         }
+
+        GetComponent<OrderSystem>().GenerateOrder();
     }
 }
