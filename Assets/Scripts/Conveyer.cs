@@ -19,7 +19,7 @@ public class Conveyer : MonoBehaviour
     void Start()
     {
         xBounds = this.transform.position.x + 1.25f - this.transform.position.x;
-        yBounds = this.transform.position.y + 1.25f - this.transform.position.y;
+        yBounds = this.transform.position.y + 0.93f - this.transform.position.y;
         zBounds = this.transform.position.z - this.transform.position.z;
 
         startPos = new Vector3(xBounds, yBounds, zBounds);

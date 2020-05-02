@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 4785633350550129242}
   - component: {fileID: 3788712604590246098}
   - component: {fileID: 8013560066336775151}
+  - component: {fileID: 1308044473187309228}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8695107017400563035}
-  m_Mesh: {fileID: 1706219170432718242, guid: cc44c8502c6c3b84d9823102aabfd1fa, type: 3}
+  m_Mesh: {fileID: 7982939208185282332, guid: 5c62c94af60c04443a3ff719de2d44d9, type: 3}
 --- !u!23 &8695107017400563036
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,8 +98,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6839905, z: 1}
-  m_Center: {x: 0, y: 0.005548477, z: 0}
+  m_Size: {x: 1, y: 0.5809878, z: 0.7038057}
+  m_Center: {x: 0, y: 0.26889592, z: -0.0032627583}
 --- !u!114 &4785633350550129242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +131,7 @@ MonoBehaviour:
   smallBoxMesh: {fileID: 7982939208185282332, guid: 5c62c94af60c04443a3ff719de2d44d9, type: 3}
   mediumBoxMesh: {fileID: 1706219170432718242, guid: cc44c8502c6c3b84d9823102aabfd1fa, type: 3}
   largeBoxMesh: {fileID: -8200947965567913791, guid: 0deba34cf9ec2bd4583cf85f10bcf6dc, type: 3}
+  orderCompleted: 0
 --- !u!114 &8013560066336775151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +151,19 @@ MonoBehaviour:
   - {fileID: 5956656326384309610, guid: c70d575fb211946479935078bbf51a59, type: 3}
   - {fileID: 8757410505404952403, guid: 49567dda7f7751a46a8d3c5a15a52a6d, type: 3}
   - {fileID: 2971612299413498717, guid: 57591a915b297d846b03cd66d4c37a4c, type: 3}
+--- !u!54 &1308044473187309228
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695107017400563035}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0

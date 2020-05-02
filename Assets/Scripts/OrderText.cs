@@ -39,7 +39,7 @@ public class OrderText : MonoBehaviour
                 GameObject sprite = Instantiate(spritePrefabs[order[i]]);
                 sprite.transform.SetParent(gameObject.transform, false);
 
-                sprite.transform.localPosition = new Vector3(spawnLocValue, sprite.transform.localPosition.y + 1.0f, -spawnLocValue);
+                sprite.transform.position = new Vector3(spawnLocValue, sprite.transform.localPosition.y + 1.0f, -spawnLocValue) + transform.position;
 
                 sprite.transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward, cam.transform.rotation * Vector3.up);
 
