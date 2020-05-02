@@ -28,11 +28,13 @@ public class GameController : MonoBehaviour
     private float curTime;
     private GameTimer timer;
     private int prevTime;
+    private int originalInterval;
 
     void Start()
     {
         sendingBoxes = true;
         timer = this.GetComponent<GameTimer>();
+        originalInterval = interval;
     }
 
     void Update()
@@ -45,6 +47,9 @@ public class GameController : MonoBehaviour
                 GameObject box = Instantiate(boxPrefab);
                 startConv.GetComponent<Conveyer>().box = box;
                 numBoxes--;
+
+                interval = originalInterval;
+                //interval = Random.Range(interval, interval + 2);
             }
         }
     }

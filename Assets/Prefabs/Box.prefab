@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8695107017400563035}
-  m_Mesh: {fileID: 7982939208185282332, guid: 5c62c94af60c04443a3ff719de2d44d9, type: 3}
+  m_Mesh: {fileID: -8200947965567913791, guid: 0deba34cf9ec2bd4583cf85f10bcf6dc, type: 3}
 --- !u!23 &8695107017400563036
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5809878, z: 0.7038057}
+  m_Size: {x: 2.19, y: 0.5809878, z: 1.85}
   m_Center: {x: 0, y: 0.26889592, z: -0.0032627583}
 --- !u!114 &4785633350550129242
 MonoBehaviour:
@@ -146,11 +146,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 
   spritePrefabs:
-  - {fileID: 2758518978145817422, guid: 4ef62b46a13fa5d41a823c4cd1a5285f, type: 3}
-  - {fileID: 446229796372238174, guid: 4278edf5ca2e1214d8b209a94020c9ba, type: 3}
-  - {fileID: 5956656326384309610, guid: c70d575fb211946479935078bbf51a59, type: 3}
-  - {fileID: 8757410505404952403, guid: 49567dda7f7751a46a8d3c5a15a52a6d, type: 3}
   - {fileID: 2971612299413498717, guid: 57591a915b297d846b03cd66d4c37a4c, type: 3}
+  - {fileID: 8757410505404952403, guid: 49567dda7f7751a46a8d3c5a15a52a6d, type: 3}
+  - {fileID: 5956656326384309610, guid: c70d575fb211946479935078bbf51a59, type: 3}
+  - {fileID: 446229796372238174, guid: 4278edf5ca2e1214d8b209a94020c9ba, type: 3}
+  - {fileID: 2758518978145817422, guid: 4ef62b46a13fa5d41a823c4cd1a5285f, type: 3}
+  spawnedSprites: []
 --- !u!54 &1308044473187309228
 Rigidbody:
   m_ObjectHideFlags: 0

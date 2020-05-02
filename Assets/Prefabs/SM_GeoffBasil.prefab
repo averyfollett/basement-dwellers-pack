@@ -529,14 +529,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookupTable:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6704775613940789983, guid: 92283cbe171827f479c990bece378f70, type: 3}
+  - {fileID: 8692969657351250150, guid: 730ab6f8c8369b240bbce1a8328bb0ac, type: 3}
+  - {fileID: 1757962270006592837, guid: f2c1c903af18bcd438d58730d8a92979, type: 3}
+  - {fileID: 417702596077192512, guid: 7d75656485fba744aa05e9ee53317774, type: 3}
+  - {fileID: 2321229545196978248, guid: 75d53dc8a08487e4ea544a0e208c144e, type: 3}
   inventorySize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   trigger: 0
   col: {fileID: 0}
@@ -554,7 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda89b2a796ed6c4591910fa32938882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.5
+  moveSpeed: 2
 --- !u!1 &2595307667910533369
 GameObject:
   m_ObjectHideFlags: 0

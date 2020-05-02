@@ -13,7 +13,7 @@ public class BoxController : MonoBehaviour
 
     private void Start()
     {
-        maxBoxCapacity = Random.Range(3, 20);
+        maxBoxCapacity = Random.Range(3, 15);
 
         transform.Rotate(new Vector3(0.0f, Random.Range(0, 360), 0.0f));
 

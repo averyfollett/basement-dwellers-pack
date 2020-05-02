@@ -46,6 +46,8 @@ public class PickupItem : MonoBehaviour
 			{
 				int change = inventorySize[i];
 				int amount = col.gameObject.GetComponent<OrderSystem>().itemUnitValue[i];
+
+				col.gameObject.GetComponent<BoxController>().currentBoxCapacity = 0;
 				int currBox = col.gameObject.GetComponent<BoxController>().currentBoxCapacity;
 				int boxCap = col.gameObject.GetComponent<BoxController>().maxBoxCapacity;
 				if(inventorySize[i] > 0 && currBox != boxCap) // while there are items to drop
@@ -55,6 +57,7 @@ public class PickupItem : MonoBehaviour
 						currBox = currBox + amount;
 						col.gameObject.GetComponent<BoxController>().currentBoxCapacity = currBox;
 						col.gameObject.GetComponent<OrderSystem>().orderList.Remove(i);
+						Debug.Log("Removing item from order list");
 						List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
 						foreach(GameObject g in spawnedSprites)
 						{
@@ -71,7 +74,7 @@ public class PickupItem : MonoBehaviour
 				Vector3 pos = transform.position;
 				if(inventorySize[i] > 0) // while there are items to drop
 				{
-					GameObject item = Instantiate(lookupTable[i], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+					GameObject item = Instantiate(lookupTable[i], new Vector3(pos.x, pos.y + 0.5f, pos.z), Quaternion.identity);
 					item.gameObject.GetComponent<ItemController>().setWasDropped(true);
 					// inst the itme, then change droppped to true
 					inventory[i,change - 1] = 0;

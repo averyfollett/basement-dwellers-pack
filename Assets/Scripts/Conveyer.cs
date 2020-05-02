@@ -54,7 +54,8 @@ public class Conveyer : MonoBehaviour
         LayerMask mask = LayerMask.GetMask("Conveyer");
         if(Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.left), out hit, 5f))
         {
-            nextConv = hit.collider.gameObject;
+            if (hit.collider.gameObject.CompareTag("Conveyor"))
+                nextConv = hit.collider.gameObject;
         }
         /*
         if (Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.right), out hit, 2f))
@@ -88,7 +89,8 @@ public class Conveyer : MonoBehaviour
 
                 if (this.transform.rotation != nextConv.transform.rotation)
                 {
-                    nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.6f - this.transform.position.x, yBounds, zBounds);
+                    if (nextConv != null)
+                        nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.6f - this.transform.position.x, yBounds, zBounds);
                 }  
                 nextConv.GetComponent<Conveyer>().box = this.box;
                 this.box = null;
