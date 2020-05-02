@@ -10,7 +10,8 @@ public class Conveyer : MonoBehaviour
     public bool hasBox = false, isMoving = false, initialized = false;
     public Vector3 startPos, endPos;
     public float xVel = 0;
-    //public GameObject[] prevConv = new GameObject[3];
+    public int speed = 1;
+    public float[] speedLookup = new float[] { 0.0005f, 0.0008f, 0.001f, 0.0015f, 0.002f};
     public GameObject nextConv;
 
 
@@ -91,6 +92,7 @@ public class Conveyer : MonoBehaviour
                 }  
                 nextConv.GetComponent<Conveyer>().box = this.box;
                 this.box = null;
+                nextConv.GetComponent<Conveyer>().speed = this.speed;
                 boxNode.SetActive(false);
                     
             }
@@ -107,7 +109,7 @@ public class Conveyer : MonoBehaviour
             boxNode.SetActive(true);
             isMoving = true;
             boxNode.transform.localPosition = startPos;
-            xVel = -0.001f;
+            xVel = -speedLookup[speed - 1];
         }
     }
 }
