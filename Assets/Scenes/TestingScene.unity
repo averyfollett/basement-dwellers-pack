@@ -263,10 +263,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e7665ced176764d90f8bf92555da10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   trigger: 0
-  holding: 0
   col: {fileID: 0}
-  child: {fileID: 0}
+  count: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +663,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 8695107017400563036, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695107017400563036, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -7426137383944577192, guid: 0deba34cf9ec2bd4583cf85f10bcf6dc, type: 3}
+    - target: {fileID: 8695107017400563036, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8695107017400563036, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8695107017400563036, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8695107017400563036, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -2994687108606785340, guid: 0deba34cf9ec2bd4583cf85f10bcf6dc, type: 3}
     - target: {fileID: 8695107017400563038, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.22
@@ -699,6 +731,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8695107017400563039, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7495214366096592705, guid: 0deba34cf9ec2bd4583cf85f10bcf6dc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
 --- !u!1001 &3199900594863125683
