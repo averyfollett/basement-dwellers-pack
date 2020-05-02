@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 5068562678143853762}
   - component: {fileID: 1543520319784540219}
   - component: {fileID: 9112634273978782710}
+  - component: {fileID: 2964737138676121628}
+  - component: {fileID: 5400552274658548080}
   m_Layer: 0
   m_Name: Rack_ToiletPaper
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +139,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.4873772, y: 2.8468974, z: 1.1161718}
   m_Center: {x: 0.0049114227, y: 1.1571838, z: 0.008569241}
+--- !u!114 &2964737138676121628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961370641394101479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16dc5a303abae6144a8ea8ae2638c8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  wasDropped: 0
+--- !u!65 &5400552274658548080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961370641394101479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.604326, y: 2.8431675, z: 2}
+  m_Center: {x: 0.017209593, y: 1.1690763, z: 0.0042089233}
 --- !u!1001 &72562041192032171
 PrefabInstance:
   m_ObjectHideFlags: 0
