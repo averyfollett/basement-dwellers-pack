@@ -17,7 +17,7 @@ public class OrderSystem : MonoBehaviour
         while (GetComponent<BoxController>().currentBoxCapacity < GetComponent<BoxController>().maxBoxCapacity)
         {
             int remainingBoxSpace = GetComponent<BoxController>().maxBoxCapacity - GetComponent<BoxController>().currentBoxCapacity;
-            int itemToAdd = Random.Range(0, 8);
+            int itemToAdd = Random.Range(0, 5);
             if (itemUnitValue[itemToAdd] <= remainingBoxSpace)
             {
                 orderList.Add(itemToAdd);
