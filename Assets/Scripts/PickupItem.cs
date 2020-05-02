@@ -11,7 +11,13 @@ public class PickupItem : MonoBehaviour
 	public Collider col;
 	public int count = 0;
 	public KeyCode[] arr = new KeyCode[9]{KeyCode.Alpha1,KeyCode.Alpha2,KeyCode.Alpha3,KeyCode.Alpha4,KeyCode.Alpha5,KeyCode.Alpha6,KeyCode.Alpha7,KeyCode.Alpha8,KeyCode.Alpha9};
+	public UiManager ui;
 	
+	void Start()
+	{
+		ui = GameObject.Find("GameManager").GetComponent<UiManager>();
+	}
+
     void Update()
     {		
 		if (Input.GetMouseButtonDown(0) && trigger == true) // if left mouse and colliding
@@ -38,6 +44,7 @@ public class PickupItem : MonoBehaviour
 					}
 				}
 			}
+			ui.updateInv();
         } 
 		
 		for(int i = 0; i < 9; i++)
@@ -68,6 +75,7 @@ public class PickupItem : MonoBehaviour
 					inventory[i,change - 1] = 0;
 					inventorySize[i] = inventorySize[i] - 1;
 				}
+				ui.updateInv();
 			}else if(Input.GetKeyDown(arr[i])) // if key down is 1-9, based on KeyCode array above
 			{
 				int change = inventorySize[i];
@@ -82,6 +90,7 @@ public class PickupItem : MonoBehaviour
 					// set the array index to 0, meaning off 
 					// subtract the length of the 2nd index of the 2d array to one less
 				}
+				ui.updateInv();
 			}
 		}
 		
