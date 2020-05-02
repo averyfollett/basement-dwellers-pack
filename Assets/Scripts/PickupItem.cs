@@ -5,8 +5,8 @@ using UnityEngine;
 public class PickupItem : MonoBehaviour
 {	
 	public GameObject[] lookupTable = new GameObject[8];
-	public int[,] inventory = new int[8,10];
-	public int[] inventorySize = new int[10];
+	public int[,] inventory = new int[8,9];
+	public int[] inventorySize = new int[9];
 	public bool trigger = false;
 	public Collider col;
 	public int count = 0;
@@ -55,7 +55,7 @@ public class PickupItem : MonoBehaviour
 					inventory[id,count] = 1;
 					count += 1;
 				}
-				inventorySize[0] = count;
+				inventorySize[id] = count;
 			}
         } 
 		
@@ -75,12 +75,13 @@ public class PickupItem : MonoBehaviour
 		{
 			if(Input.GetKeyDown(arr[i]))
 			{
+				print(i);
 				int change = inventorySize[i];
 				Vector3 pos = transform.position;
 				if(inventorySize[i] > 0) 
 				{
 					Instantiate(lookupTable[i], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
-					inventory[i,change] = 0;
+					inventory[i,change - 1] = 0;
 					inventorySize[i] = inventorySize[i] - 1;
 				}
 			}
