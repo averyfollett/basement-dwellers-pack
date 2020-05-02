@@ -10,6 +10,7 @@ public class PickupItem : MonoBehaviour
 	public bool trigger = false;
 	public Collider col;
 	public int count = 0;
+	public KeyCode[] arr = new KeyCode[9]{KeyCode.Alpha1,KeyCode.Alpha2,KeyCode.Alpha3,KeyCode.Alpha4,KeyCode.Alpha5,KeyCode.Alpha6,KeyCode.Alpha7,KeyCode.Alpha8,KeyCode.Alpha9};
 	
     void Update()
     {
@@ -45,30 +46,46 @@ public class PickupItem : MonoBehaviour
         {
 			string tag = col.tag;
 			print(tag);
-			if(tag == "TestNumber") 
+			if(tag == "Item") 
 			{
-				int count = inventorySize[0];
+				int id = col.gameObject.GetComponent<ItemController>().GetItemId();
+				int count = inventorySize[id];
 				if(count < inventory.GetLength(1))
 				{
-					inventory[0,count] = 1;
+					inventory[id,count] = 1;
 					count += 1;
 				}
 				inventorySize[0] = count;
 			}
         } 
 		
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-			int num = 0;
-			int change = inventorySize[num];
-			Vector3 pos = transform.position;
-			if(inventorySize[num] > 0) 
+		// if (Input.GetKeyDown(KeyCode.Alpha1))
+        // {
+			// int num = 0;
+			// int change = inventorySize[num];
+			// Vector3 pos = transform.position;
+			// if(inventorySize[num] > 0) 
+			// {
+				// Instantiate(lookupTable[num], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+				// inventory[num,change] = 0;
+				// inventorySize[num] = inventorySize[num] - 1;
+			// }
+        // } 
+		for(int i = 0; i < 9; i++)
+		{
+			if(Input.GetKeyDown(arr[i]))
 			{
-				Instantiate(lookupTable[num], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
-				inventory[num,change] = 0;
-				inventorySize[num] = inventorySize[num] - 1;
+				int change = inventorySize[i];
+				Vector3 pos = transform.position;
+				if(inventorySize[i] > 0) 
+				{
+					Instantiate(lookupTable[i], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+					inventory[i,change] = 0;
+					inventorySize[i] = inventorySize[i] - 1;
+				}
 			}
-        } 
+		}
+		
     }
 	
 	public void OnTriggerEnter(Collider other)
