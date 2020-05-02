@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: dbac85c97195f7f448e85545395d358e
 =======
 guid: 6284fd5baf37e4c4395b29579225b2ec
 >>>>>>> KO
+=======
+guid: dbac85c97195f7f448e85545395d358e
+>>>>>>> b417fc8695535594ebe37184c37b95d3d7d4b37f
 ModelImporter:
   serializedVersion: 20100
   internalIDToNameTable:
@@ -38,6 +42,9 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b417fc8695535594ebe37184c37b95d3d7d4b37f
     clipAnimations:
     - serializedVersion: 16
       name: Idle
@@ -69,10 +76,13 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     isReadable: 0
+<<<<<<< HEAD
 =======
     clipAnimations: []
     isReadable: 1
 >>>>>>> KO
+=======
+>>>>>>> b417fc8695535594ebe37184c37b95d3d7d4b37f
   meshes:
     lODScreenPercentages: []
     globalScale: 1

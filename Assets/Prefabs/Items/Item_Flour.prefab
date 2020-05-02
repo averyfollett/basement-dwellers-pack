@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5399446506776732067}
   m_Layer: 0
   m_Name: Item_Flour
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6704775613940789983}
-  m_Mesh: {fileID: 3536473510718860908, guid: b1119e5d7997fd14b905cdc5eb74dff8, type: 3}
+  m_Mesh: {fileID: 3536473510718860908, guid: 96cf810651a8038478e0acc08d13dc35, type: 3}
 --- !u!23 &627714122026518314
 MeshRenderer:
   m_ObjectHideFlags: 0
