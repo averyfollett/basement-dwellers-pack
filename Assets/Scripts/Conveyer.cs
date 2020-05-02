@@ -77,7 +77,7 @@ public class Conveyer : MonoBehaviour
         {
             if (this.transform.rotation != nextConv.transform.rotation)
             {
-                off = -1.5f;
+                off = -1.95f;
             }
         }
         if (boxNode.transform.localPosition.x <= off)
@@ -87,7 +87,7 @@ public class Conveyer : MonoBehaviour
 
                 if (this.transform.rotation != nextConv.transform.rotation)
                 {
-                    nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.10f - this.transform.position.x, yBounds, zBounds);
+                    nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.6f - this.transform.position.x, yBounds, zBounds);
                 }  
                 nextConv.GetComponent<Conveyer>().box = this.box;
                 this.box = null;
