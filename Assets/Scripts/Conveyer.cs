@@ -73,28 +73,31 @@ public class Conveyer : MonoBehaviour
     void checkBounds()
     {
         float off = -1.25f;
-        if (this.transform.rotation != nextConv.transform.rotation)
+        if(nextConv != null)
         {
-            off = -1.5f;
-        }
-            if (boxNode.transform.localPosition.x <= off)
+            if (this.transform.rotation != nextConv.transform.rotation)
             {
-                if(nextConv != null)
-                {
-
-                    if (this.transform.rotation != nextConv.transform.rotation)
-                    {
-                        nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.10f - this.transform.position.x, yBounds, zBounds);
-                    }  
-                    nextConv.GetComponent<Conveyer>().box = this.box;
-                    this.box = null;
-                    boxNode.SetActive(false);
-                    
-                }
-                isMoving = false;
-                hasBox = false;
-                initialized = false;    
+                off = -1.5f;
             }
+        }
+        if (boxNode.transform.localPosition.x <= off)
+        {
+            if(nextConv != null)
+            {
+
+                if (this.transform.rotation != nextConv.transform.rotation)
+                {
+                    nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.10f - this.transform.position.x, yBounds, zBounds);
+                }  
+                nextConv.GetComponent<Conveyer>().box = this.box;
+                this.box = null;
+                boxNode.SetActive(false);
+                    
+            }
+            isMoving = false;
+            hasBox = false;
+            initialized = false;    
+        }
     }
 
     public void animate()
