@@ -6,13 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     Animator anim;
     [SerializeField]
-    float moveSpeed = 4f;
+    float moveSpeed = 2f;
 
     Vector3 forward, right;
 
     void Start()
     {
-        // anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -21,20 +21,44 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(Input.anyKey)
+        if (Input.anyKey)
+        {
+            anim.SetBool("isMoving", true);
             Move();
+        }
+        else
+            anim.SetBool("isMoving", false);
     }
 
     void Move()
     {
-        Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
-        Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+        if ((Input.GetKey(KeyCode.W)) && (Input.GetKey(KeyCode.A)) ||
+            (Input.GetKey(KeyCode.W)) && (Input.GetKey(KeyCode.D)) ||
+            (Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.A)) ||
+            (Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.D)))
+        {
+            Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey") / 1.5f;
+            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey") / 1.5f;
 
-        Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+            Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
-        transform.forward = heading;
-        transform.position += rightMovement;
-        transform.position += upMovement;
+            transform.right = -heading;
+            transform.position += rightMovement;
+            transform.position += upMovement;
+
+        }
+        else
+        {
+            Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
+            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+
+            Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+
+            transform.right = -heading;
+            transform.position += rightMovement;
+            transform.position += upMovement;
+        }
     }
 }
