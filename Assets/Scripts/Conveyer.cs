@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Conveyer : MonoBehaviour
 {
+    public GameObject boxNode;
     public GameObject box;
     public float xBounds, yBounds, zBounds;
-    public bool hasBox = false, isMoving = false;
+    public bool hasBox = false, isMoving = false, initialized = false;
     public Vector3 startPos, endPos;
     public float xVel = 0;
     //public GameObject[] prevConv = new GameObject[3];
@@ -16,25 +17,27 @@ public class Conveyer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-        xBounds = this.transform.position.x + 0.25f - this.transform.position.x;
-        yBounds = this.transform.position.y + 0.25f - this.transform.position.y;
+        xBounds = this.transform.position.x + 1.25f - this.transform.position.x;
+        yBounds = this.transform.position.y + 1.25f - this.transform.position.y;
         zBounds = this.transform.position.z - this.transform.position.z;
 
         startPos = new Vector3(xBounds, yBounds, zBounds);
         endPos = new Vector3(xBounds - 0.5f, yBounds, zBounds);
 
-        box.SetActive(false);
-
         checkSurroundings();
-
-        //box.transform.localPosition = startPos;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (box != null && initialized == false)
+        {
+            box.transform.SetParent(boxNode.transform);
+            box.transform.localPosition = new Vector3(0, 0, 0);
+            hasBox = true;
+            initialized = true;
+        }
+
         if (hasBox == true)
         {
             animate();
@@ -46,13 +49,9 @@ public class Conveyer : MonoBehaviour
 
     void checkSurroundings()
     {
-        Debug.DrawLine(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.position + Vector3.left, Color.yellow, 900f);
-        Debug.DrawLine(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.position + Vector3.right, Color.yellow, 900f);
-        //Debug.Log("fuck me harder");
-
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Conveyer");
-        if(Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.left), out hit, 2f))
+        if(Physics.Raycast(this.transform.position + new Vector3(0, 0.5f, 0), this.transform.TransformDirection(Vector3.left), out hit, 5f))
         {
             nextConv = hit.collider.gameObject;
         }
@@ -68,18 +67,36 @@ public class Conveyer : MonoBehaviour
 
     void moveBox()
     {
-        box.transform.localPosition += new Vector3(xVel, 0, 0);
+        boxNode.transform.localPosition += new Vector3(xVel, 0, 0);
     }
 
     void checkBounds()
     {
-        if(box.transform.localPosition.x <= -0.25f)
+        float off = -1.25f;
+        if(nextConv != null)
+        {
+            if (this.transform.rotation != nextConv.transform.rotation)
+            {
+                off = -1.95f;
+            }
+        }
+        if (boxNode.transform.localPosition.x <= off)
         {
             if(nextConv != null)
-                nextConv.GetComponent<Conveyer>().hasBox = true;
-            box.SetActive(false);
+            {
+
+                if (this.transform.rotation != nextConv.transform.rotation)
+                {
+                    nextConv.GetComponent<Conveyer>().startPos = new Vector3(this.transform.position.x + 0.6f - this.transform.position.x, yBounds, zBounds);
+                }  
+                nextConv.GetComponent<Conveyer>().box = this.box;
+                this.box = null;
+                boxNode.SetActive(false);
+                    
+            }
             isMoving = false;
             hasBox = false;
+            initialized = false;    
         }
     }
 
@@ -87,9 +104,9 @@ public class Conveyer : MonoBehaviour
     {
         if(isMoving == false)
         {
-            box.SetActive(true);
+            boxNode.SetActive(true);
             isMoving = true;
-            box.transform.localPosition = startPos;
+            boxNode.transform.localPosition = startPos;
             xVel = -0.001f;
         }
     }
