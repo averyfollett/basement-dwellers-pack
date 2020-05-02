@@ -4,24 +4,37 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if(instance != this)
+        {
+            Destroy(this);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
+
     public GameObject boxPrefab;
     public GameObject startConv;
     public int numBoxes;
     public int interval;
     public bool sendingBoxes;
-    float curTime;
-    GameTimer timer;
-    int prevTime;
+    public int score = 0;
+    private float curTime;
+    private GameTimer timer;
+    private int prevTime;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         sendingBoxes = true;
         timer = this.GetComponent<GameTimer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (sendingBoxes && numBoxes > 0)

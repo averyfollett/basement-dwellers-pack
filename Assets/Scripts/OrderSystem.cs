@@ -16,8 +16,8 @@ public class OrderSystem : MonoBehaviour
             int remainingBoxSpace = GetComponent<BoxController>().maxBoxCapacity - GetComponent<BoxController>().currentBoxCapacity;
             int itemToAdd = Random.Range(0, 5);
 
-            Debug.Log("Adding item #" + itemToAdd);
-            Debug.Log("Remaining space: " + remainingBoxSpace);
+            //Debug.Log("Adding item #" + itemToAdd);
+            //Debug.Log("Remaining space: " + remainingBoxSpace);
 
             if (itemUnitValue[itemToAdd] <= remainingBoxSpace)
             {
@@ -26,7 +26,7 @@ public class OrderSystem : MonoBehaviour
             }
             else
             {
-                Debug.Log("Item " + itemToAdd + " couldnt be added. Remaining space was " + remainingBoxSpace + " and item value was " + itemUnitValue[itemToAdd]);
+                //Debug.Log("Item " + itemToAdd + " couldnt be added. Remaining space was " + remainingBoxSpace + " and item value was " + itemUnitValue[itemToAdd]);
                 break;
             }
         }
