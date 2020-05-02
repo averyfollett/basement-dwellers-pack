@@ -13,83 +13,55 @@ public class PickupItem : MonoBehaviour
 	public KeyCode[] arr = new KeyCode[9]{KeyCode.Alpha1,KeyCode.Alpha2,KeyCode.Alpha3,KeyCode.Alpha4,KeyCode.Alpha5,KeyCode.Alpha6,KeyCode.Alpha7,KeyCode.Alpha8,KeyCode.Alpha9};
 	
     void Update()
-    {
-        // if within and press e, add box to the top
-		// if (Input.GetMouseButtonDown(0) && trigger == true)
-        // {
-			// string tag = col.tag;
-			// print(tag);
-			// if(tag == "TestNumber") 
-			// {
-				// // keep the size of the [0][a] a in the first index of the 2d
-				// int count = inventory[0,0];
-				// if(count < inventory[0].Length)
-				// {
-					// inventory[0,count] = col.gameObject;
-					// count += 1;
-				// }
-				// inventory[0,0] = count;
-			// }
-        // } 
-		// if (Input.GetMouseButtonDown(1)) 
-		// {
-			// if(count > 0)
-			// {
-				// count = count - 1;
-				// Vector3 pos = transform.position;
-				// Instantiate(inventory[count], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
-				// inventory[count] = null;
-			// }
-		// }
-		
-		if (Input.GetMouseButtonDown(0) && trigger == true)
+    {		
+		if (Input.GetMouseButtonDown(0) && trigger == true) // if left mouse and colliding
         {
-			string tag = col.tag;
-			print(tag);
-			if(tag == "Item") 
+			if(col != null) //if the object you are colliding with exists
+			// I know its dumb, but I get a nullobjectref if I dont have this because of string tag = col.tag is null
 			{
-				int id = col.gameObject.GetComponent<ItemController>().GetItemId();
-				int count = inventorySize[id];
-				if(count < inventory.GetLength(1))
+				string tag = col.tag;
+				print(col);
+				if(tag == "Item") //get and check if collider is an item
 				{
-					inventory[id,count] = 1;
-					count += 1;
+					int id = col.gameObject.GetComponent<ItemController>().GetItemId();
+					int count = inventorySize[id];
+					if(count < inventory.GetLength(1)) // get the item id from col, and check if the items in the
+					// array are exceeding length
+					{
+						inventory[id,count] = 1; // 1 is full, 0 is empty
+						count += 1;
+					}
+					inventorySize[id] = count;
+					if(col != null && col.gameObject.GetComponent<ItemController>().GetWasDropped())
+					{
+						Destroy(col.gameObject); // if the item has been dropped before, destroy it when picked up
+					}
 				}
-				inventorySize[id] = count;
 			}
         } 
 		
-		// if (Input.GetKeyDown(KeyCode.Alpha1))
-        // {
-			// int num = 0;
-			// int change = inventorySize[num];
-			// Vector3 pos = transform.position;
-			// if(inventorySize[num] > 0) 
-			// {
-				// Instantiate(lookupTable[num], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
-				// inventory[num,change] = 0;
-				// inventorySize[num] = inventorySize[num] - 1;
-			// }
-        // } 
 		for(int i = 0; i < 9; i++)
 		{
-			if(Input.GetKeyDown(arr[i]))
+			if(Input.GetKeyDown(arr[i])) // if key down is 1-9, based on KeyCode array above
 			{
-				print(i);
 				int change = inventorySize[i];
 				Vector3 pos = transform.position;
-				if(inventorySize[i] > 0) 
+				if(inventorySize[i] > 0) // while there are items to drop
 				{
-					Instantiate(lookupTable[i], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+					GameObject item = Instantiate(lookupTable[i], new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+					item.gameObject.GetComponent<ItemController>().setWasDropped(true);
+					// inst the itme, then change droppped to true
 					inventory[i,change - 1] = 0;
 					inventorySize[i] = inventorySize[i] - 1;
+					// set the array index to 0, meaning off 
+					// subtract the length of the 2nd index of the 2d array to one less
 				}
 			}
 		}
 		
     }
 	
-	public void OnTriggerEnter(Collider other)
+	public void OnTriggerStay(Collider other)
     {
 		trigger = true;
 		col = other;
@@ -102,6 +74,6 @@ public class PickupItem : MonoBehaviour
     }
 }
 
-// add 9 specific objects, with a specific amount total
+// complete - add 9 specific objects, with a specific amount total
 // complete - count needs to be based on inventory size 
-// if it was picked off the shelf and dropped, when picked up, delete it off the ground
+// complete - if it was picked off the shelf and dropped, when picked up, delete it off the ground
