@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: MayaScene.ma
-//Last modified: Fri, May 01, 2020 09:45:14 PM
+//Last modified: Fri, May 01, 2020 11:59:40 PM
 //Codeset: 1252
 requires maya "2019";
 requires "stereoCamera" "10.0";
@@ -16,17 +16,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "66257783-474E-1B08-19EC-4FBCC54EA0B7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -431.67670151337518 109.59656527597646 140.85639368837454 ;
-	setAttr ".r" -type "double3" -36.938352447087013 -2162.9999999998645 0 ;
+	setAttr ".t" -type "double3" -403.83161000263675 139.77144970733292 282.58655839572617 ;
+	setAttr ".r" -type "double3" -5.7383524520259011 -2162.2000000019357 1.2433206036615948e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F46CA361-4B1A-9AB2-B5B7-2BB3BED79D25";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 153.54299240108321;
+	setAttr ".coi" 260.98975141818579;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -440.00000550472976 29.99999996910174 5.3099577712600876e-07 ;
+	setAttr ".tp" -type "double3" -380 13.33910540239593 69.999999761581421 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -4515,7 +4515,7 @@ createNode mesh -n "HandSanitizerShape" -p "HandSanitizer";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "f[0:18]" "f[20:27]" "f[30:37]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.49999991059303284 0.37499998509883881 ;
+	setAttr ".pv" -type "double2" 0.5 0.50000000186264515 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 166 ".uvst[0].uvsp[0:165]" -type "float2" 0.40994546 0.96373117
 		 0.40317306 1 0.37500009 0.93750626 0.40994537 5.5879354e-09 0.59005523 5.5879354e-09
@@ -4564,28 +4564,123 @@ createNode mesh -n "HandSanitizerShape" -p "HandSanitizer";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 116 ".pt[32:147]" -type "float3"  0 0 0.33825108 0 0 -0.33825046 
-		0 0 -0.19289291 0 0 0.19289348 0 0 -0.33825046 0 0 -0.19289084 0 0 0.33825108 0 0 
-		0.19289143 0 0 0.46848732 0 0 -0.46848691 0 0 -0.26716265 0 0 0.26716265 0 0 -0.46848691 
-		0 0 -0.26715943 0 0 0.4684875 0 0 0.26716 0 0 0.46848732 0 0 -0.46848691 0 0 -0.26716265 
-		0 0 0.26716265 0 0 -0.46848691 0 0 -0.26715943 0 0 0.4684875 0 0 0.26716 0 0 0.34708443 
-		0 0 -0.34708413 0 0 -0.19793063 0 0 0.19793063 0 0 -0.34708413 0 0 -0.19792825 0 
-		0 0.34708458 0 0 0.19792886 0 0 0.34708443 0 0 -0.34708413 0 0 -0.19793063 0 0 0.19793063 
-		0 0 -0.34708413 0 0 -0.19792825 0 0 0.34708458 0 0 0.19792886 0 0 0.12430453 0 0 
-		-0.12430453 0 0 -0.070886612 0 0 0.070886612 0 0 -0.12430453 0 0 -0.070885897 0 0 
-		0.12430453 0 0 0.070886143 0 0 0.15460145 0 0 -0.15460145 0 0 -0.08816395 0 0 0.08816395 
-		0 0 -0.15460145 0 0 -0.08816307 0 0 0.15460145 0 0 0.088163286 0 0 0.26718432 0 0 
-		-0.26718432 0 0 -0.15236609 0 0 0.15236609 0 0 -0.26718432 0 0 -0.15236451 0 0 0.26718432 
-		0 0 0.15236491 0 0 0.26718432 0 0 -0.26718432 0 0 -0.26718432 0 0 0.26718432 0 0 
-		-0.26718432 0 0 -0.26718432 0 0 0.26718432 0 0 0.26718432 0 0 0.24358526 0 0 -0.24358526 
-		0 0 -0.24358526 0 0 0.24358526 0 0 -0.24358526 0 0 -0.24358526 0 0 0.24358526 0 0 
-		0.24358526 0 0 0.20081142 0 0 -0.20081142 0 0 0.18307477 0 0 -0.18307477 0 0 0.042201407 
-		0 0 -0.042201407 0 0 0.038473986 0 0 -0.038473986 0 0 -0.071130671 0 0 0.071130671 
-		0 0 -0.064848118 0 0 0.064848118 0 0 -0.124467 0 0 -0.11347355 0 0 0.11347355 0 0 
-		0.124467 0 0 -0.19823681 0 0 -0.18072753 0 0 0.18072753 0 0 0.19823681 0 0 0.15280762 
-		0 0 0.15280762 0 0 0.087140337 0 0 -0.087140083 0 0 -0.15280762 0 0 -0.15280762 0 
-		0 -0.087140955 0 0 0.087140955 0 0 0.12609486 0 0 0.12609486 0 0 0.071907073 0 0 
-		-0.071906865 0 0 -0.12609486 0 0 -0.12609486 0 0 -0.07190758 0 0 0.07190758;
+	setAttr -s 117 ".pt";
+	setAttr ".pt[32]" -type "float3" 0 0 0.33825108 ;
+	setAttr ".pt[33]" -type "float3" 0 0 -0.33825046 ;
+	setAttr ".pt[34]" -type "float3" 0 0 -0.19289291 ;
+	setAttr ".pt[35]" -type "float3" 0 0 0.19289348 ;
+	setAttr ".pt[36]" -type "float3" 0 0 -0.33825046 ;
+	setAttr ".pt[37]" -type "float3" 0 0 -0.19289084 ;
+	setAttr ".pt[38]" -type "float3" 0 0 0.33825108 ;
+	setAttr ".pt[39]" -type "float3" 0 0 0.19289143 ;
+	setAttr ".pt[40]" -type "float3" 0 0 0.46848732 ;
+	setAttr ".pt[41]" -type "float3" 0 0 -0.46848691 ;
+	setAttr ".pt[42]" -type "float3" 0 0 -0.26716265 ;
+	setAttr ".pt[43]" -type "float3" 0 0 0.26716265 ;
+	setAttr ".pt[44]" -type "float3" 0 0 -0.46848691 ;
+	setAttr ".pt[45]" -type "float3" 0 0 -0.26715943 ;
+	setAttr ".pt[46]" -type "float3" 0 0 0.4684875 ;
+	setAttr ".pt[47]" -type "float3" 0 0 0.26716 ;
+	setAttr ".pt[48]" -type "float3" 0 0 0.46848732 ;
+	setAttr ".pt[49]" -type "float3" 0 0 -0.46848691 ;
+	setAttr ".pt[50]" -type "float3" 0 0 -0.26716265 ;
+	setAttr ".pt[51]" -type "float3" 0 0 0.26716265 ;
+	setAttr ".pt[52]" -type "float3" 0 0 -0.46848691 ;
+	setAttr ".pt[53]" -type "float3" 0 0 -0.26715943 ;
+	setAttr ".pt[54]" -type "float3" 0 0 0.4684875 ;
+	setAttr ".pt[55]" -type "float3" 0 0 0.26716 ;
+	setAttr ".pt[56]" -type "float3" 0 0 0.34708443 ;
+	setAttr ".pt[57]" -type "float3" 0 0 -0.34708413 ;
+	setAttr ".pt[58]" -type "float3" 0 0 -0.19793063 ;
+	setAttr ".pt[59]" -type "float3" 0 0 0.19793063 ;
+	setAttr ".pt[60]" -type "float3" 0 0 -0.34708413 ;
+	setAttr ".pt[61]" -type "float3" 0 0 -0.19792825 ;
+	setAttr ".pt[62]" -type "float3" 0 0 0.34708458 ;
+	setAttr ".pt[63]" -type "float3" 0 0 0.19792886 ;
+	setAttr ".pt[64]" -type "float3" 0 0 0.34708443 ;
+	setAttr ".pt[65]" -type "float3" 0 0 -0.34708413 ;
+	setAttr ".pt[66]" -type "float3" 0 0 -0.19793063 ;
+	setAttr ".pt[67]" -type "float3" 0 0 0.19793063 ;
+	setAttr ".pt[68]" -type "float3" 0 0 -0.34708413 ;
+	setAttr ".pt[69]" -type "float3" 0 0 -0.19792825 ;
+	setAttr ".pt[70]" -type "float3" 0 0 0.34708458 ;
+	setAttr ".pt[71]" -type "float3" 0 0 0.19792886 ;
+	setAttr ".pt[72]" -type "float3" 0 0 0.12430453 ;
+	setAttr ".pt[73]" -type "float3" 0 0 -0.12430453 ;
+	setAttr ".pt[74]" -type "float3" 0 0 -0.070886612 ;
+	setAttr ".pt[75]" -type "float3" 0 0 0.070886612 ;
+	setAttr ".pt[76]" -type "float3" 0 0 -0.12430453 ;
+	setAttr ".pt[77]" -type "float3" 0 0 -0.070885897 ;
+	setAttr ".pt[78]" -type "float3" 0 0 0.12430453 ;
+	setAttr ".pt[79]" -type "float3" 0 0 0.070886143 ;
+	setAttr ".pt[80]" -type "float3" 0 0 0.15460145 ;
+	setAttr ".pt[81]" -type "float3" 0 0 -0.15460145 ;
+	setAttr ".pt[82]" -type "float3" 0 0 -0.08816395 ;
+	setAttr ".pt[83]" -type "float3" 0 0 0.08816395 ;
+	setAttr ".pt[84]" -type "float3" 0 0 -0.15460145 ;
+	setAttr ".pt[85]" -type "float3" 0 0 -0.08816307 ;
+	setAttr ".pt[86]" -type "float3" 0 0 0.15460145 ;
+	setAttr ".pt[87]" -type "float3" 0 0 0.088163286 ;
+	setAttr ".pt[88]" -type "float3" 0 0 0.26718432 ;
+	setAttr ".pt[89]" -type "float3" 0 0 -0.26718432 ;
+	setAttr ".pt[90]" -type "float3" 0 0 -0.15236609 ;
+	setAttr ".pt[91]" -type "float3" 0 0 0.15236609 ;
+	setAttr ".pt[92]" -type "float3" 0 0 -0.26718432 ;
+	setAttr ".pt[93]" -type "float3" 0 0 -0.15236451 ;
+	setAttr ".pt[94]" -type "float3" 0 0 0.26718432 ;
+	setAttr ".pt[95]" -type "float3" 0 0 0.15236491 ;
+	setAttr ".pt[96]" -type "float3" 0 0 0.26718432 ;
+	setAttr ".pt[97]" -type "float3" 0 0 -0.26718432 ;
+	setAttr ".pt[98]" -type "float3" 0 0 -0.26718432 ;
+	setAttr ".pt[99]" -type "float3" 0 0 0.26718432 ;
+	setAttr ".pt[100]" -type "float3" 0 0 -0.26718432 ;
+	setAttr ".pt[101]" -type "float3" 0 0 -0.26718432 ;
+	setAttr ".pt[102]" -type "float3" 0 0 0.26718432 ;
+	setAttr ".pt[103]" -type "float3" 0 0 0.26718432 ;
+	setAttr ".pt[104]" -type "float3" 0 0 0.24358526 ;
+	setAttr ".pt[105]" -type "float3" 0 0 -0.24358526 ;
+	setAttr ".pt[106]" -type "float3" 0 0 -0.24358526 ;
+	setAttr ".pt[107]" -type "float3" 0 0 0.24358526 ;
+	setAttr ".pt[108]" -type "float3" 0 0 -0.24358526 ;
+	setAttr ".pt[109]" -type "float3" 0 0 -0.24358526 ;
+	setAttr ".pt[110]" -type "float3" 0 0 0.24358526 ;
+	setAttr ".pt[111]" -type "float3" 0 0 0.24358526 ;
+	setAttr ".pt[112]" -type "float3" 0 0 0.20081142 ;
+	setAttr ".pt[113]" -type "float3" 0 0 -0.20081142 ;
+	setAttr ".pt[114]" -type "float3" 0 0 0.18307477 ;
+	setAttr ".pt[115]" -type "float3" 0 0 -0.18307477 ;
+	setAttr ".pt[116]" -type "float3" 0 0 0.042201407 ;
+	setAttr ".pt[117]" -type "float3" 0 0 -0.042201407 ;
+	setAttr ".pt[118]" -type "float3" 0 0 0.038473986 ;
+	setAttr ".pt[119]" -type "float3" 0 0 -0.038473986 ;
+	setAttr ".pt[120]" -type "float3" 0 0 -0.071130671 ;
+	setAttr ".pt[121]" -type "float3" 0 0 0.071130671 ;
+	setAttr ".pt[122]" -type "float3" 0 0 -0.064848118 ;
+	setAttr ".pt[123]" -type "float3" 0 0 0.064848118 ;
+	setAttr ".pt[124]" -type "float3" 0 0 -0.124467 ;
+	setAttr ".pt[125]" -type "float3" 0 0 -0.11347355 ;
+	setAttr ".pt[126]" -type "float3" 0 0 0.11347355 ;
+	setAttr ".pt[127]" -type "float3" 0 0 0.124467 ;
+	setAttr ".pt[128]" -type "float3" 0 0 -0.19823681 ;
+	setAttr ".pt[129]" -type "float3" 0 0 -0.18072753 ;
+	setAttr ".pt[130]" -type "float3" 0 0 0.18072753 ;
+	setAttr ".pt[131]" -type "float3" 0 0 0.19823681 ;
+	setAttr ".pt[132]" -type "float3" 0 0 0.15280762 ;
+	setAttr ".pt[133]" -type "float3" 0 0 0.15280762 ;
+	setAttr ".pt[134]" -type "float3" 0 0 0.087140337 ;
+	setAttr ".pt[135]" -type "float3" 0 0 -0.087140083 ;
+	setAttr ".pt[136]" -type "float3" 0 0 -0.15280762 ;
+	setAttr ".pt[137]" -type "float3" 0 0 -0.15280762 ;
+	setAttr ".pt[138]" -type "float3" 0 0 -0.087140955 ;
+	setAttr ".pt[139]" -type "float3" 0 0 0.087140955 ;
+	setAttr ".pt[140]" -type "float3" 0 0 0.12609486 ;
+	setAttr ".pt[141]" -type "float3" 0 0 0.12609486 ;
+	setAttr ".pt[142]" -type "float3" 0 0 0.071907073 ;
+	setAttr ".pt[143]" -type "float3" 0 0 -0.071906865 ;
+	setAttr ".pt[144]" -type "float3" 0 0 -0.12609486 ;
+	setAttr ".pt[145]" -type "float3" 0 0 -0.12609486 ;
+	setAttr ".pt[146]" -type "float3" 0 0 -0.07190758 ;
+	setAttr ".pt[147]" -type "float3" 0 0 0.07190758 ;
 	setAttr -s 148 ".vt[0:147]"  -10.32728577 -26.38702965 5.64143372 -11.10395813 -23.52181625 7.94736862
 		 10.32743835 -26.38702965 5.64143372 11.10406494 -23.52181625 7.94736862 -12.45973206 -26.38702965 3.018920898
 		 -14.33482361 -23.52181625 3.97408295 12.45983887 -26.38702965 3.018932343 14.33485413 -23.52181625 3.97408295
@@ -4978,7 +5073,7 @@ createNode mesh -n "ToiletPaperShape" -p "ToiletPaper";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "f[9:17]" "f[19:28]" "f[42:43]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5885416567325592 0.76609492301940918 ;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 96 ".uvst[0].uvsp[0:95]" -type "float2" 0.57812506 0.020933539
 		 0.42187503 0.020933509 0.34375 0.15624997 0.421875 0.29156646 0.578125 0.29156649
@@ -5164,13 +5259,13 @@ createNode mesh -n "GoldfishShape" -p "Goldfish";
 	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.19075134538442384 0.12500005874155562 ;
+	setAttr ".pv" -type "double2" 0.50000004446785695 5.0737442970275879 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 5 ".pt";
+	setAttr -s 6 ".pt";
 	setAttr ".pt[2]" -type "float3" -5.9604645e-07 -1.8210487 0 ;
 	setAttr ".pt[8]" -type "float3" -8.9406967e-08 -1.8210487 0 ;
 	setAttr ".pt[28]" -type "float3" 0 -1.9177291 0 ;
@@ -5292,13 +5387,13 @@ createNode mesh -n "FlourShape" -p "Flour";
 	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.37499997764825821 ;
+	setAttr ".pv" -type "double2" 0.5 0.50000000186264515 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 66 ".pt";
+	setAttr -s 67 ".pt";
 	setAttr ".pt[24]" -type "float3" 0 0 -9.5367432e-07 ;
 	setAttr ".pt[25]" -type "float3" 0 0 -9.5367432e-07 ;
 	setAttr ".pt[26]" -type "float3" 0 0 -9.5367432e-07 ;
@@ -5379,7 +5474,7 @@ createNode mesh -n "Sotrage_Rack00Shape" -p "Sotrage_Rack00";
 	setAttr ".iog[0].og[4].gcl" -type "componentList" 11 "f[2]" "f[4]" "f[6]" "f[8]" "f[43:44]" "f[48:49]" "f[79]" "f[82]" "f[85]" "f[88]" "f[90:114]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.62858277559280396 0.15212827920913696 ;
+	setAttr ".pv" -type "double2" 0.50000002980232239 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 183 ".uvst[0].uvsp[0:182]" -type "float2" 0.375 0.5 0.625 0.75
 		 0.375 1 0.625 1 0.125 0.17124954 0.375 0.58791625 0.62500006 0.57875055 0.875 0.16208377
@@ -5427,7 +5522,7 @@ createNode mesh -n "Sotrage_Rack00Shape" -p "Sotrage_Rack00";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 44 ".pt";
+	setAttr -s 45 ".pt";
 	setAttr ".pt[2]" -type "float3" -0.074737564 4.8948526 -0.95594448 ;
 	setAttr ".pt[3]" -type "float3" 0.12004012 16.269033 -0.78985631 ;
 	setAttr ".pt[4]" -type "float3" -0.29030642 -16.296303 -0.3107928 ;
@@ -5915,6 +6010,7 @@ createNode mesh -n "MaskShape" -p "Mask";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 1 "f[248:549]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 694 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0 0 0 0.050000001 0.5 0.050000001
@@ -7464,20 +7560,470 @@ createNode mesh -n "MaskShape" -p "Mask";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Barbell";
+	rename -uid "0FA13C58-482A-C4D2-98FB-16B91AE0CB29";
+	setAttr ".t" -type "double3" 0 76.250368576464581 -60 ;
+	setAttr ".rp" -type "double3" -335 41.332371711730957 100 ;
+	setAttr ".sp" -type "double3" -335 41.332371711730957 100 ;
+createNode mesh -n "BarbellShape" -p "Barbell";
+	rename -uid "954A9BC8-4101-8D4D-83C7-279EB2FEF53B";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".iog[0].og[1].gcl" -type "componentList" 2 "e[70:79]" "e[90:99]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 136 ".uvst[0].uvsp[0:135]" -type "float2" 0.54231632 0.026146106
+		 0.38921458 0.075810976 0.38921455 0.23678449 0.54231626 0.28645724 0.5 0.15000001
+		 0.63693833 0.15629414 0.38921455 0.92437255 0.38921455 0.76330382 0.54231632 0.71348494
+		 0.63693833 0.84379411 0.54231626 0.97403741 0.5 0.83749998 0.37808985 0.31250042
+		 0.42191017 0.31250021 0.37808985 0.68843955 0.42191017 0.68843943 0.42917871 0.35008994
+		 0.42808989 0.31250036 0.47191012 0.31250024 0.42808989 0.68843955 0.47191018 0.68843949
+		 0.47808987 0.31250054 0.52191031 0.31250021 0.47808987 0.68843949 0.52191019 0.68843955
+		 0.52808988 0.31250024 0.57191014 0.3125003 0.62191015 0.31250027 0.57808989 0.31250036
+		 0.62191021 0.68843949 0.57808989 0.68843961 0.52808988 0.68843961 0.5719102 0.68843943
+		 0.62082154 0.35008994 0.42082146 0.35008991 0.42917854 0.65084988 0.375 0.35008994
+		 0.37917852 0.65084982 0.375 0.65084982 0.47082147 0.35008997 0.47917858 0.65084988
+		 0.52082151 0.35008994 0.52917856 0.65084988 0.5708214 0.35009 0.57917857 0.65084988
+		 0.42345968 0.33135056 0.42082149 0.65084988 0.37636879 0.3334378 0.37917838 0.35008994
+		 0.6236313 0.66750205 0.62082165 0.65084988 0.47917807 0.35009 0.4708215 0.65084988
+		 0.52917862 0.35008994 0.52082151 0.65084988 0.57917857 0.35009003 0.57082152 0.65084988
+		 0.37917852 0.65084982 0.37917838 0.35008994 0.42082146 0.35008991 0.42082149 0.65084988
+		 0.42917854 0.65084988 0.42917871 0.35008994 0.47082147 0.35008997 0.4708215 0.65084988
+		 0.47917858 0.65084988 0.47917807 0.35009 0.52082151 0.35008994 0.52082151 0.65084988
+		 0.52917856 0.65084988 0.52917862 0.35008994 0.5708214 0.35009 0.57082152 0.65084988
+		 0.57917857 0.65084988 0.57917857 0.35009003 0.62082154 0.35008994 0.62082165 0.65084988
+		 0.375 0.35008994 0.375 0.65084982 0.62191015 0.31250027 0.62082154 0.35008994 0.57917857
+		 0.35009003 0.57808989 0.31250036 0.37808985 0.68843955 0.37917852 0.65084982 0.42082149
+		 0.65084988 0.42191017 0.68843943 0.42808989 0.68843955 0.42917854 0.65084988 0.4708215
+		 0.65084988 0.47191018 0.68843949 0.47808987 0.68843949 0.47917858 0.65084988 0.52082151
+		 0.65084988 0.52191019 0.68843955 0.52808988 0.68843961 0.52917856 0.65084988 0.57082152
+		 0.65084988 0.5719102 0.68843943 0.37917838 0.35008994 0.42082146 0.35008991 0.42917871
+		 0.35008994 0.47082147 0.35008997 0.47917807 0.35009 0.52082151 0.35008994 0.52917862
+		 0.35008994 0.5708214 0.35009 0.57917857 0.65084988 0.62082165 0.65084988 0.38921458
+		 0.075810976 0.54231632 0.026146106 0.5 0.15000001 0.38921455 0.23678449 0.54231626
+		 0.28645724 0.63693833 0.15629414 0.54231626 0.97403741 0.38921455 0.92437255 0.5
+		 0.83749998 0.38921455 0.76330382 0.54231632 0.71348494 0.63693833 0.84379411 0.42808989
+		 0.31250036 0.47191012 0.31250024 0.37808985 0.31250042 0.42191017 0.31250021 0.62191021
+		 0.68843949 0.57808989 0.68843961 0.47808987 0.31250054 0.52191031 0.31250021 0.52808988
+		 0.31250024 0.57191014 0.3125003 0.375 0.35008994 0.375 0.65084982 0.42345968 0.33135056
+		 0.37636879 0.3334378 0.6236313 0.66750205;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 84 ".vt[0:83]"  -300 40 100 -320 40 100 -300 45.41648865 83.32977295
+		 -300 25.81945992 89.69723511 -300 25.81945801 110.30276489 -300 45.41648483 116.67022705
+		 -300 57.5281105 100 -320 45.41648865 83.32977295 -320 25.81945992 89.69723511 -320 25.81945801 110.30276489
+		 -320 45.41648483 116.67022705 -320 57.5281105 100 -301.99978638 25.68835068 87.63711548
+		 -301.99978638 23.81966019 90.20915222 -318.00021362305 23.81966019 90.20915222 -318.00021362305 25.68835068 87.63711548
+		 -301.99978638 47.33525848 82.56847382 -301.99978638 44.31165314 81.58604431 -318.00021362305 44.31165314 81.58604431
+		 -318.00021362305 47.33525848 82.56847382 -301.99978638 23.81965828 109.79084778 -301.99978638 25.68834877 112.36288452
+		 -318.00021362305 25.68834877 112.36288452 -318.00021362305 23.81965828 109.79084778
+		 -301.99978638 44.31164932 118.41395569 -301.99978638 47.33525467 117.43152618 -318.00021362305 47.33525467 117.43152618
+		 -318.00021362305 44.31164932 118.41395569 -301.99978638 58.84508514 101.58960724
+		 -301.99978638 58.84508514 98.41039276 -318.00021362305 58.84508514 98.41039276 -318.00021362305 58.84508514 101.58960724
+		 -304.69308472 35.78524399 96.35915375 -304.69308472 35.23491669 97.1166153 -360.68667603 35.23491669 97.1166153
+		 -360.68667603 35.78524399 96.35915375 -304.69308472 42.1602211 94.86644745 -304.69308472 41.26977539 94.57712555
+		 -360.68667603 41.26977539 94.57712555 -360.68667603 42.1602211 94.86644745 -304.69308472 35.23491669 102.8833847
+		 -304.69308472 35.78524399 103.64084625 -360.68667603 35.78524399 103.64084625 -360.68667603 35.23491669 102.8833847
+		 -304.69308472 41.26977158 105.42287445 -304.69308472 42.1602211 105.13355255 -360.68667603 42.1602211 105.13355255
+		 -360.68667603 41.26977158 105.42287445 -304.69308472 45.54984283 100.46813965 -304.69308472 45.54984283 99.53186035
+		 -360.68667603 45.54984283 99.53186035 -360.68667603 45.54984283 100.46813965 -350 40 100
+		 -370 40 100 -350 45.41648865 83.32977295 -350 25.81945992 89.69723511 -350 25.81945801 110.30276489
+		 -350 45.41648483 116.67022705 -350 57.5281105 100 -370 45.41648865 83.32977295 -370 25.81945992 89.69723511
+		 -370 25.81945801 110.30276489 -370 45.41648483 116.67022705 -370 57.5281105 100 -351.99978638 25.68835068 87.63711548
+		 -351.99978638 23.81966019 90.20915222 -368.00021362305 23.81966019 90.20915222 -368.00021362305 25.68835068 87.63711548
+		 -351.99978638 47.33525848 82.56847382 -351.99978638 44.31165314 81.58604431 -368.00021362305 44.31165314 81.58604431
+		 -368.00021362305 47.33525848 82.56847382 -351.99978638 23.81965828 109.79084778 -351.99978638 25.68834877 112.36288452
+		 -368.00021362305 25.68834877 112.36288452 -368.00021362305 23.81965828 109.79084778
+		 -351.99978638 44.31164932 118.41395569 -351.99978638 47.33525467 117.43152618 -368.00021362305 47.33525467 117.43152618
+		 -368.00021362305 44.31164932 118.41395569 -351.99978638 58.84508514 101.58960724
+		 -351.99978638 58.84508514 98.41039276 -368.00021362305 58.84508514 98.41039276 -368.00021362305 58.84508514 101.58960724;
+	setAttr -s 170 ".ed";
+	setAttr ".ed[0:165]"  2 3 0 6 2 0 3 4 0 4 5 0 5 6 0 7 11 0 8 7 0 9 8 0 10 9 0
+		 11 10 0 2 0 1 0 3 1 0 4 1 0 5 1 0 6 1 8 1 1 1 7 1 9 1 1 10 1 1 11 1 1 12 17 0 3 12 0
+		 3 13 0 14 23 0 8 14 0 15 8 0 16 29 0 2 16 0 2 17 0 18 15 0 7 18 0 7 19 0 20 13 0
+		 4 20 0 4 21 0 22 27 0 9 22 0 23 9 0 24 21 0 5 24 0 5 25 0 26 31 0 10 26 0 27 10 0
+		 28 25 0 6 28 0 29 6 0 30 19 0 11 30 0 31 11 0 12 15 0 14 13 0 16 19 0 18 17 0 20 23 0
+		 22 21 0 24 27 0 26 25 0 28 31 0 30 29 0 12 13 1 14 15 1 16 17 1 18 19 1 20 21 1 22 23 1
+		 24 25 1 26 27 1 28 29 1 30 31 1 32 37 0 34 43 0 36 49 0 38 35 0 40 33 0 42 47 0 44 41 0
+		 46 51 0 48 45 0 50 39 0 32 35 0 34 33 0 36 39 0 38 37 0 40 43 0 42 41 0 44 47 0 46 45 0
+		 48 51 0 50 49 0 32 33 1 34 35 1 36 37 1 38 39 1 40 41 1 42 43 1 44 45 1 46 47 1 48 49 1
+		 50 51 1 54 55 0 58 54 0 55 56 0 56 57 0 57 58 0 59 63 0 60 59 0 61 60 0 62 61 0 63 62 0
+		 54 52 1 52 55 1 52 56 1 52 57 1 52 58 1 60 53 1 53 59 1 61 53 1 62 53 1 63 53 1 64 69 0
+		 55 64 0 55 65 0 66 75 0 60 66 0 67 60 0 68 81 0 54 68 0 54 69 0 70 67 0 59 70 0 59 71 0
+		 72 65 0 56 72 0 56 73 0 74 79 0 61 74 0 75 61 0 76 73 0 57 76 0 57 77 0 78 83 0 62 78 0
+		 79 62 0 80 77 0 58 80 0 81 58 0 82 71 0 63 82 0 83 63 0 64 67 0 66 65 0 68 71 0 70 69 0
+		 72 75 0 74 73 0 76 79 0 78 77 0 80 83 0 82 81 0 64 65 1 66 67 1 68 69 1 70 71 1 72 73 1
+		 74 75 1;
+	setAttr ".ed[166:169]" 76 77 1 78 79 1 80 81 1 82 83 1;
+	setAttr -s 90 -ch 320 ".fc[0:89]" -type "polyFaces" 
+		f 4 27 26 46 1
+		mu 0 4 27 33 55 28
+		f 4 30 29 25 6
+		mu 0 4 14 37 46 15
+		f 4 24 23 37 7
+		mu 0 4 19 35 52 20
+		f 4 36 35 43 8
+		mu 0 4 23 40 54 24
+		f 4 42 41 49 9
+		mu 0 4 31 42 56 32
+		f 4 53 -21 50 -30
+		mu 0 4 37 48 34 46
+		f 4 51 -33 54 -24
+		mu 0 4 35 16 39 52
+		f 4 55 -39 56 -36
+		mu 0 4 40 51 41 54
+		f 4 57 -45 58 -42
+		mu 0 4 42 53 43 56
+		f 4 59 -27 52 -48
+		mu 0 4 44 55 33 50
+		f 3 -1 10 11
+		mu 0 3 1 0 4
+		f 3 -3 -12 12
+		mu 0 3 2 1 4
+		f 3 -4 -13 13
+		mu 0 3 3 2 4
+		f 3 -5 -14 14
+		mu 0 3 5 3 4
+		f 3 -2 -15 -11
+		mu 0 3 0 5 4
+		f 3 -7 15 16
+		mu 0 3 10 6 11
+		f 3 -8 17 -16
+		mu 0 3 6 7 11
+		f 3 -9 18 -18
+		mu 0 3 7 8 11
+		f 3 -10 19 -19
+		mu 0 3 8 9 11
+		f 3 -6 -17 -20
+		mu 0 3 9 10 11
+		f 4 -23 2 33 32
+		mu 0 4 16 17 18 39
+		f 4 -29 0 21 20
+		mu 0 4 48 12 13 34
+		f 4 -32 5 48 47
+		mu 0 4 50 29 30 44
+		f 4 -35 3 39 38
+		mu 0 4 51 21 22 41
+		f 4 -41 4 45 44
+		mu 0 4 53 25 26 43
+		f 4 60 -52 61 -51
+		mu 0 4 34 16 35 46
+		f 4 62 -54 63 -53
+		mu 0 4 36 48 37 38
+		f 4 64 -56 65 -55
+		mu 0 4 39 51 40 52
+		f 4 66 -58 67 -57
+		mu 0 4 41 53 42 54
+		f 4 68 -60 69 -59
+		mu 0 4 43 55 44 56
+		f 3 -22 22 -61
+		mu 0 3 34 13 45
+		f 3 -25 -26 -62
+		mu 0 3 35 15 46
+		f 3 -28 28 -63
+		mu 0 3 47 12 48
+		f 3 -31 31 -64
+		mu 0 3 49 29 50
+		f 3 -34 34 -65
+		mu 0 3 39 21 51
+		f 3 -37 -38 -66
+		mu 0 3 40 20 52
+		f 3 -40 40 -67
+		mu 0 3 41 25 53
+		f 3 -43 -44 -68
+		mu 0 3 42 24 54
+		f 3 -46 -47 -69
+		mu 0 3 43 28 55
+		f 3 -49 -50 -70
+		mu 0 3 44 32 56
+		f 4 83 -71 80 -74
+		mu 0 4 57 58 59 60
+		f 4 81 -75 84 -72
+		mu 0 4 61 62 63 64
+		f 4 85 -77 86 -76
+		mu 0 4 65 66 67 68
+		f 4 87 -79 88 -78
+		mu 0 4 69 70 71 72
+		f 4 89 -73 82 -80
+		mu 0 4 73 74 75 76
+		f 4 90 -82 91 -81
+		mu 0 4 59 62 61 60
+		f 4 92 -84 93 -83
+		mu 0 4 77 58 57 78
+		f 4 94 -86 95 -85
+		mu 0 4 63 66 65 64
+		f 4 96 -88 97 -87
+		mu 0 4 67 70 69 68
+		f 4 98 -90 99 -89
+		mu 0 4 71 74 73 72
+		f 4 127 126 146 101
+		mu 0 4 79 80 81 82
+		f 4 130 129 125 106
+		mu 0 4 83 84 85 86
+		f 4 124 123 137 107
+		mu 0 4 87 88 89 90
+		f 4 136 135 143 108
+		mu 0 4 91 92 93 94
+		f 4 142 141 149 109
+		mu 0 4 95 96 97 98
+		f 4 153 -121 150 -130
+		mu 0 4 84 99 100 85
+		f 4 151 -133 154 -124
+		mu 0 4 88 101 102 89
+		f 4 155 -139 156 -136
+		mu 0 4 92 103 104 93
+		f 4 157 -145 158 -142
+		mu 0 4 96 105 106 97
+		f 4 159 -127 152 -148
+		mu 0 4 107 81 80 108
+		f 3 -101 110 111
+		mu 0 3 109 110 111
+		f 3 -103 -112 112
+		mu 0 3 112 109 111
+		f 3 -104 -113 113
+		mu 0 3 113 112 111
+		f 3 -105 -114 114
+		mu 0 3 114 113 111
+		f 3 -102 -115 -111
+		mu 0 3 110 114 111
+		f 3 -107 115 116
+		mu 0 3 115 116 117
+		f 3 -108 117 -116
+		mu 0 3 116 118 117
+		f 3 -109 118 -118
+		mu 0 3 118 119 117
+		f 3 -110 119 -119
+		mu 0 3 119 120 117
+		f 3 -106 -117 -120
+		mu 0 3 120 115 117
+		f 4 -123 102 133 132
+		mu 0 4 101 121 122 102
+		f 4 -129 100 121 120
+		mu 0 4 99 123 124 100
+		f 4 -132 105 148 147
+		mu 0 4 108 125 126 107
+		f 4 -135 103 139 138
+		mu 0 4 103 127 128 104
+		f 4 -141 104 145 144
+		mu 0 4 105 129 130 106
+		f 4 160 -152 161 -151
+		mu 0 4 100 101 88 85
+		f 4 162 -154 163 -153
+		mu 0 4 131 99 84 132
+		f 4 164 -156 165 -155
+		mu 0 4 102 103 92 89
+		f 4 166 -158 167 -157
+		mu 0 4 104 105 96 93
+		f 4 168 -160 169 -159
+		mu 0 4 106 81 107 97
+		f 3 -122 122 -161
+		mu 0 3 100 124 133
+		f 3 -125 -126 -162
+		mu 0 3 88 86 85
+		f 3 -128 128 -163
+		mu 0 3 134 123 99
+		f 3 -131 131 -164
+		mu 0 3 135 125 108
+		f 3 -134 134 -165
+		mu 0 3 102 127 103
+		f 3 -137 -138 -166
+		mu 0 3 92 90 89
+		f 3 -140 140 -167
+		mu 0 3 104 129 105
+		f 3 -143 -144 -168
+		mu 0 3 96 94 93
+		f 3 -146 -147 -169
+		mu 0 3 106 82 81
+		f 3 -149 -150 -170
+		mu 0 3 107 98 97;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "BlueCow";
+	rename -uid "D366D60E-4FEA-8E99-218B-C8A806F2489D";
+	setAttr ".t" -type "double3" -392.03891604166887 115.24212426407257 30 ;
+createNode mesh -n "BlueCowShape" -p "BlueCow";
+	rename -uid "BF8986A8-46EC-2EF9-A936-BABBBBF33BE6";
+	setAttr -k off ".v";
+	setAttr -s 3 ".iog[0].og";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[36:47]";
+	setAttr ".iog[0].og[1].gcl" -type "componentList" 2 "f[0:17]" "f[24:35]";
+	setAttr ".iog[0].og[2].gcl" -type "componentList" 1 "f[18:23]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999998509883881 0.49859020113945007 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 62 ".uvst[0].uvsp[0:61]" -type "float2" 0.57812506 0.020933539
+		 0.42187503 0.020933509 0.34375 0.15624997 0.421875 0.29156646 0.578125 0.29156649
+		 0.65625 0.15625 0.375 0.3125 0.41666666 0.3125 0.45833331 0.3125 0.49999997 0.3125
+		 0.54166663 0.3125 0.58333331 0.3125 0.625 0.3125 0.375 0.68843985 0.41666666 0.68843985
+		 0.45833331 0.68843985 0.49999997 0.68843985 0.54166663 0.68843985 0.58333331 0.68843985
+		 0.625 0.68843985 0.57812506 0.70843351 0.42187503 0.70843351 0.34375 0.84375 0.421875
+		 0.97906649 0.578125 0.97906649 0.65625 0.84375 0.5 0.15000001 0.5 0.83749998 0.625
+		 0.65084583 0.375 0.65084583 0.41666666 0.65084583 0.45833331 0.65084583 0.49999997
+		 0.65084583 0.54166663 0.65084583 0.58333331 0.65084583 0.625 0.34633458 0.37499997
+		 0.34633458 0.41666663 0.34633458 0.45833328 0.34633458 0.49999994 0.34633458 0.54166663
+		 0.34633458 0.58333331 0.34633458 0.578125 0.97906649 0.421875 0.97906649 0.34375
+		 0.84375 0.42187503 0.70843351 0.57812506 0.70843351 0.65625 0.84375 0.625 0.55937189
+		 0.375 0.55937189 0.58333331 0.55937189 0.54166663 0.55937189 0.49999994 0.55937189
+		 0.45833331 0.55937189 0.41666663 0.55937189 0.625 0.45539927 0.375 0.45539927 0.41666663
+		 0.45539927 0.45833331 0.45539927 0.49999994 0.45539927 0.54166663 0.45539927 0.58333331
+		 0.45539927;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 13 ".pt";
+	setAttr ".pt[32]" -type "float3" 0 2.9050305 0 ;
+	setAttr ".pt[34]" -type "float3" 0 2.9050326 0 ;
+	setAttr ".pt[35]" -type "float3" 0 2.9050326 0 ;
+	setAttr ".pt[37]" -type "float3" 0 2.9050305 0 ;
+	setAttr ".pt[38]" -type "float3" 0 -2.9050305 0 ;
+	setAttr ".pt[39]" -type "float3" 0 -2.9050305 0 ;
+	setAttr ".pt[41]" -type "float3" 0 -2.9050326 0 ;
+	setAttr ".pt[42]" -type "float3" 0 -2.9050326 0 ;
+	setAttr -s 44 ".vt[0:43]"  2.98864746 -15 -5.1764679 -2.98864746 -15 -5.1764679
+		 -5.9772644 -15 0 -2.98864746 -15 5.1764679 2.98864746 -15 5.1764679 5.9772644 -15 0
+		 3.31204224 15 -5.73661804 -3.31204224 15 -5.73662567 -6.62408447 15 0 -3.31204224 15 5.73661804
+		 3.31204224 15 5.73662567 6.62408447 15 0 0 -15 0 3.5 13.71480751 -6.062175751 -3.5 13.71480751 -6.062179565
+		 -7 13.71480751 0 -3.5 13.71480751 6.062179565 3.5 13.71480751 6.062179565 7 13.71480751 0
+		 3.5 -13.87421227 -6.062175751 -3.5 -13.87421227 -6.062179565 -7 -13.87421227 0 -3.5 -13.87421227 6.062179565
+		 3.5 -13.87421227 6.062179565 7 -13.87421227 0 2.54061365 14.39848328 -4.40046597
+		 -2.54061365 14.39848328 -4.40047216 0 14.39848518 0 -5.081227303 14.39848328 0 -2.54061365 14.39848328 4.40046597
+		 2.54061365 14.39848328 4.40047216 5.081227303 14.39848328 0 3.5 5.42717552 -6.062175751
+		 7 5.42717552 0 3.5 5.42717552 6.062179565 -3.5 5.42717552 6.062179565 -7 5.42717552 0
+		 -3.5 5.42717552 -6.062179565 3.5 -3.99284697 -6.062175751 -3.5 -3.99284697 -6.062179565
+		 -7 -3.99284697 0 -3.5 -3.99284697 6.062179565 3.5 -3.99284697 6.062179565 7 -3.99284697 0;
+	setAttr -s 90 ".ed[0:89]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 0 0 6 7 0
+		 7 8 0 8 9 0 9 10 0 10 11 0 11 6 0 0 19 0 1 20 0 2 21 0 3 22 0 4 23 0 5 24 0 12 0 1
+		 12 1 1 12 2 1 12 3 1 12 4 1 12 5 1 13 6 0 14 7 0 15 8 0 16 9 0 17 10 0 18 11 0 13 14 1
+		 14 15 1 15 16 1 16 17 1 17 18 1 18 13 1 19 38 0 20 39 0 21 40 0 22 41 0 23 42 0 24 43 0
+		 19 20 1 20 21 1 21 22 1 22 23 1 23 24 1 24 19 1 6 25 0 7 26 0 25 26 0 26 27 1 25 27 1
+		 8 28 0 26 28 0 28 27 1 9 29 0 28 29 0 29 27 1 10 30 0 29 30 0 30 27 1 11 31 0 30 31 0
+		 31 27 1 31 25 0 32 13 0 33 18 0 34 17 0 35 16 0 36 15 0 37 14 0 32 33 1 33 34 1 34 35 1
+		 35 36 1 36 37 1 37 32 1 38 32 0 39 37 0 40 36 0 41 35 0 42 34 0 43 33 0 38 39 1 39 40 1
+		 40 41 1 41 42 1 42 43 1 43 38 1;
+	setAttr -s 48 -ch 180 ".fc[0:47]" -type "polyFaces" 
+		f 4 30 25 -7 -25
+		mu 0 4 29 30 14 13
+		f 4 31 26 -8 -26
+		mu 0 4 30 31 15 14
+		f 4 32 27 -9 -27
+		mu 0 4 31 32 16 15
+		f 4 33 28 -10 -28
+		mu 0 4 32 33 17 16
+		f 4 34 29 -11 -29
+		mu 0 4 33 34 18 17
+		f 4 35 24 -12 -30
+		mu 0 4 34 28 19 18
+		f 3 -1 -19 19
+		mu 0 3 1 0 26
+		f 3 -2 -20 20
+		mu 0 3 2 1 26
+		f 3 -3 -21 21
+		mu 0 3 3 2 26
+		f 3 -4 -22 22
+		mu 0 3 4 3 26
+		f 3 -5 -23 23
+		mu 0 3 5 4 26
+		f 3 -6 -24 18
+		mu 0 3 0 5 26
+		f 3 50 51 -53
+		mu 0 3 42 43 27
+		f 3 54 55 -52
+		mu 0 3 43 44 27
+		f 3 57 58 -56
+		mu 0 3 44 45 27
+		f 3 60 61 -59
+		mu 0 3 45 46 27
+		f 3 63 64 -62
+		mu 0 3 46 47 27
+		f 3 65 52 -65
+		mu 0 3 47 42 27
+		f 4 84 79 77 -79
+		mu 0 4 56 57 54 49
+		f 4 85 80 76 -80
+		mu 0 4 57 58 53 54
+		f 4 86 81 75 -81
+		mu 0 4 58 59 52 53
+		f 4 87 82 74 -82
+		mu 0 4 59 60 51 52
+		f 4 88 83 73 -83
+		mu 0 4 60 61 50 51
+		f 4 89 78 72 -84
+		mu 0 4 61 55 48 50
+		f 4 0 13 -43 -13
+		mu 0 4 6 7 37 36
+		f 4 1 14 -44 -14
+		mu 0 4 7 8 38 37
+		f 4 2 15 -45 -15
+		mu 0 4 8 9 39 38
+		f 4 3 16 -46 -16
+		mu 0 4 9 10 40 39
+		f 4 4 17 -47 -17
+		mu 0 4 10 11 41 40
+		f 4 5 12 -48 -18
+		mu 0 4 11 12 35 41
+		f 4 6 49 -51 -49
+		mu 0 4 24 23 43 42
+		f 4 7 53 -55 -50
+		mu 0 4 23 22 44 43
+		f 4 8 56 -58 -54
+		mu 0 4 22 21 45 44
+		f 4 9 59 -61 -57
+		mu 0 4 21 20 46 45
+		f 4 10 62 -64 -60
+		mu 0 4 20 25 47 46
+		f 4 11 48 -66 -63
+		mu 0 4 25 24 42 47
+		f 4 -73 66 -36 -68
+		mu 0 4 50 48 28 34
+		f 4 -74 67 -35 -69
+		mu 0 4 51 50 34 33
+		f 4 -75 68 -34 -70
+		mu 0 4 52 51 33 32
+		f 4 -76 69 -33 -71
+		mu 0 4 53 52 32 31
+		f 4 -77 70 -32 -72
+		mu 0 4 54 53 31 30
+		f 4 -78 71 -31 -67
+		mu 0 4 49 54 30 29
+		f 4 42 37 -85 -37
+		mu 0 4 36 37 57 56
+		f 4 43 38 -86 -38
+		mu 0 4 37 38 58 57
+		f 4 44 39 -87 -39
+		mu 0 4 38 39 59 58
+		f 4 45 40 -88 -40
+		mu 0 4 39 40 60 59
+		f 4 46 41 -89 -41
+		mu 0 4 40 41 61 60
+		f 4 47 36 -90 -42
+		mu 0 4 41 35 55 61;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AF93A395-4472-EED1-6E8D-89B70391B979";
-	setAttr -s 21 ".lnk";
-	setAttr -s 21 ".slnk";
+	rename -uid "0AD5954B-4E3F-8C2F-C046-58978C11CB0A";
+	setAttr -s 64 ".lnk";
+	setAttr -s 64 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2129B221-4541-35F8-0F0B-DC89AFED870A";
+	rename -uid "1D87949E-40D4-5321-943B-5CBF47C24839";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8A611B1D-427E-D452-CCF1-DF94CC7E8D16";
+	rename -uid "C05BB6BC-46E9-5D70-EA67-CCA45360D66F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "65B869CA-4D8E-DFE0-6F96-0DA215DFFB54";
+	rename -uid "0711F72E-45A0-46ED-3537-7195637D9BDC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "72D886B4-432F-68D3-6DEA-F4A637A6D292";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "903B6BFC-4F03-0E93-FE7C-4B8A07D739FB";
+	rename -uid "AF83F337-44F4-85A0-973F-FC9E06DFE203";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5BB81AFB-42F9-0BF9-C751-F08337744EF5";
 	setAttr ".g" yes;
@@ -7565,12 +8111,11 @@ createNode gameFbxExporter -n "gameExporterPreset1";
 	setAttr ".ils" yes;
 	setAttr ".ilu" yes;
 	setAttr ".esi" 2;
-	setAttr ".mfm" 2;
 	setAttr ".ebm" yes;
 	setAttr ".inc" yes;
 	setAttr ".fv" -type "string" "FBX201800";
-	setAttr ".exp" -type "string" "E:/Users/camer/Documents/Repos/basement-dwellers-game-jam/Assets/StaticMeshes";
-	setAttr ".exf" -type "string" "SM_";
+	setAttr ".exp" -type "string" "C:/Users/katrongle/Desktop/Character Art/robotLady//data/LOW";
+	setAttr ".exf" -type "string" "characterPosed";
 createNode gameFbxExporter -n "gameExporterPreset2";
 	rename -uid "9E77C72F-469D-74CE-91CC-CAA145465049";
 	setAttr ".pn" -type "string" "Anim Default";
@@ -7617,7 +8162,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 652\n            -height 327\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1168\n            -height 702\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1115\n            -height 702\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
@@ -7645,8 +8190,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
 		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1168\\n    -height 702\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1168\\n    -height 702\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1115\\n    -height 702\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1115\\n    -height 702\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 10 -size 1000 -divisions 1 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -8219,20 +8764,11 @@ createNode shadingEngine -n "lambert12SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo11";
 	rename -uid "73D506B2-43FE-0B32-4D75-F89DDE3F0AE9";
-createNode groupId -n "groupId25";
-	rename -uid "1381DB71-4BC7-6CEC-8FF4-CB8F70B5E0C9";
-	setAttr ".ihi" 0;
 createNode groupId -n "groupId51";
 	rename -uid "0265195D-4A7C-3516-C4E9-2AB3A1505967";
 	setAttr ".ihi" 0;
 createNode groupId -n "groupId52";
 	rename -uid "336F21AE-406F-E64F-7906-6F88BA242A32";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId53";
-	rename -uid "EA245009-4C58-3B75-FB24-B2BFF99D0665";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId54";
-	rename -uid "20B9D88F-4E89-22BD-7BAA-01A3B8555D7D";
 	setAttr ".ihi" 0;
 createNode groupId -n "groupId55";
 	rename -uid "7A43951B-4964-664B-697A-F291F729CB5B";
@@ -8803,6 +9339,647 @@ createNode groupId -n "groupId83";
 createNode groupId -n "groupId84";
 	rename -uid "1B7C3F67-494F-7528-2CA1-0AAEFA3D6B5B";
 	setAttr ".ihi" 0;
+createNode shadingEngine -n "Backbox_low_defaultMat";
+	rename -uid "F7A01EFE-4EFB-334F-684D-A39EFA3A23FF";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Backbox_low_materialInfo1";
+	rename -uid "E97F2618-4043-1056-1478-E6B60DDBE931";
+createNode lambert -n "Backbox_low_defaultMat1";
+	rename -uid "C442E263-4ECE-7F2D-FACE-6EB129C52347";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Backbox_low_defaultMat1F";
+	rename -uid "25E29739-477D-BC35-15E8-A4AA0A566B01";
+	setAttr ".ftn" -type "string" "Backbox_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Backbox_low_defaultMat1P2D";
+	rename -uid "C83E1131-49A6-EAED-100C-AABFA9372EE7";
+createNode shadingEngine -n "Chestarmour_low_defaultMat";
+	rename -uid "5FAC0D1E-4FCA-3108-8472-44B83BA2DB83";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Chestarmour_low_materialInfo1";
+	rename -uid "220AF0F6-4781-9135-5223-FBAEEA1CAA37";
+createNode lambert -n "Chestarmour_low_defaultMat1";
+	rename -uid "040C33A0-4F02-44ED-8888-85AE56DA4277";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Chestarmour_low_defaultMat1F";
+	rename -uid "65213FBF-4556-0971-81D8-2CBC826D6916";
+	setAttr ".ftn" -type "string" "Chestarmour_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Chestarmour_low_defaultMat1P2D";
+	rename -uid "4E4F5FAA-4EA4-02B1-64E0-008D923778D2";
+createNode shadingEngine -n "Cuerpo_low_defaultMat";
+	rename -uid "98C5B143-4054-FC88-A479-A085EDF84C95";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Cuerpo_low_materialInfo1";
+	rename -uid "6CC999D2-4A65-F698-60BF-EFBE66A9E932";
+createNode lambert -n "Cuerpo_low_defaultMat1";
+	rename -uid "33D31D2D-4307-8DE3-FF2D-5F82E86BD0C4";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Cuerpo_low_defaultMat1F";
+	rename -uid "6C4A9347-4E31-7D92-7860-AC8ADCCDA426";
+	setAttr ".ftn" -type "string" "Cuerpo_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Cuerpo_low_defaultMat1P2D";
+	rename -uid "58E8D40D-49D1-C925-3CB6-EF9EC39253EA";
+createNode shadingEngine -n "Eyelashes_low_defaultMat";
+	rename -uid "76B35FE1-48AE-4D9B-26C0-9D8B2364ECFB";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Eyelashes_low_materialInfo1";
+	rename -uid "A0A6153E-4339-EF24-F0AB-3FA73FA75C38";
+createNode lambert -n "Eyelashes_low_defaultMat1";
+	rename -uid "8C7C1731-4D97-3DDE-5508-6E965E424A32";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Eyelashes_low_defaultMat1F";
+	rename -uid "7673F628-417D-2BC9-DB1C-D098773E2C6B";
+	setAttr ".ftn" -type "string" "Eyelashes_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Eyelashes_low_defaultMat1P2D";
+	rename -uid "C69F73E0-4FB2-D98C-7C35-B3A227F4D2FD";
+createNode shadingEngine -n "Eyes_low_copy2_defaultMat";
+	rename -uid "0BB868AE-433A-5891-0FBA-18B149E653C6";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Eyes_low_copy2_materialInfo1";
+	rename -uid "CBCA80FA-4114-30D1-0073-6BBFDBEFB12F";
+createNode lambert -n "Eyes_low_copy2_defaultMat1";
+	rename -uid "CC48531E-4859-F733-E504-D7B23C3035A5";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Eyes_low_copy2_defaultMat1F";
+	rename -uid "DE4C0E63-4AEA-81FF-709F-868658B1C944";
+	setAttr ".ftn" -type "string" "Eyes_low_copy2.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Eyes_low_copy2_defaultMat1P2D";
+	rename -uid "BB5E0AE7-4A0C-F06F-8442-2AB6A35C6E39";
+createNode shadingEngine -n "Eyes_low_copy3_defaultMat";
+	rename -uid "E1FB1981-4775-9420-4A55-E19E463800B3";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Eyes_low_copy3_materialInfo1";
+	rename -uid "5E5025BF-4A49-92E7-1693-E5A9D1D4A437";
+createNode lambert -n "Eyes_low_copy3_defaultMat1";
+	rename -uid "B3694B5A-487F-41A6-8183-E0B1D2565BAB";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Eyes_low_copy3_defaultMat1F";
+	rename -uid "D93B9ED1-466E-CC33-7AAD-2EBE55224ECD";
+	setAttr ".ftn" -type "string" "Eyes_low_copy3.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Eyes_low_copy3_defaultMat1P2D";
+	rename -uid "7E5ABA45-4BA4-8DA2-2ABF-48BA6D4C32EC";
+createNode shadingEngine -n "Head_low_defaultMat";
+	rename -uid "0858CDED-46C7-6C4C-16F9-8784A8C17B4B";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Head_low_materialInfo1";
+	rename -uid "47B3D57C-4DD1-E8A6-4BB0-D98A5B3FF50E";
+createNode lambert -n "Head_low_defaultMat1";
+	rename -uid "CC725292-4A43-A179-48C1-CB8C4EC072D4";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Head_low_defaultMat1F";
+	rename -uid "F093623D-4DAA-006F-6A93-1A97C0E340BD";
+	setAttr ".ftn" -type "string" "Head_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Head_low_defaultMat1P2D";
+	rename -uid "4CF540AE-4992-6A92-7D3E-30AFBD420E5B";
+createNode shadingEngine -n "Headback_low_defaultMat";
+	rename -uid "9E7FFD8B-4502-B1A7-4F1A-348E67BE23D0";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Headback_low_materialInfo1";
+	rename -uid "F6B5ED62-4987-EC18-658D-CDA2DA8323E8";
+createNode lambert -n "Headback_low_defaultMat1";
+	rename -uid "8C236728-45B6-F63F-982B-68A926B211D7";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Headback_low_defaultMat1F";
+	rename -uid "4AC075D5-457F-F81B-F969-F18EAB2144EF";
+	setAttr ".ftn" -type "string" "Headback_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Headback_low_defaultMat1P2D";
+	rename -uid "E5BB1551-4692-09DB-641B-D3B1D85248C6";
+createNode shadingEngine -n "Headbottom_low_defaultMat";
+	rename -uid "50FE623F-4AFE-73A0-EC89-94A6EF0417BD";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Headbottom_low_materialInfo1";
+	rename -uid "FC97DEF2-493D-E5E4-EBB5-F5AC4D7190C6";
+createNode lambert -n "Headbottom_low_defaultMat1";
+	rename -uid "967FCAD4-4163-66DE-23B9-718CD7B8A027";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Headbottom_low_defaultMat1F";
+	rename -uid "CF3D6C3F-47BF-F0F3-871B-609D73EB15BA";
+	setAttr ".ftn" -type "string" "Headbottom_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Headbottom_low_defaultMat1P2D";
+	rename -uid "0E5F5720-4D63-0868-0D73-278B03BED648";
+createNode shadingEngine -n "Headcylinder_low_defaultMat";
+	rename -uid "031433C9-4F3F-4EBB-7587-40B548F3A4A2";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Headcylinder_low_materialInfo1";
+	rename -uid "B207560A-4513-9805-EF27-98BB91787398";
+createNode lambert -n "Headcylinder_low_defaultMat1";
+	rename -uid "5B640780-4456-D622-8315-67903A715D68";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Headcylinder_low_defaultMat1F";
+	rename -uid "2870097B-46CC-5B91-09D2-248D7AEA69E9";
+	setAttr ".ftn" -type "string" "Headcylinder_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Headcylinder_low_defaultMat1P2D";
+	rename -uid "F96A95D1-44A4-187F-2A58-BEB549493FE7";
+createNode shadingEngine -n "Headsides_low_defaultMat";
+	rename -uid "83C1A370-4EF7-583B-9CFA-32A2C5A90346";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Headsides_low_materialInfo1";
+	rename -uid "3D562C30-4C27-D722-6B17-14937403DC9A";
+createNode lambert -n "Headsides_low_defaultMat1";
+	rename -uid "B7B08FE9-48DC-52F8-8A6E-8484BDED80B8";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Headsides_low_defaultMat1F";
+	rename -uid "5A0ABE1C-4100-3E08-8FCC-60829A9FB8AF";
+	setAttr ".ftn" -type "string" "Headsides_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Headsides_low_defaultMat1P2D";
+	rename -uid "04DA5285-4ED0-335C-E28A-5A90C39D4702";
+createNode shadingEngine -n "Headtop_low_defaultMat";
+	rename -uid "8E7524F1-4B1A-B2B0-A641-9481A62B9FF7";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Headtop_low_materialInfo1";
+	rename -uid "68465652-4D9A-2A44-4E65-4189762375B1";
+createNode lambert -n "Headtop_low_defaultMat1";
+	rename -uid "72BDDF38-4DE7-3025-CA47-3F84023E0D19";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Headtop_low_defaultMat1F";
+	rename -uid "366BD9C2-4348-ED81-EA6F-D6A827D04983";
+	setAttr ".ftn" -type "string" "Headtop_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Headtop_low_defaultMat1P2D";
+	rename -uid "BFC3DEA5-4017-2E66-C866-ED8E7A66DD11";
+createNode shadingEngine -n "Headvent_low_defaultMat";
+	rename -uid "DE4C1DA5-4CFD-445C-7B54-988D8D2B63F6";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Headvent_low_materialInfo1";
+	rename -uid "FED29B9D-4CAE-9575-E1B1-D9854D3D2DD5";
+createNode lambert -n "Headvent_low_defaultMat1";
+	rename -uid "47CB0012-48E0-0AE7-7981-1EBA969BEF71";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Headvent_low_defaultMat1F";
+	rename -uid "CB16A633-404D-E070-0D64-EFBE8EAFD2F9";
+	setAttr ".ftn" -type "string" "Headvent_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Headvent_low_defaultMat1P2D";
+	rename -uid "B9152095-432E-B193-01A7-0CAE932BC00C";
+createNode shadingEngine -n "Headtop_low_defaultMat2";
+	rename -uid "B3D642B6-41B0-56BA-EE7D-FC841706131A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Headtop_low_materialInfo2";
+	rename -uid "A37BB648-49B2-BC35-9D64-119C8B9B10B4";
+createNode lambert -n "Headtop_low_defaultMat3";
+	rename -uid "6C419EF9-41D9-E84E-A0D4-11B995194EC0";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Headtop_low_defaultMat1F1";
+	rename -uid "FBD67305-4926-4D32-DD2C-AAA8D122CD18";
+	setAttr ".ftn" -type "string" "Headtop_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Headtop_low_defaultMat1P2D1";
+	rename -uid "658B4BC6-46F9-E322-8DBF-909AC2446B92";
+createNode shadingEngine -n "Leglower_low_defaultMat";
+	rename -uid "8B3BD29E-452C-FADB-F02F-7FA21FFE5B5D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Leglower_low_materialInfo1";
+	rename -uid "BB595076-4204-FC37-C1AC-BD971157E5A3";
+createNode lambert -n "Leglower_low_defaultMat1";
+	rename -uid "D989708F-4D5B-7BD8-417B-BE8FCE13B777";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Leglower_low_defaultMat1F";
+	rename -uid "AA673367-43A8-D23E-5249-FD9771626256";
+	setAttr ".ftn" -type "string" "Leglower_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Leglower_low_defaultMat1P2D";
+	rename -uid "C58B1BF8-4B23-69A5-016D-058CD38DC7FB";
+createNode shadingEngine -n "Legupper_low_defaultMat";
+	rename -uid "E2ACC0E0-43AE-2762-469A-648D914117BC";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Legupper_low_materialInfo1";
+	rename -uid "061DF7CC-44FB-E807-730D-5CBB1682728E";
+createNode lambert -n "Legupper_low_defaultMat1";
+	rename -uid "0B5CF8A6-4315-4D2E-6973-5C8EBF4BAA4F";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Legupper_low_defaultMat1F";
+	rename -uid "ABCC8616-4A72-2145-A5E9-308B60D1B27B";
+	setAttr ".ftn" -type "string" "Legupper_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Legupper_low_defaultMat1P2D";
+	rename -uid "8F4B798E-4E36-B3C3-2D8D-7582DC7C8650";
+createNode shadingEngine -n "Neckarmour_low_defaultMat";
+	rename -uid "41186623-41CC-DBF5-BE95-A681327AAE5C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Neckarmour_low_materialInfo1";
+	rename -uid "D5E4A8D6-4C5A-5725-B24E-EEAFCAE60616";
+createNode lambert -n "Neckarmour_low_defaultMat1";
+	rename -uid "59E9D317-4BC6-801C-4548-B99CF113A0AD";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Neckarmour_low_defaultMat1F";
+	rename -uid "26638176-4C61-C9F0-FBDC-F3A9245D8C60";
+	setAttr ".ftn" -type "string" "Neckarmour_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Neckarmour_low_defaultMat1P2D";
+	rename -uid "CF1AB1DA-4B31-FCE5-B627-C089F61F3F78";
+createNode shadingEngine -n "Shoesbottom_low_defaultMat";
+	rename -uid "8F2F569F-4F41-39C4-9134-0C84124C88BC";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Shoesbottom_low_materialInfo1";
+	rename -uid "5EE90B42-4C38-EC42-2EC4-6CB18A85F8E5";
+createNode lambert -n "Shoesbottom_low_defaultMat1";
+	rename -uid "FFD8DA69-403E-3686-5F00-A3B9358D8B4C";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Shoesbottom_low_defaultMat1F";
+	rename -uid "708B9934-4C79-FDD0-4C39-C8902E53DF48";
+	setAttr ".ftn" -type "string" "Shoesbottom_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Shoesbottom_low_defaultMat1P2D";
+	rename -uid "B5617184-477F-1A8B-610D-57B4E9506FDB";
+createNode shadingEngine -n "Shoescontact_low_defaultMat";
+	rename -uid "971AC6D9-4F85-9E95-AD62-CB8F398E0790";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Shoescontact_low_materialInfo1";
+	rename -uid "FDF4908C-412B-6E78-8087-FCA460566B6A";
+createNode lambert -n "Shoescontact_low_defaultMat1";
+	rename -uid "C4E0454D-4FAE-C5BE-6E2E-08863C773D38";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Shoescontact_low_defaultMat1F";
+	rename -uid "DCA7E960-4C55-BC08-455E-B4AAFD59DE30";
+	setAttr ".ftn" -type "string" "Shoescontact_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Shoescontact_low_defaultMat1P2D";
+	rename -uid "A2ABEAE3-4752-05A3-E981-5FA67AE4851E";
+createNode shadingEngine -n "Shoesheel_low_defaultMat";
+	rename -uid "C8875A4F-408F-94F7-2BA6-5E98930D99D1";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Shoesheel_low_materialInfo1";
+	rename -uid "72BF1F5B-41C7-3418-EB46-D79ABB37FBB8";
+createNode lambert -n "Shoesheel_low_defaultMat1";
+	rename -uid "B12EFE8A-4C95-6B22-9C35-09A6E33BA65D";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Shoesheel_low_defaultMat1F";
+	rename -uid "7C244D12-4215-81A3-BC9F-45B708E75182";
+	setAttr ".ftn" -type "string" "Shoesheel_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Shoesheel_low_defaultMat1P2D";
+	rename -uid "E50BBF9C-492D-B960-D6E6-3DA406157C9F";
+createNode shadingEngine -n "Shoesmiddle_low_defaultMat";
+	rename -uid "EEAAF063-4642-52E9-8556-B9A9DA0952DD";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Shoesmiddle_low_materialInfo1";
+	rename -uid "31599253-46A5-BAED-D1D9-51ACC82EDF35";
+createNode lambert -n "Shoesmiddle_low_defaultMat1";
+	rename -uid "1ACB6581-4687-CDB0-D47E-14AB554A7749";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Shoesmiddle_low_defaultMat1F";
+	rename -uid "9DEA454B-4A05-8981-DEF3-C7A0511A00C4";
+	setAttr ".ftn" -type "string" "Shoesmiddle_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Shoesmiddle_low_defaultMat1P2D";
+	rename -uid "221FEA2D-49B1-73C0-8328-FD831CA12CC2";
+createNode shadingEngine -n "Shoessoles_low_defaultMat";
+	rename -uid "2DBF017C-4CED-30D2-2D86-4999B6E96722";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Shoessoles_low_materialInfo1";
+	rename -uid "9F87D668-4DCF-8F3F-B0C8-A9879FFA7207";
+createNode lambert -n "Shoessoles_low_defaultMat1";
+	rename -uid "5DDAE76B-4DB5-77A6-2F52-C6835412B6BC";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Shoessoles_low_defaultMat1F";
+	rename -uid "5E10ECC6-49B8-519E-255C-01A580B2715B";
+	setAttr ".ftn" -type "string" "Shoessoles_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Shoessoles_low_defaultMat1P2D";
+	rename -uid "7C45AD12-4EBC-2142-A4A4-70AF84112F78";
+createNode shadingEngine -n "Shoesstrapsfront_low_defaultMat";
+	rename -uid "183E7247-4F0B-EEA5-ECEB-1BA789248CC4";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Shoesstrapsfront_low_materialInfo1";
+	rename -uid "91D3D86F-4908-1F79-E9D2-6E963149D7D0";
+createNode lambert -n "Shoesstrapsfront_low_defaultMat1";
+	rename -uid "30853B3C-44C6-2CFD-B03B-75A8E4CB9CDF";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Shoesstrapsfront_low_defaultMat1F";
+	rename -uid "84707A7D-4140-3DB5-6116-0583184F858A";
+	setAttr ".ftn" -type "string" "Shoesstrapsfront_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Shoesstrapsfront_low_defaultMat1P2D";
+	rename -uid "B0F12106-4990-6AEB-B90E-8DA8983FB517";
+createNode shadingEngine -n "Shoestrapssides_low_defaultMat";
+	rename -uid "CD84E235-4546-684C-0F2A-13BF5C6FFAC7";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Shoestrapssides_low_materialInfo1";
+	rename -uid "4F6D5B98-40C6-0B1E-B8C5-2DBA838984E5";
+createNode lambert -n "Shoestrapssides_low_defaultMat1";
+	rename -uid "5BD03E92-45BC-5D26-796B-89BBCE0FC629";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Shoestrapssides_low_defaultMat1F";
+	rename -uid "34C01A4A-4389-79DB-5130-3BB1502681ED";
+	setAttr ".ftn" -type "string" "Shoestrapssides_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Shoestrapssides_low_defaultMat1P2D";
+	rename -uid "8E67AABA-4D76-282B-19E6-61A1F6A7F772";
+createNode shadingEngine -n "Shoestuds_low_defaultMat";
+	rename -uid "E1535220-4C81-7CA8-AB67-6FBF1D0F8C2A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Shoestuds_low_materialInfo1";
+	rename -uid "AA34A39F-473B-EEC4-03ED-959B1F363E14";
+createNode lambert -n "Shoestuds_low_defaultMat1";
+	rename -uid "B15FEC99-40CF-99A8-9BBD-5BB290E1A652";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Shoestuds_low_defaultMat1F";
+	rename -uid "D71489F4-434C-2991-8E22-3FBA34F9A43E";
+	setAttr ".ftn" -type "string" "Shoestuds_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Shoestuds_low_defaultMat1P2D";
+	rename -uid "AB547052-465D-A761-045B-0FA5EFDCECC6";
+createNode shadingEngine -n "Skirt_low_defaultMat";
+	rename -uid "BE534218-4557-F244-9A36-43AC8A3C21AB";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Skirt_low_materialInfo1";
+	rename -uid "4103E193-46D9-3579-03AD-A8998B5FC5DC";
+createNode lambert -n "Skirt_low_defaultMat1";
+	rename -uid "21B16927-4B63-8178-6E9A-C39BF2CDDC6C";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Skirt_low_defaultMat1F";
+	rename -uid "7F2FD7AA-4A66-3452-76C8-2898A0FB08BD";
+	setAttr ".ftn" -type "string" "Skirt_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Skirt_low_defaultMat1P2D";
+	rename -uid "4A6B1BE0-4FD0-3F71-83EF-8FB1E73910C2";
+createNode shadingEngine -n "Torsoback_low_defaultMat";
+	rename -uid "2DAFD449-47D3-5A9E-2660-1EB95A3816DE";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Torsoback_low_materialInfo1";
+	rename -uid "79996A55-4041-6A55-6D36-25888B1CB851";
+createNode lambert -n "Torsoback_low_defaultMat1";
+	rename -uid "0FDC104D-4802-3E6E-FFF6-669E615A1E8D";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Torsoback_low_defaultMat1F";
+	rename -uid "D4D5482D-4D39-258A-778E-F5B9ACF13C7A";
+	setAttr ".ftn" -type "string" "Torsoback_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Torsoback_low_defaultMat1P2D";
+	rename -uid "E7364DCC-442B-75FA-7421-9EB500A72892";
+createNode shadingEngine -n "Torsobackbottom_low_defaultMat";
+	rename -uid "887D0896-4F70-192A-E2EE-058FDEBF2794";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Torsobackbottom_low_materialInfo1";
+	rename -uid "3B7A6FF5-43AD-FD28-2701-6BAFB94E5E60";
+createNode lambert -n "Torsobackbottom_low_defaultMat1";
+	rename -uid "C4316143-43CC-F3A2-3001-4BAE0C0B9E6B";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Torsobackbottom_low_defaultMat1F";
+	rename -uid "473BB7AF-4730-5485-5EDE-24BEC9B7E2D1";
+	setAttr ".ftn" -type "string" "Torsobackbottom_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Torsobackbottom_low_defaultMat1P2D";
+	rename -uid "A6A00BD5-4C87-CD4E-615C-1989526C08CA";
+createNode shadingEngine -n "Torsobottom_low_defaultMat";
+	rename -uid "1EFFE198-4EC3-8C50-37C6-3A8C9917281B";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Torsobottom_low_materialInfo1";
+	rename -uid "9C12CE19-49EE-1ECA-EF02-CDABB7289744";
+createNode lambert -n "Torsobottom_low_defaultMat1";
+	rename -uid "E556B7EC-4238-B9B2-A945-479F77019647";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Torsobottom_low_defaultMat1F";
+	rename -uid "2FC6FA79-4311-95FE-C7F4-7D8B1F30A843";
+	setAttr ".ftn" -type "string" "Torsobottom_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Torsobottom_low_defaultMat1P2D";
+	rename -uid "B81780AD-4BE9-8D10-194F-F9A9EA727CBE";
+createNode shadingEngine -n "Torsochestmiddle_low_defaultMat";
+	rename -uid "163043D1-4674-28D5-C394-10A751F064BB";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Torsochestmiddle_low_materialInfo1";
+	rename -uid "D0B980F7-4105-9FBD-A44D-EA91D0283E4C";
+createNode lambert -n "Torsochestmiddle_low_defaultMat1";
+	rename -uid "91C195FA-4590-0A42-9456-8BB478CF9918";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Torsochestmiddle_low_defaultMat1F";
+	rename -uid "EAC30DB0-4F0B-87F3-3EC9-08BA1F3A664A";
+	setAttr ".ftn" -type "string" "Torsochestmiddle_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Torsochestmiddle_low_defaultMat1P2D";
+	rename -uid "34297200-4FBC-5A14-C29B-ACAA5D3BAFFE";
+createNode shadingEngine -n "Torsofrontangle_low_defaultMat";
+	rename -uid "C4EF1EE1-4A27-23E5-F09E-2594800320B6";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Torsofrontangle_low_materialInfo1";
+	rename -uid "BC1239FC-49EA-EF6C-22FD-6FA4D887C3FC";
+createNode lambert -n "Torsofrontangle_low_defaultMat1";
+	rename -uid "62714626-483B-FE95-D02A-128F9165E2FC";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Torsofrontangle_low_defaultMat1F";
+	rename -uid "DB19188D-4811-B265-B915-4BB95D7C35D5";
+	setAttr ".ftn" -type "string" "Torsofrontangle_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Torsofrontangle_low_defaultMat1P2D";
+	rename -uid "DE657E5B-4BA0-4AE1-DF65-069B380380DC";
+createNode shadingEngine -n "Torsofrontmain_low_defaultMat";
+	rename -uid "CA8E8099-4EC4-1341-0719-3E89C4A5D940";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Torsofrontmain_low_materialInfo1";
+	rename -uid "B25B9B1B-4C60-F1AF-B6DD-2891AE34375D";
+createNode lambert -n "Torsofrontmain_low_defaultMat1";
+	rename -uid "96B83CD0-4C45-AA68-1E82-61A0CF502446";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Torsofrontmain_low_defaultMat1F";
+	rename -uid "06D9A416-422E-34A0-C5DB-6893D5D99064";
+	setAttr ".ftn" -type "string" "Torsofrontmain_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Torsofrontmain_low_defaultMat1P2D";
+	rename -uid "8A51BB73-4F13-150B-17AB-06A9BD87AA3C";
+createNode shadingEngine -n "Torsoside_low_defaultMat";
+	rename -uid "9EC70A05-4237-3827-2559-1C9CAE27F521";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Torsoside_low_materialInfo1";
+	rename -uid "75F135F1-4CA2-2CC4-A964-FFBD156C531B";
+createNode lambert -n "Torsoside_low_defaultMat1";
+	rename -uid "8CD18EF2-4451-4652-D3E4-E899905B8A8B";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Torsoside_low_defaultMat1F";
+	rename -uid "6E88A305-4847-C241-376D-38844D8A2511";
+	setAttr ".ftn" -type "string" "Torsoside_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Torsoside_low_defaultMat1P2D";
+	rename -uid "17E0CE8A-4545-C036-1E85-DF88F9895C1F";
+createNode shadingEngine -n "Torsosidevents_low_defaultMat";
+	rename -uid "6DBD9725-4F89-1DAC-5436-E9A06742E626";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Torsosidevents_low_materialInfo1";
+	rename -uid "28029705-434A-A67F-892C-DCBDFA59C77F";
+createNode lambert -n "Torsosidevents_low_defaultMat1";
+	rename -uid "623DD5C3-4197-4C7F-42ED-B4ADBE8555CA";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Torsosidevents_low_defaultMat1F";
+	rename -uid "9E724752-4E9B-96E4-D3EA-94B2635A9E0D";
+	setAttr ".ftn" -type "string" "Torsosidevents_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Torsosidevents_low_defaultMat1P2D";
+	rename -uid "24139601-4B26-00FB-7E26-04B4EFD30505";
+createNode shadingEngine -n "Vestbase_low_defaultMat";
+	rename -uid "5BBDC021-45E4-CD7D-D88F-5891C75B0253";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Vestbase_low_materialInfo1";
+	rename -uid "580037E9-4C29-D264-1B57-06B5E729E8BB";
+createNode lambert -n "Vestbase_low_defaultMat1";
+	rename -uid "969CDBA9-48E4-8253-DE78-4496173F9C6B";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Vestbase_low_defaultMat1F";
+	rename -uid "8E410826-48D1-C75A-AF94-7FA84804B329";
+	setAttr ".ftn" -type "string" "Vestbase_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Vestbase_low_defaultMat1P2D";
+	rename -uid "93F5BCEE-4CD6-B95B-BC09-0A996B295532";
+createNode shadingEngine -n "Vestbuttons_low_defaultMat";
+	rename -uid "6DCA9118-4869-C387-9A6C-35A54D4D0923";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Vestbuttons_low_materialInfo1";
+	rename -uid "1E678A07-4A91-71BC-FBA7-70B71260064D";
+createNode lambert -n "Vestbuttons_low_defaultMat1";
+	rename -uid "A24A846A-4904-8940-926E-D395FCF75E2F";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Vestbuttons_low_defaultMat1F";
+	rename -uid "43E00B0D-4C98-F348-91AE-BC8DA0618F04";
+	setAttr ".ftn" -type "string" "Vestbuttons_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Vestbuttons_low_defaultMat1P2D";
+	rename -uid "48572D38-4683-561D-4671-FE8D35296CD8";
+createNode shadingEngine -n "Vestconnect_low_defaultMat";
+	rename -uid "33A77617-4D41-08D2-A163-8D86CCA13D77";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Vestconnect_low_materialInfo1";
+	rename -uid "7452E3ED-40E6-F88D-4694-7BA6974ADE2F";
+createNode lambert -n "Vestconnect_low_defaultMat1";
+	rename -uid "87A7D416-428E-FCA8-405A-7BBCD410FA66";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Vestconnect_low_defaultMat1F";
+	rename -uid "0FC96F70-436C-B408-63E2-1E9508EA443B";
+	setAttr ".ftn" -type "string" "Vestconnect_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Vestconnect_low_defaultMat1P2D";
+	rename -uid "AF63860C-46CD-20BF-53D7-11975A7285BC";
+createNode shadingEngine -n "Veststraps_low_defaultMat";
+	rename -uid "BE809F38-4E41-02D6-3D0A-56A16B57E81C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Veststraps_low_materialInfo1";
+	rename -uid "7258A172-472C-A984-364D-4E9918B1A437";
+createNode lambert -n "Veststraps_low_defaultMat1";
+	rename -uid "4DAEB752-422A-6699-5DCE-6ABBF5628F30";
+	setAttr ".ambc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+createNode file -n "Veststraps_low_defaultMat1F";
+	rename -uid "681EA763-465C-B300-0934-6DBE2F48965C";
+	setAttr ".ftn" -type "string" "Veststraps_low.bmp";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "Veststraps_low_defaultMat1P2D";
+	rename -uid "B9CD24C7-47DB-0EC1-A90E-FC8024F2F337";
+createNode groupId -n "groupId25";
+	rename -uid "1381DB71-4BC7-6CEC-8FF4-CB8F70B5E0C9";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId54";
+	rename -uid "20B9D88F-4E89-22BD-7BAA-01A3B8555D7D";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId53";
+	rename -uid "EA245009-4C58-3B75-FB24-B2BFF99D0665";
+	setAttr ".ihi" 0;
+createNode objectSet -n "set1";
+	rename -uid "08A23161-48AC-738B-C122-469054B6437D";
+	setAttr ".ihi" 0;
+createNode lambert -n "barbell";
+	rename -uid "364A3D9C-4B64-3FB7-0E4D-9CAA56C5B27C";
+	setAttr ".c" -type "float3" 0.0339 0.0394 0.052299999 ;
+createNode shadingEngine -n "lambert19SG";
+	rename -uid "440B645E-41C7-209F-46F0-1D93D543EF48";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo20";
+	rename -uid "64B135A3-4341-522A-388C-309F293AD3F0";
+createNode groupId -n "groupId85";
+	rename -uid "4FC34491-45B5-FDD9-1F9C-48905B875CFC";
+	setAttr ".ihi" 0;
+createNode lambert -n "metalCan";
+	rename -uid "AD74AC8F-48F4-0490-CA48-C79F3829F322";
+	setAttr ".c" -type "float3" 0.66680002 0.72820002 0.87199998 ;
+createNode shadingEngine -n "lambert20SG";
+	rename -uid "DEDA3249-48EB-917D-07D6-FCBB2C56EAE2";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo21";
+	rename -uid "F04B2EB7-4CDC-4065-BCD9-079D33CB671D";
+createNode groupId -n "groupId87";
+	rename -uid "2369969C-4633-B35D-36C5-5EBFDF6E298E";
+	setAttr ".ihi" 0;
+createNode lambert -n "lambert21";
+	rename -uid "009844F5-4CFB-2F0D-A04D-E08934D93CCE";
+createNode shadingEngine -n "lambert21SG";
+	rename -uid "A0DC5E3E-4317-AEE5-C69D-76B8783DC030";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo22";
+	rename -uid "DD3CD7D5-48F6-9058-A56A-DBA61957DA59";
+createNode lambert -n "redCan";
+	rename -uid "2D97B8D3-4970-67D5-2DEB-2EB917919416";
+	setAttr ".c" -type "float3" 0.58029997 0.0074999998 0.0074999998 ;
+createNode shadingEngine -n "lambert22SG";
+	rename -uid "B798F88B-4C8D-E9EF-32CE-098519773580";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo23";
+	rename -uid "D2C9C840-4DE7-5EFE-8907-099067E82197";
+createNode groupId -n "groupId88";
+	rename -uid "8EAA9434-492B-CE57-8DC4-CAB9F38ECD0D";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId89";
+	rename -uid "17CB2ABD-4F28-E530-ABD4-8393F8BFC6A8";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId90";
+	rename -uid "D5182CE0-49F9-8ECB-307C-5096CE9E5291";
+	setAttr ".ihi" 0;
+createNode lambert -n "blueCan";
+	rename -uid "80043424-4762-426B-44BB-608F85329266";
+	setAttr ".c" -type "float3" 0.0902 0.2606 0.38350001 ;
+createNode shadingEngine -n "lambert23SG";
+	rename -uid "E381CEB1-42E8-777E-4802-CFAC55A06768";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo24";
+	rename -uid "2D8C7078-48E6-FA40-9219-A7842C267439";
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -8812,15 +9989,21 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 21 ".st";
+	setAttr -s 64 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 23 ".s";
+	setAttr -s 66 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -s 38 ".u";
 select -ne :defaultRenderingList1;
+select -ne :defaultTextureList1;
+	setAttr -s 38 ".tx";
 select -ne :initialShadingGroup;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -8976,6 +10159,15 @@ connectAttr "groupId83.id" "MaskShape.iog.og[0].gid";
 connectAttr "lambert18SG.mwc" "MaskShape.iog.og[0].gco";
 connectAttr "groupId84.id" "MaskShape.iog.og[1].gid";
 connectAttr "lambert17SG.mwc" "MaskShape.iog.og[1].gco";
+connectAttr "groupId85.id" "BarbellShape.iog.og[1].gid";
+connectAttr "set1.mwc" "BarbellShape.iog.og[1].gco";
+connectAttr "groupId88.id" "BlueCowShape.iog.og[0].gid";
+connectAttr "lambert23SG.mwc" "BlueCowShape.iog.og[0].gco";
+connectAttr "groupId89.id" "BlueCowShape.iog.og[1].gid";
+connectAttr "lambert20SG.mwc" "BlueCowShape.iog.og[1].gco";
+connectAttr "groupId90.id" "BlueCowShape.iog.og[2].gid";
+connectAttr "lambert22SG.mwc" "BlueCowShape.iog.og[2].gco";
+connectAttr "groupId87.id" "BlueCowShape.ciog.cog[0].cgid";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -8997,6 +10189,49 @@ relationship "link" ":lightLinker1" "lambert15SG.message" ":defaultLightSet.mess
 relationship "link" ":lightLinker1" "lambert16SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert17SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert18SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Backbox_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Chestarmour_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Cuerpo_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Eyelashes_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Eyes_low_copy2_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Eyes_low_copy3_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Head_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Headback_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Headbottom_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Headcylinder_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Headsides_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Headtop_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Headvent_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Headtop_low_defaultMat2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Leglower_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Legupper_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Neckarmour_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Shoesbottom_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Shoescontact_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Shoesheel_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Shoesmiddle_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Shoessoles_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Shoesstrapsfront_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Shoestrapssides_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Shoestuds_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Skirt_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Torsoback_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Torsobackbottom_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Torsobottom_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Torsochestmiddle_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Torsofrontangle_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Torsofrontmain_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Torsoside_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Torsosidevents_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Vestbase_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Vestbuttons_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Vestconnect_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Veststraps_low_defaultMat.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert19SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert20SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert21SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert22SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert23SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -9018,6 +10253,49 @@ relationship "shadowLink" ":lightLinker1" "lambert15SG.message" ":defaultLightSe
 relationship "shadowLink" ":lightLinker1" "lambert16SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert17SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert18SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Backbox_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Chestarmour_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Cuerpo_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Eyelashes_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Eyes_low_copy2_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Eyes_low_copy3_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Head_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Headback_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Headbottom_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Headcylinder_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Headsides_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Headtop_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Headvent_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Headtop_low_defaultMat2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Leglower_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Legupper_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Neckarmour_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Shoesbottom_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Shoescontact_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Shoesheel_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Shoesmiddle_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Shoessoles_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Shoesstrapsfront_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Shoestrapssides_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Shoestuds_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Skirt_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Torsoback_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Torsobackbottom_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Torsobottom_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Torsochestmiddle_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Torsofrontangle_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Torsofrontmain_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Torsoside_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Torsosidevents_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Vestbase_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Vestbuttons_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Vestconnect_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Veststraps_low_defaultMat.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert19SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert20SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert21SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert22SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert23SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "M_Conveyer_Body.oc" "lambert2SG.ss";
@@ -9260,6 +10538,1029 @@ connectAttr "MaskShape.iog.og[0]" "lambert18SG.dsm" -na;
 connectAttr "groupId83.msg" "lambert18SG.gn" -na;
 connectAttr "lambert18SG.msg" "materialInfo19.sg";
 connectAttr "maskStrings.msg" "materialInfo19.m";
+connectAttr "Backbox_low_defaultMat1.oc" "Backbox_low_defaultMat.ss";
+connectAttr "Backbox_low_defaultMat.msg" "Backbox_low_materialInfo1.sg";
+connectAttr "Backbox_low_defaultMat1.msg" "Backbox_low_materialInfo1.m";
+connectAttr "Backbox_low_defaultMat1F.msg" "Backbox_low_materialInfo1.t" -na;
+connectAttr "Backbox_low_defaultMat1F.oc" "Backbox_low_defaultMat1.c";
+connectAttr "Backbox_low_defaultMat1P2D.c" "Backbox_low_defaultMat1F.c";
+connectAttr "Backbox_low_defaultMat1P2D.tf" "Backbox_low_defaultMat1F.tf";
+connectAttr "Backbox_low_defaultMat1P2D.rf" "Backbox_low_defaultMat1F.rf";
+connectAttr "Backbox_low_defaultMat1P2D.s" "Backbox_low_defaultMat1F.s";
+connectAttr "Backbox_low_defaultMat1P2D.wu" "Backbox_low_defaultMat1F.wu";
+connectAttr "Backbox_low_defaultMat1P2D.wv" "Backbox_low_defaultMat1F.wv";
+connectAttr "Backbox_low_defaultMat1P2D.re" "Backbox_low_defaultMat1F.re";
+connectAttr "Backbox_low_defaultMat1P2D.of" "Backbox_low_defaultMat1F.of";
+connectAttr "Backbox_low_defaultMat1P2D.r" "Backbox_low_defaultMat1F.ro";
+connectAttr "Backbox_low_defaultMat1P2D.o" "Backbox_low_defaultMat1F.uv";
+connectAttr "Backbox_low_defaultMat1P2D.ofs" "Backbox_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Backbox_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Backbox_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Backbox_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Backbox_low_defaultMat1F.ws";
+connectAttr "Chestarmour_low_defaultMat1.oc" "Chestarmour_low_defaultMat.ss";
+connectAttr "Chestarmour_low_defaultMat.msg" "Chestarmour_low_materialInfo1.sg";
+connectAttr "Chestarmour_low_defaultMat1.msg" "Chestarmour_low_materialInfo1.m";
+connectAttr "Chestarmour_low_defaultMat1F.msg" "Chestarmour_low_materialInfo1.t"
+		 -na;
+connectAttr "Chestarmour_low_defaultMat1F.oc" "Chestarmour_low_defaultMat1.c";
+connectAttr "Chestarmour_low_defaultMat1P2D.c" "Chestarmour_low_defaultMat1F.c";
+connectAttr "Chestarmour_low_defaultMat1P2D.tf" "Chestarmour_low_defaultMat1F.tf"
+		;
+connectAttr "Chestarmour_low_defaultMat1P2D.rf" "Chestarmour_low_defaultMat1F.rf"
+		;
+connectAttr "Chestarmour_low_defaultMat1P2D.s" "Chestarmour_low_defaultMat1F.s";
+connectAttr "Chestarmour_low_defaultMat1P2D.wu" "Chestarmour_low_defaultMat1F.wu"
+		;
+connectAttr "Chestarmour_low_defaultMat1P2D.wv" "Chestarmour_low_defaultMat1F.wv"
+		;
+connectAttr "Chestarmour_low_defaultMat1P2D.re" "Chestarmour_low_defaultMat1F.re"
+		;
+connectAttr "Chestarmour_low_defaultMat1P2D.of" "Chestarmour_low_defaultMat1F.of"
+		;
+connectAttr "Chestarmour_low_defaultMat1P2D.r" "Chestarmour_low_defaultMat1F.ro"
+		;
+connectAttr "Chestarmour_low_defaultMat1P2D.o" "Chestarmour_low_defaultMat1F.uv"
+		;
+connectAttr "Chestarmour_low_defaultMat1P2D.ofs" "Chestarmour_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Chestarmour_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Chestarmour_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Chestarmour_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Chestarmour_low_defaultMat1F.ws";
+connectAttr "Cuerpo_low_defaultMat1.oc" "Cuerpo_low_defaultMat.ss";
+connectAttr "Cuerpo_low_defaultMat.msg" "Cuerpo_low_materialInfo1.sg";
+connectAttr "Cuerpo_low_defaultMat1.msg" "Cuerpo_low_materialInfo1.m";
+connectAttr "Cuerpo_low_defaultMat1F.msg" "Cuerpo_low_materialInfo1.t" -na;
+connectAttr "Cuerpo_low_defaultMat1F.oc" "Cuerpo_low_defaultMat1.c";
+connectAttr "Cuerpo_low_defaultMat1P2D.c" "Cuerpo_low_defaultMat1F.c";
+connectAttr "Cuerpo_low_defaultMat1P2D.tf" "Cuerpo_low_defaultMat1F.tf";
+connectAttr "Cuerpo_low_defaultMat1P2D.rf" "Cuerpo_low_defaultMat1F.rf";
+connectAttr "Cuerpo_low_defaultMat1P2D.s" "Cuerpo_low_defaultMat1F.s";
+connectAttr "Cuerpo_low_defaultMat1P2D.wu" "Cuerpo_low_defaultMat1F.wu";
+connectAttr "Cuerpo_low_defaultMat1P2D.wv" "Cuerpo_low_defaultMat1F.wv";
+connectAttr "Cuerpo_low_defaultMat1P2D.re" "Cuerpo_low_defaultMat1F.re";
+connectAttr "Cuerpo_low_defaultMat1P2D.of" "Cuerpo_low_defaultMat1F.of";
+connectAttr "Cuerpo_low_defaultMat1P2D.r" "Cuerpo_low_defaultMat1F.ro";
+connectAttr "Cuerpo_low_defaultMat1P2D.o" "Cuerpo_low_defaultMat1F.uv";
+connectAttr "Cuerpo_low_defaultMat1P2D.ofs" "Cuerpo_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Cuerpo_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Cuerpo_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Cuerpo_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Cuerpo_low_defaultMat1F.ws";
+connectAttr "Eyelashes_low_defaultMat1.oc" "Eyelashes_low_defaultMat.ss";
+connectAttr "Eyelashes_low_defaultMat.msg" "Eyelashes_low_materialInfo1.sg";
+connectAttr "Eyelashes_low_defaultMat1.msg" "Eyelashes_low_materialInfo1.m";
+connectAttr "Eyelashes_low_defaultMat1F.msg" "Eyelashes_low_materialInfo1.t" -na
+		;
+connectAttr "Eyelashes_low_defaultMat1F.oc" "Eyelashes_low_defaultMat1.c";
+connectAttr "Eyelashes_low_defaultMat1P2D.c" "Eyelashes_low_defaultMat1F.c";
+connectAttr "Eyelashes_low_defaultMat1P2D.tf" "Eyelashes_low_defaultMat1F.tf";
+connectAttr "Eyelashes_low_defaultMat1P2D.rf" "Eyelashes_low_defaultMat1F.rf";
+connectAttr "Eyelashes_low_defaultMat1P2D.s" "Eyelashes_low_defaultMat1F.s";
+connectAttr "Eyelashes_low_defaultMat1P2D.wu" "Eyelashes_low_defaultMat1F.wu";
+connectAttr "Eyelashes_low_defaultMat1P2D.wv" "Eyelashes_low_defaultMat1F.wv";
+connectAttr "Eyelashes_low_defaultMat1P2D.re" "Eyelashes_low_defaultMat1F.re";
+connectAttr "Eyelashes_low_defaultMat1P2D.of" "Eyelashes_low_defaultMat1F.of";
+connectAttr "Eyelashes_low_defaultMat1P2D.r" "Eyelashes_low_defaultMat1F.ro";
+connectAttr "Eyelashes_low_defaultMat1P2D.o" "Eyelashes_low_defaultMat1F.uv";
+connectAttr "Eyelashes_low_defaultMat1P2D.ofs" "Eyelashes_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Eyelashes_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Eyelashes_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Eyelashes_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Eyelashes_low_defaultMat1F.ws";
+connectAttr "Eyes_low_copy2_defaultMat1.oc" "Eyes_low_copy2_defaultMat.ss";
+connectAttr "Eyes_low_copy2_defaultMat.msg" "Eyes_low_copy2_materialInfo1.sg";
+connectAttr "Eyes_low_copy2_defaultMat1.msg" "Eyes_low_copy2_materialInfo1.m";
+connectAttr "Eyes_low_copy2_defaultMat1F.msg" "Eyes_low_copy2_materialInfo1.t" -na
+		;
+connectAttr "Eyes_low_copy2_defaultMat1F.oc" "Eyes_low_copy2_defaultMat1.c";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.c" "Eyes_low_copy2_defaultMat1F.c";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.tf" "Eyes_low_copy2_defaultMat1F.tf";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.rf" "Eyes_low_copy2_defaultMat1F.rf";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.s" "Eyes_low_copy2_defaultMat1F.s";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.wu" "Eyes_low_copy2_defaultMat1F.wu";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.wv" "Eyes_low_copy2_defaultMat1F.wv";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.re" "Eyes_low_copy2_defaultMat1F.re";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.of" "Eyes_low_copy2_defaultMat1F.of";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.r" "Eyes_low_copy2_defaultMat1F.ro";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.o" "Eyes_low_copy2_defaultMat1F.uv";
+connectAttr "Eyes_low_copy2_defaultMat1P2D.ofs" "Eyes_low_copy2_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Eyes_low_copy2_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Eyes_low_copy2_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Eyes_low_copy2_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Eyes_low_copy2_defaultMat1F.ws";
+connectAttr "Eyes_low_copy3_defaultMat1.oc" "Eyes_low_copy3_defaultMat.ss";
+connectAttr "Eyes_low_copy3_defaultMat.msg" "Eyes_low_copy3_materialInfo1.sg";
+connectAttr "Eyes_low_copy3_defaultMat1.msg" "Eyes_low_copy3_materialInfo1.m";
+connectAttr "Eyes_low_copy3_defaultMat1F.msg" "Eyes_low_copy3_materialInfo1.t" -na
+		;
+connectAttr "Eyes_low_copy3_defaultMat1F.oc" "Eyes_low_copy3_defaultMat1.c";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.c" "Eyes_low_copy3_defaultMat1F.c";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.tf" "Eyes_low_copy3_defaultMat1F.tf";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.rf" "Eyes_low_copy3_defaultMat1F.rf";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.s" "Eyes_low_copy3_defaultMat1F.s";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.wu" "Eyes_low_copy3_defaultMat1F.wu";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.wv" "Eyes_low_copy3_defaultMat1F.wv";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.re" "Eyes_low_copy3_defaultMat1F.re";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.of" "Eyes_low_copy3_defaultMat1F.of";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.r" "Eyes_low_copy3_defaultMat1F.ro";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.o" "Eyes_low_copy3_defaultMat1F.uv";
+connectAttr "Eyes_low_copy3_defaultMat1P2D.ofs" "Eyes_low_copy3_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Eyes_low_copy3_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Eyes_low_copy3_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Eyes_low_copy3_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Eyes_low_copy3_defaultMat1F.ws";
+connectAttr "Head_low_defaultMat1.oc" "Head_low_defaultMat.ss";
+connectAttr "Head_low_defaultMat.msg" "Head_low_materialInfo1.sg";
+connectAttr "Head_low_defaultMat1.msg" "Head_low_materialInfo1.m";
+connectAttr "Head_low_defaultMat1F.msg" "Head_low_materialInfo1.t" -na;
+connectAttr "Head_low_defaultMat1F.oc" "Head_low_defaultMat1.c";
+connectAttr "Head_low_defaultMat1P2D.c" "Head_low_defaultMat1F.c";
+connectAttr "Head_low_defaultMat1P2D.tf" "Head_low_defaultMat1F.tf";
+connectAttr "Head_low_defaultMat1P2D.rf" "Head_low_defaultMat1F.rf";
+connectAttr "Head_low_defaultMat1P2D.s" "Head_low_defaultMat1F.s";
+connectAttr "Head_low_defaultMat1P2D.wu" "Head_low_defaultMat1F.wu";
+connectAttr "Head_low_defaultMat1P2D.wv" "Head_low_defaultMat1F.wv";
+connectAttr "Head_low_defaultMat1P2D.re" "Head_low_defaultMat1F.re";
+connectAttr "Head_low_defaultMat1P2D.of" "Head_low_defaultMat1F.of";
+connectAttr "Head_low_defaultMat1P2D.r" "Head_low_defaultMat1F.ro";
+connectAttr "Head_low_defaultMat1P2D.o" "Head_low_defaultMat1F.uv";
+connectAttr "Head_low_defaultMat1P2D.ofs" "Head_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Head_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Head_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Head_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Head_low_defaultMat1F.ws";
+connectAttr "Headback_low_defaultMat1.oc" "Headback_low_defaultMat.ss";
+connectAttr "Headback_low_defaultMat.msg" "Headback_low_materialInfo1.sg";
+connectAttr "Headback_low_defaultMat1.msg" "Headback_low_materialInfo1.m";
+connectAttr "Headback_low_defaultMat1F.msg" "Headback_low_materialInfo1.t" -na;
+connectAttr "Headback_low_defaultMat1F.oc" "Headback_low_defaultMat1.c";
+connectAttr "Headback_low_defaultMat1P2D.c" "Headback_low_defaultMat1F.c";
+connectAttr "Headback_low_defaultMat1P2D.tf" "Headback_low_defaultMat1F.tf";
+connectAttr "Headback_low_defaultMat1P2D.rf" "Headback_low_defaultMat1F.rf";
+connectAttr "Headback_low_defaultMat1P2D.s" "Headback_low_defaultMat1F.s";
+connectAttr "Headback_low_defaultMat1P2D.wu" "Headback_low_defaultMat1F.wu";
+connectAttr "Headback_low_defaultMat1P2D.wv" "Headback_low_defaultMat1F.wv";
+connectAttr "Headback_low_defaultMat1P2D.re" "Headback_low_defaultMat1F.re";
+connectAttr "Headback_low_defaultMat1P2D.of" "Headback_low_defaultMat1F.of";
+connectAttr "Headback_low_defaultMat1P2D.r" "Headback_low_defaultMat1F.ro";
+connectAttr "Headback_low_defaultMat1P2D.o" "Headback_low_defaultMat1F.uv";
+connectAttr "Headback_low_defaultMat1P2D.ofs" "Headback_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Headback_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Headback_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Headback_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Headback_low_defaultMat1F.ws";
+connectAttr "Headbottom_low_defaultMat1.oc" "Headbottom_low_defaultMat.ss";
+connectAttr "Headbottom_low_defaultMat.msg" "Headbottom_low_materialInfo1.sg";
+connectAttr "Headbottom_low_defaultMat1.msg" "Headbottom_low_materialInfo1.m";
+connectAttr "Headbottom_low_defaultMat1F.msg" "Headbottom_low_materialInfo1.t" -na
+		;
+connectAttr "Headbottom_low_defaultMat1F.oc" "Headbottom_low_defaultMat1.c";
+connectAttr "Headbottom_low_defaultMat1P2D.c" "Headbottom_low_defaultMat1F.c";
+connectAttr "Headbottom_low_defaultMat1P2D.tf" "Headbottom_low_defaultMat1F.tf";
+connectAttr "Headbottom_low_defaultMat1P2D.rf" "Headbottom_low_defaultMat1F.rf";
+connectAttr "Headbottom_low_defaultMat1P2D.s" "Headbottom_low_defaultMat1F.s";
+connectAttr "Headbottom_low_defaultMat1P2D.wu" "Headbottom_low_defaultMat1F.wu";
+connectAttr "Headbottom_low_defaultMat1P2D.wv" "Headbottom_low_defaultMat1F.wv";
+connectAttr "Headbottom_low_defaultMat1P2D.re" "Headbottom_low_defaultMat1F.re";
+connectAttr "Headbottom_low_defaultMat1P2D.of" "Headbottom_low_defaultMat1F.of";
+connectAttr "Headbottom_low_defaultMat1P2D.r" "Headbottom_low_defaultMat1F.ro";
+connectAttr "Headbottom_low_defaultMat1P2D.o" "Headbottom_low_defaultMat1F.uv";
+connectAttr "Headbottom_low_defaultMat1P2D.ofs" "Headbottom_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Headbottom_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Headbottom_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Headbottom_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Headbottom_low_defaultMat1F.ws";
+connectAttr "Headcylinder_low_defaultMat1.oc" "Headcylinder_low_defaultMat.ss";
+connectAttr "Headcylinder_low_defaultMat.msg" "Headcylinder_low_materialInfo1.sg"
+		;
+connectAttr "Headcylinder_low_defaultMat1.msg" "Headcylinder_low_materialInfo1.m"
+		;
+connectAttr "Headcylinder_low_defaultMat1F.msg" "Headcylinder_low_materialInfo1.t"
+		 -na;
+connectAttr "Headcylinder_low_defaultMat1F.oc" "Headcylinder_low_defaultMat1.c";
+connectAttr "Headcylinder_low_defaultMat1P2D.c" "Headcylinder_low_defaultMat1F.c"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.tf" "Headcylinder_low_defaultMat1F.tf"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.rf" "Headcylinder_low_defaultMat1F.rf"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.s" "Headcylinder_low_defaultMat1F.s"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.wu" "Headcylinder_low_defaultMat1F.wu"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.wv" "Headcylinder_low_defaultMat1F.wv"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.re" "Headcylinder_low_defaultMat1F.re"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.of" "Headcylinder_low_defaultMat1F.of"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.r" "Headcylinder_low_defaultMat1F.ro"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.o" "Headcylinder_low_defaultMat1F.uv"
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.ofs" "Headcylinder_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Headcylinder_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Headcylinder_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Headcylinder_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Headcylinder_low_defaultMat1F.ws";
+connectAttr "Headsides_low_defaultMat1.oc" "Headsides_low_defaultMat.ss";
+connectAttr "Headsides_low_defaultMat.msg" "Headsides_low_materialInfo1.sg";
+connectAttr "Headsides_low_defaultMat1.msg" "Headsides_low_materialInfo1.m";
+connectAttr "Headsides_low_defaultMat1F.msg" "Headsides_low_materialInfo1.t" -na
+		;
+connectAttr "Headsides_low_defaultMat1F.oc" "Headsides_low_defaultMat1.c";
+connectAttr "Headsides_low_defaultMat1P2D.c" "Headsides_low_defaultMat1F.c";
+connectAttr "Headsides_low_defaultMat1P2D.tf" "Headsides_low_defaultMat1F.tf";
+connectAttr "Headsides_low_defaultMat1P2D.rf" "Headsides_low_defaultMat1F.rf";
+connectAttr "Headsides_low_defaultMat1P2D.s" "Headsides_low_defaultMat1F.s";
+connectAttr "Headsides_low_defaultMat1P2D.wu" "Headsides_low_defaultMat1F.wu";
+connectAttr "Headsides_low_defaultMat1P2D.wv" "Headsides_low_defaultMat1F.wv";
+connectAttr "Headsides_low_defaultMat1P2D.re" "Headsides_low_defaultMat1F.re";
+connectAttr "Headsides_low_defaultMat1P2D.of" "Headsides_low_defaultMat1F.of";
+connectAttr "Headsides_low_defaultMat1P2D.r" "Headsides_low_defaultMat1F.ro";
+connectAttr "Headsides_low_defaultMat1P2D.o" "Headsides_low_defaultMat1F.uv";
+connectAttr "Headsides_low_defaultMat1P2D.ofs" "Headsides_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Headsides_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Headsides_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Headsides_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Headsides_low_defaultMat1F.ws";
+connectAttr "Headtop_low_defaultMat1.oc" "Headtop_low_defaultMat.ss";
+connectAttr "Headtop_low_defaultMat.msg" "Headtop_low_materialInfo1.sg";
+connectAttr "Headtop_low_defaultMat1.msg" "Headtop_low_materialInfo1.m";
+connectAttr "Headtop_low_defaultMat1F.msg" "Headtop_low_materialInfo1.t" -na;
+connectAttr "Headtop_low_defaultMat1F.oc" "Headtop_low_defaultMat1.c";
+connectAttr "Headtop_low_defaultMat1P2D.c" "Headtop_low_defaultMat1F.c";
+connectAttr "Headtop_low_defaultMat1P2D.tf" "Headtop_low_defaultMat1F.tf";
+connectAttr "Headtop_low_defaultMat1P2D.rf" "Headtop_low_defaultMat1F.rf";
+connectAttr "Headtop_low_defaultMat1P2D.s" "Headtop_low_defaultMat1F.s";
+connectAttr "Headtop_low_defaultMat1P2D.wu" "Headtop_low_defaultMat1F.wu";
+connectAttr "Headtop_low_defaultMat1P2D.wv" "Headtop_low_defaultMat1F.wv";
+connectAttr "Headtop_low_defaultMat1P2D.re" "Headtop_low_defaultMat1F.re";
+connectAttr "Headtop_low_defaultMat1P2D.of" "Headtop_low_defaultMat1F.of";
+connectAttr "Headtop_low_defaultMat1P2D.r" "Headtop_low_defaultMat1F.ro";
+connectAttr "Headtop_low_defaultMat1P2D.o" "Headtop_low_defaultMat1F.uv";
+connectAttr "Headtop_low_defaultMat1P2D.ofs" "Headtop_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Headtop_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Headtop_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Headtop_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Headtop_low_defaultMat1F.ws";
+connectAttr "Headvent_low_defaultMat1.oc" "Headvent_low_defaultMat.ss";
+connectAttr "Headvent_low_defaultMat.msg" "Headvent_low_materialInfo1.sg";
+connectAttr "Headvent_low_defaultMat1.msg" "Headvent_low_materialInfo1.m";
+connectAttr "Headvent_low_defaultMat1F.msg" "Headvent_low_materialInfo1.t" -na;
+connectAttr "Headvent_low_defaultMat1F.oc" "Headvent_low_defaultMat1.c";
+connectAttr "Headvent_low_defaultMat1P2D.c" "Headvent_low_defaultMat1F.c";
+connectAttr "Headvent_low_defaultMat1P2D.tf" "Headvent_low_defaultMat1F.tf";
+connectAttr "Headvent_low_defaultMat1P2D.rf" "Headvent_low_defaultMat1F.rf";
+connectAttr "Headvent_low_defaultMat1P2D.s" "Headvent_low_defaultMat1F.s";
+connectAttr "Headvent_low_defaultMat1P2D.wu" "Headvent_low_defaultMat1F.wu";
+connectAttr "Headvent_low_defaultMat1P2D.wv" "Headvent_low_defaultMat1F.wv";
+connectAttr "Headvent_low_defaultMat1P2D.re" "Headvent_low_defaultMat1F.re";
+connectAttr "Headvent_low_defaultMat1P2D.of" "Headvent_low_defaultMat1F.of";
+connectAttr "Headvent_low_defaultMat1P2D.r" "Headvent_low_defaultMat1F.ro";
+connectAttr "Headvent_low_defaultMat1P2D.o" "Headvent_low_defaultMat1F.uv";
+connectAttr "Headvent_low_defaultMat1P2D.ofs" "Headvent_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Headvent_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Headvent_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Headvent_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Headvent_low_defaultMat1F.ws";
+connectAttr "Headtop_low_defaultMat3.oc" "Headtop_low_defaultMat2.ss";
+connectAttr "Headtop_low_defaultMat2.msg" "Headtop_low_materialInfo2.sg";
+connectAttr "Headtop_low_defaultMat3.msg" "Headtop_low_materialInfo2.m";
+connectAttr "Headtop_low_defaultMat1F1.msg" "Headtop_low_materialInfo2.t" -na;
+connectAttr "Headtop_low_defaultMat1F1.oc" "Headtop_low_defaultMat3.c";
+connectAttr "Headtop_low_defaultMat1P2D1.c" "Headtop_low_defaultMat1F1.c";
+connectAttr "Headtop_low_defaultMat1P2D1.tf" "Headtop_low_defaultMat1F1.tf";
+connectAttr "Headtop_low_defaultMat1P2D1.rf" "Headtop_low_defaultMat1F1.rf";
+connectAttr "Headtop_low_defaultMat1P2D1.s" "Headtop_low_defaultMat1F1.s";
+connectAttr "Headtop_low_defaultMat1P2D1.wu" "Headtop_low_defaultMat1F1.wu";
+connectAttr "Headtop_low_defaultMat1P2D1.wv" "Headtop_low_defaultMat1F1.wv";
+connectAttr "Headtop_low_defaultMat1P2D1.re" "Headtop_low_defaultMat1F1.re";
+connectAttr "Headtop_low_defaultMat1P2D1.of" "Headtop_low_defaultMat1F1.of";
+connectAttr "Headtop_low_defaultMat1P2D1.r" "Headtop_low_defaultMat1F1.ro";
+connectAttr "Headtop_low_defaultMat1P2D1.o" "Headtop_low_defaultMat1F1.uv";
+connectAttr "Headtop_low_defaultMat1P2D1.ofs" "Headtop_low_defaultMat1F1.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Headtop_low_defaultMat1F1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Headtop_low_defaultMat1F1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Headtop_low_defaultMat1F1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Headtop_low_defaultMat1F1.ws";
+connectAttr "Leglower_low_defaultMat1.oc" "Leglower_low_defaultMat.ss";
+connectAttr "Leglower_low_defaultMat.msg" "Leglower_low_materialInfo1.sg";
+connectAttr "Leglower_low_defaultMat1.msg" "Leglower_low_materialInfo1.m";
+connectAttr "Leglower_low_defaultMat1F.msg" "Leglower_low_materialInfo1.t" -na;
+connectAttr "Leglower_low_defaultMat1F.oc" "Leglower_low_defaultMat1.c";
+connectAttr "Leglower_low_defaultMat1P2D.c" "Leglower_low_defaultMat1F.c";
+connectAttr "Leglower_low_defaultMat1P2D.tf" "Leglower_low_defaultMat1F.tf";
+connectAttr "Leglower_low_defaultMat1P2D.rf" "Leglower_low_defaultMat1F.rf";
+connectAttr "Leglower_low_defaultMat1P2D.s" "Leglower_low_defaultMat1F.s";
+connectAttr "Leglower_low_defaultMat1P2D.wu" "Leglower_low_defaultMat1F.wu";
+connectAttr "Leglower_low_defaultMat1P2D.wv" "Leglower_low_defaultMat1F.wv";
+connectAttr "Leglower_low_defaultMat1P2D.re" "Leglower_low_defaultMat1F.re";
+connectAttr "Leglower_low_defaultMat1P2D.of" "Leglower_low_defaultMat1F.of";
+connectAttr "Leglower_low_defaultMat1P2D.r" "Leglower_low_defaultMat1F.ro";
+connectAttr "Leglower_low_defaultMat1P2D.o" "Leglower_low_defaultMat1F.uv";
+connectAttr "Leglower_low_defaultMat1P2D.ofs" "Leglower_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Leglower_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Leglower_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Leglower_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Leglower_low_defaultMat1F.ws";
+connectAttr "Legupper_low_defaultMat1.oc" "Legupper_low_defaultMat.ss";
+connectAttr "Legupper_low_defaultMat.msg" "Legupper_low_materialInfo1.sg";
+connectAttr "Legupper_low_defaultMat1.msg" "Legupper_low_materialInfo1.m";
+connectAttr "Legupper_low_defaultMat1F.msg" "Legupper_low_materialInfo1.t" -na;
+connectAttr "Legupper_low_defaultMat1F.oc" "Legupper_low_defaultMat1.c";
+connectAttr "Legupper_low_defaultMat1P2D.c" "Legupper_low_defaultMat1F.c";
+connectAttr "Legupper_low_defaultMat1P2D.tf" "Legupper_low_defaultMat1F.tf";
+connectAttr "Legupper_low_defaultMat1P2D.rf" "Legupper_low_defaultMat1F.rf";
+connectAttr "Legupper_low_defaultMat1P2D.s" "Legupper_low_defaultMat1F.s";
+connectAttr "Legupper_low_defaultMat1P2D.wu" "Legupper_low_defaultMat1F.wu";
+connectAttr "Legupper_low_defaultMat1P2D.wv" "Legupper_low_defaultMat1F.wv";
+connectAttr "Legupper_low_defaultMat1P2D.re" "Legupper_low_defaultMat1F.re";
+connectAttr "Legupper_low_defaultMat1P2D.of" "Legupper_low_defaultMat1F.of";
+connectAttr "Legupper_low_defaultMat1P2D.r" "Legupper_low_defaultMat1F.ro";
+connectAttr "Legupper_low_defaultMat1P2D.o" "Legupper_low_defaultMat1F.uv";
+connectAttr "Legupper_low_defaultMat1P2D.ofs" "Legupper_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Legupper_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Legupper_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Legupper_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Legupper_low_defaultMat1F.ws";
+connectAttr "Neckarmour_low_defaultMat1.oc" "Neckarmour_low_defaultMat.ss";
+connectAttr "Neckarmour_low_defaultMat.msg" "Neckarmour_low_materialInfo1.sg";
+connectAttr "Neckarmour_low_defaultMat1.msg" "Neckarmour_low_materialInfo1.m";
+connectAttr "Neckarmour_low_defaultMat1F.msg" "Neckarmour_low_materialInfo1.t" -na
+		;
+connectAttr "Neckarmour_low_defaultMat1F.oc" "Neckarmour_low_defaultMat1.c";
+connectAttr "Neckarmour_low_defaultMat1P2D.c" "Neckarmour_low_defaultMat1F.c";
+connectAttr "Neckarmour_low_defaultMat1P2D.tf" "Neckarmour_low_defaultMat1F.tf";
+connectAttr "Neckarmour_low_defaultMat1P2D.rf" "Neckarmour_low_defaultMat1F.rf";
+connectAttr "Neckarmour_low_defaultMat1P2D.s" "Neckarmour_low_defaultMat1F.s";
+connectAttr "Neckarmour_low_defaultMat1P2D.wu" "Neckarmour_low_defaultMat1F.wu";
+connectAttr "Neckarmour_low_defaultMat1P2D.wv" "Neckarmour_low_defaultMat1F.wv";
+connectAttr "Neckarmour_low_defaultMat1P2D.re" "Neckarmour_low_defaultMat1F.re";
+connectAttr "Neckarmour_low_defaultMat1P2D.of" "Neckarmour_low_defaultMat1F.of";
+connectAttr "Neckarmour_low_defaultMat1P2D.r" "Neckarmour_low_defaultMat1F.ro";
+connectAttr "Neckarmour_low_defaultMat1P2D.o" "Neckarmour_low_defaultMat1F.uv";
+connectAttr "Neckarmour_low_defaultMat1P2D.ofs" "Neckarmour_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Neckarmour_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Neckarmour_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Neckarmour_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Neckarmour_low_defaultMat1F.ws";
+connectAttr "Shoesbottom_low_defaultMat1.oc" "Shoesbottom_low_defaultMat.ss";
+connectAttr "Shoesbottom_low_defaultMat.msg" "Shoesbottom_low_materialInfo1.sg";
+connectAttr "Shoesbottom_low_defaultMat1.msg" "Shoesbottom_low_materialInfo1.m";
+connectAttr "Shoesbottom_low_defaultMat1F.msg" "Shoesbottom_low_materialInfo1.t"
+		 -na;
+connectAttr "Shoesbottom_low_defaultMat1F.oc" "Shoesbottom_low_defaultMat1.c";
+connectAttr "Shoesbottom_low_defaultMat1P2D.c" "Shoesbottom_low_defaultMat1F.c";
+connectAttr "Shoesbottom_low_defaultMat1P2D.tf" "Shoesbottom_low_defaultMat1F.tf"
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.rf" "Shoesbottom_low_defaultMat1F.rf"
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.s" "Shoesbottom_low_defaultMat1F.s";
+connectAttr "Shoesbottom_low_defaultMat1P2D.wu" "Shoesbottom_low_defaultMat1F.wu"
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.wv" "Shoesbottom_low_defaultMat1F.wv"
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.re" "Shoesbottom_low_defaultMat1F.re"
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.of" "Shoesbottom_low_defaultMat1F.of"
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.r" "Shoesbottom_low_defaultMat1F.ro"
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.o" "Shoesbottom_low_defaultMat1F.uv"
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.ofs" "Shoesbottom_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Shoesbottom_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Shoesbottom_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Shoesbottom_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Shoesbottom_low_defaultMat1F.ws";
+connectAttr "Shoescontact_low_defaultMat1.oc" "Shoescontact_low_defaultMat.ss";
+connectAttr "Shoescontact_low_defaultMat.msg" "Shoescontact_low_materialInfo1.sg"
+		;
+connectAttr "Shoescontact_low_defaultMat1.msg" "Shoescontact_low_materialInfo1.m"
+		;
+connectAttr "Shoescontact_low_defaultMat1F.msg" "Shoescontact_low_materialInfo1.t"
+		 -na;
+connectAttr "Shoescontact_low_defaultMat1F.oc" "Shoescontact_low_defaultMat1.c";
+connectAttr "Shoescontact_low_defaultMat1P2D.c" "Shoescontact_low_defaultMat1F.c"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.tf" "Shoescontact_low_defaultMat1F.tf"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.rf" "Shoescontact_low_defaultMat1F.rf"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.s" "Shoescontact_low_defaultMat1F.s"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.wu" "Shoescontact_low_defaultMat1F.wu"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.wv" "Shoescontact_low_defaultMat1F.wv"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.re" "Shoescontact_low_defaultMat1F.re"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.of" "Shoescontact_low_defaultMat1F.of"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.r" "Shoescontact_low_defaultMat1F.ro"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.o" "Shoescontact_low_defaultMat1F.uv"
+		;
+connectAttr "Shoescontact_low_defaultMat1P2D.ofs" "Shoescontact_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Shoescontact_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Shoescontact_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Shoescontact_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Shoescontact_low_defaultMat1F.ws";
+connectAttr "Shoesheel_low_defaultMat1.oc" "Shoesheel_low_defaultMat.ss";
+connectAttr "Shoesheel_low_defaultMat.msg" "Shoesheel_low_materialInfo1.sg";
+connectAttr "Shoesheel_low_defaultMat1.msg" "Shoesheel_low_materialInfo1.m";
+connectAttr "Shoesheel_low_defaultMat1F.msg" "Shoesheel_low_materialInfo1.t" -na
+		;
+connectAttr "Shoesheel_low_defaultMat1F.oc" "Shoesheel_low_defaultMat1.c";
+connectAttr "Shoesheel_low_defaultMat1P2D.c" "Shoesheel_low_defaultMat1F.c";
+connectAttr "Shoesheel_low_defaultMat1P2D.tf" "Shoesheel_low_defaultMat1F.tf";
+connectAttr "Shoesheel_low_defaultMat1P2D.rf" "Shoesheel_low_defaultMat1F.rf";
+connectAttr "Shoesheel_low_defaultMat1P2D.s" "Shoesheel_low_defaultMat1F.s";
+connectAttr "Shoesheel_low_defaultMat1P2D.wu" "Shoesheel_low_defaultMat1F.wu";
+connectAttr "Shoesheel_low_defaultMat1P2D.wv" "Shoesheel_low_defaultMat1F.wv";
+connectAttr "Shoesheel_low_defaultMat1P2D.re" "Shoesheel_low_defaultMat1F.re";
+connectAttr "Shoesheel_low_defaultMat1P2D.of" "Shoesheel_low_defaultMat1F.of";
+connectAttr "Shoesheel_low_defaultMat1P2D.r" "Shoesheel_low_defaultMat1F.ro";
+connectAttr "Shoesheel_low_defaultMat1P2D.o" "Shoesheel_low_defaultMat1F.uv";
+connectAttr "Shoesheel_low_defaultMat1P2D.ofs" "Shoesheel_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Shoesheel_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Shoesheel_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Shoesheel_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Shoesheel_low_defaultMat1F.ws";
+connectAttr "Shoesmiddle_low_defaultMat1.oc" "Shoesmiddle_low_defaultMat.ss";
+connectAttr "Shoesmiddle_low_defaultMat.msg" "Shoesmiddle_low_materialInfo1.sg";
+connectAttr "Shoesmiddle_low_defaultMat1.msg" "Shoesmiddle_low_materialInfo1.m";
+connectAttr "Shoesmiddle_low_defaultMat1F.msg" "Shoesmiddle_low_materialInfo1.t"
+		 -na;
+connectAttr "Shoesmiddle_low_defaultMat1F.oc" "Shoesmiddle_low_defaultMat1.c";
+connectAttr "Shoesmiddle_low_defaultMat1P2D.c" "Shoesmiddle_low_defaultMat1F.c";
+connectAttr "Shoesmiddle_low_defaultMat1P2D.tf" "Shoesmiddle_low_defaultMat1F.tf"
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.rf" "Shoesmiddle_low_defaultMat1F.rf"
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.s" "Shoesmiddle_low_defaultMat1F.s";
+connectAttr "Shoesmiddle_low_defaultMat1P2D.wu" "Shoesmiddle_low_defaultMat1F.wu"
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.wv" "Shoesmiddle_low_defaultMat1F.wv"
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.re" "Shoesmiddle_low_defaultMat1F.re"
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.of" "Shoesmiddle_low_defaultMat1F.of"
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.r" "Shoesmiddle_low_defaultMat1F.ro"
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.o" "Shoesmiddle_low_defaultMat1F.uv"
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.ofs" "Shoesmiddle_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Shoesmiddle_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Shoesmiddle_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Shoesmiddle_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Shoesmiddle_low_defaultMat1F.ws";
+connectAttr "Shoessoles_low_defaultMat1.oc" "Shoessoles_low_defaultMat.ss";
+connectAttr "Shoessoles_low_defaultMat.msg" "Shoessoles_low_materialInfo1.sg";
+connectAttr "Shoessoles_low_defaultMat1.msg" "Shoessoles_low_materialInfo1.m";
+connectAttr "Shoessoles_low_defaultMat1F.msg" "Shoessoles_low_materialInfo1.t" -na
+		;
+connectAttr "Shoessoles_low_defaultMat1F.oc" "Shoessoles_low_defaultMat1.c";
+connectAttr "Shoessoles_low_defaultMat1P2D.c" "Shoessoles_low_defaultMat1F.c";
+connectAttr "Shoessoles_low_defaultMat1P2D.tf" "Shoessoles_low_defaultMat1F.tf";
+connectAttr "Shoessoles_low_defaultMat1P2D.rf" "Shoessoles_low_defaultMat1F.rf";
+connectAttr "Shoessoles_low_defaultMat1P2D.s" "Shoessoles_low_defaultMat1F.s";
+connectAttr "Shoessoles_low_defaultMat1P2D.wu" "Shoessoles_low_defaultMat1F.wu";
+connectAttr "Shoessoles_low_defaultMat1P2D.wv" "Shoessoles_low_defaultMat1F.wv";
+connectAttr "Shoessoles_low_defaultMat1P2D.re" "Shoessoles_low_defaultMat1F.re";
+connectAttr "Shoessoles_low_defaultMat1P2D.of" "Shoessoles_low_defaultMat1F.of";
+connectAttr "Shoessoles_low_defaultMat1P2D.r" "Shoessoles_low_defaultMat1F.ro";
+connectAttr "Shoessoles_low_defaultMat1P2D.o" "Shoessoles_low_defaultMat1F.uv";
+connectAttr "Shoessoles_low_defaultMat1P2D.ofs" "Shoessoles_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Shoessoles_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Shoessoles_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Shoessoles_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Shoessoles_low_defaultMat1F.ws";
+connectAttr "Shoesstrapsfront_low_defaultMat1.oc" "Shoesstrapsfront_low_defaultMat.ss"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat.msg" "Shoesstrapsfront_low_materialInfo1.sg"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1.msg" "Shoesstrapsfront_low_materialInfo1.m"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1F.msg" "Shoesstrapsfront_low_materialInfo1.t"
+		 -na;
+connectAttr "Shoesstrapsfront_low_defaultMat1F.oc" "Shoesstrapsfront_low_defaultMat1.c"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.c" "Shoesstrapsfront_low_defaultMat1F.c"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.tf" "Shoesstrapsfront_low_defaultMat1F.tf"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.rf" "Shoesstrapsfront_low_defaultMat1F.rf"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.s" "Shoesstrapsfront_low_defaultMat1F.s"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.wu" "Shoesstrapsfront_low_defaultMat1F.wu"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.wv" "Shoesstrapsfront_low_defaultMat1F.wv"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.re" "Shoesstrapsfront_low_defaultMat1F.re"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.of" "Shoesstrapsfront_low_defaultMat1F.of"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.r" "Shoesstrapsfront_low_defaultMat1F.ro"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.o" "Shoesstrapsfront_low_defaultMat1F.uv"
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.ofs" "Shoesstrapsfront_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Shoesstrapsfront_low_defaultMat1F.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Shoesstrapsfront_low_defaultMat1F.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Shoesstrapsfront_low_defaultMat1F.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Shoesstrapsfront_low_defaultMat1F.ws"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1.oc" "Shoestrapssides_low_defaultMat.ss"
+		;
+connectAttr "Shoestrapssides_low_defaultMat.msg" "Shoestrapssides_low_materialInfo1.sg"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1.msg" "Shoestrapssides_low_materialInfo1.m"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1F.msg" "Shoestrapssides_low_materialInfo1.t"
+		 -na;
+connectAttr "Shoestrapssides_low_defaultMat1F.oc" "Shoestrapssides_low_defaultMat1.c"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.c" "Shoestrapssides_low_defaultMat1F.c"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.tf" "Shoestrapssides_low_defaultMat1F.tf"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.rf" "Shoestrapssides_low_defaultMat1F.rf"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.s" "Shoestrapssides_low_defaultMat1F.s"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.wu" "Shoestrapssides_low_defaultMat1F.wu"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.wv" "Shoestrapssides_low_defaultMat1F.wv"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.re" "Shoestrapssides_low_defaultMat1F.re"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.of" "Shoestrapssides_low_defaultMat1F.of"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.r" "Shoestrapssides_low_defaultMat1F.ro"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.o" "Shoestrapssides_low_defaultMat1F.uv"
+		;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.ofs" "Shoestrapssides_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Shoestrapssides_low_defaultMat1F.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Shoestrapssides_low_defaultMat1F.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Shoestrapssides_low_defaultMat1F.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Shoestrapssides_low_defaultMat1F.ws";
+connectAttr "Shoestuds_low_defaultMat1.oc" "Shoestuds_low_defaultMat.ss";
+connectAttr "Shoestuds_low_defaultMat.msg" "Shoestuds_low_materialInfo1.sg";
+connectAttr "Shoestuds_low_defaultMat1.msg" "Shoestuds_low_materialInfo1.m";
+connectAttr "Shoestuds_low_defaultMat1F.msg" "Shoestuds_low_materialInfo1.t" -na
+		;
+connectAttr "Shoestuds_low_defaultMat1F.oc" "Shoestuds_low_defaultMat1.c";
+connectAttr "Shoestuds_low_defaultMat1P2D.c" "Shoestuds_low_defaultMat1F.c";
+connectAttr "Shoestuds_low_defaultMat1P2D.tf" "Shoestuds_low_defaultMat1F.tf";
+connectAttr "Shoestuds_low_defaultMat1P2D.rf" "Shoestuds_low_defaultMat1F.rf";
+connectAttr "Shoestuds_low_defaultMat1P2D.s" "Shoestuds_low_defaultMat1F.s";
+connectAttr "Shoestuds_low_defaultMat1P2D.wu" "Shoestuds_low_defaultMat1F.wu";
+connectAttr "Shoestuds_low_defaultMat1P2D.wv" "Shoestuds_low_defaultMat1F.wv";
+connectAttr "Shoestuds_low_defaultMat1P2D.re" "Shoestuds_low_defaultMat1F.re";
+connectAttr "Shoestuds_low_defaultMat1P2D.of" "Shoestuds_low_defaultMat1F.of";
+connectAttr "Shoestuds_low_defaultMat1P2D.r" "Shoestuds_low_defaultMat1F.ro";
+connectAttr "Shoestuds_low_defaultMat1P2D.o" "Shoestuds_low_defaultMat1F.uv";
+connectAttr "Shoestuds_low_defaultMat1P2D.ofs" "Shoestuds_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Shoestuds_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Shoestuds_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Shoestuds_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Shoestuds_low_defaultMat1F.ws";
+connectAttr "Skirt_low_defaultMat1.oc" "Skirt_low_defaultMat.ss";
+connectAttr "Skirt_low_defaultMat.msg" "Skirt_low_materialInfo1.sg";
+connectAttr "Skirt_low_defaultMat1.msg" "Skirt_low_materialInfo1.m";
+connectAttr "Skirt_low_defaultMat1F.msg" "Skirt_low_materialInfo1.t" -na;
+connectAttr "Skirt_low_defaultMat1F.oc" "Skirt_low_defaultMat1.c";
+connectAttr "Skirt_low_defaultMat1P2D.c" "Skirt_low_defaultMat1F.c";
+connectAttr "Skirt_low_defaultMat1P2D.tf" "Skirt_low_defaultMat1F.tf";
+connectAttr "Skirt_low_defaultMat1P2D.rf" "Skirt_low_defaultMat1F.rf";
+connectAttr "Skirt_low_defaultMat1P2D.s" "Skirt_low_defaultMat1F.s";
+connectAttr "Skirt_low_defaultMat1P2D.wu" "Skirt_low_defaultMat1F.wu";
+connectAttr "Skirt_low_defaultMat1P2D.wv" "Skirt_low_defaultMat1F.wv";
+connectAttr "Skirt_low_defaultMat1P2D.re" "Skirt_low_defaultMat1F.re";
+connectAttr "Skirt_low_defaultMat1P2D.of" "Skirt_low_defaultMat1F.of";
+connectAttr "Skirt_low_defaultMat1P2D.r" "Skirt_low_defaultMat1F.ro";
+connectAttr "Skirt_low_defaultMat1P2D.o" "Skirt_low_defaultMat1F.uv";
+connectAttr "Skirt_low_defaultMat1P2D.ofs" "Skirt_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Skirt_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Skirt_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Skirt_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Skirt_low_defaultMat1F.ws";
+connectAttr "Torsoback_low_defaultMat1.oc" "Torsoback_low_defaultMat.ss";
+connectAttr "Torsoback_low_defaultMat.msg" "Torsoback_low_materialInfo1.sg";
+connectAttr "Torsoback_low_defaultMat1.msg" "Torsoback_low_materialInfo1.m";
+connectAttr "Torsoback_low_defaultMat1F.msg" "Torsoback_low_materialInfo1.t" -na
+		;
+connectAttr "Torsoback_low_defaultMat1F.oc" "Torsoback_low_defaultMat1.c";
+connectAttr "Torsoback_low_defaultMat1P2D.c" "Torsoback_low_defaultMat1F.c";
+connectAttr "Torsoback_low_defaultMat1P2D.tf" "Torsoback_low_defaultMat1F.tf";
+connectAttr "Torsoback_low_defaultMat1P2D.rf" "Torsoback_low_defaultMat1F.rf";
+connectAttr "Torsoback_low_defaultMat1P2D.s" "Torsoback_low_defaultMat1F.s";
+connectAttr "Torsoback_low_defaultMat1P2D.wu" "Torsoback_low_defaultMat1F.wu";
+connectAttr "Torsoback_low_defaultMat1P2D.wv" "Torsoback_low_defaultMat1F.wv";
+connectAttr "Torsoback_low_defaultMat1P2D.re" "Torsoback_low_defaultMat1F.re";
+connectAttr "Torsoback_low_defaultMat1P2D.of" "Torsoback_low_defaultMat1F.of";
+connectAttr "Torsoback_low_defaultMat1P2D.r" "Torsoback_low_defaultMat1F.ro";
+connectAttr "Torsoback_low_defaultMat1P2D.o" "Torsoback_low_defaultMat1F.uv";
+connectAttr "Torsoback_low_defaultMat1P2D.ofs" "Torsoback_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Torsoback_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Torsoback_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Torsoback_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Torsoback_low_defaultMat1F.ws";
+connectAttr "Torsobackbottom_low_defaultMat1.oc" "Torsobackbottom_low_defaultMat.ss"
+		;
+connectAttr "Torsobackbottom_low_defaultMat.msg" "Torsobackbottom_low_materialInfo1.sg"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1.msg" "Torsobackbottom_low_materialInfo1.m"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1F.msg" "Torsobackbottom_low_materialInfo1.t"
+		 -na;
+connectAttr "Torsobackbottom_low_defaultMat1F.oc" "Torsobackbottom_low_defaultMat1.c"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.c" "Torsobackbottom_low_defaultMat1F.c"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.tf" "Torsobackbottom_low_defaultMat1F.tf"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.rf" "Torsobackbottom_low_defaultMat1F.rf"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.s" "Torsobackbottom_low_defaultMat1F.s"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.wu" "Torsobackbottom_low_defaultMat1F.wu"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.wv" "Torsobackbottom_low_defaultMat1F.wv"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.re" "Torsobackbottom_low_defaultMat1F.re"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.of" "Torsobackbottom_low_defaultMat1F.of"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.r" "Torsobackbottom_low_defaultMat1F.ro"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.o" "Torsobackbottom_low_defaultMat1F.uv"
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.ofs" "Torsobackbottom_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Torsobackbottom_low_defaultMat1F.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Torsobackbottom_low_defaultMat1F.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Torsobackbottom_low_defaultMat1F.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Torsobackbottom_low_defaultMat1F.ws";
+connectAttr "Torsobottom_low_defaultMat1.oc" "Torsobottom_low_defaultMat.ss";
+connectAttr "Torsobottom_low_defaultMat.msg" "Torsobottom_low_materialInfo1.sg";
+connectAttr "Torsobottom_low_defaultMat1.msg" "Torsobottom_low_materialInfo1.m";
+connectAttr "Torsobottom_low_defaultMat1F.msg" "Torsobottom_low_materialInfo1.t"
+		 -na;
+connectAttr "Torsobottom_low_defaultMat1F.oc" "Torsobottom_low_defaultMat1.c";
+connectAttr "Torsobottom_low_defaultMat1P2D.c" "Torsobottom_low_defaultMat1F.c";
+connectAttr "Torsobottom_low_defaultMat1P2D.tf" "Torsobottom_low_defaultMat1F.tf"
+		;
+connectAttr "Torsobottom_low_defaultMat1P2D.rf" "Torsobottom_low_defaultMat1F.rf"
+		;
+connectAttr "Torsobottom_low_defaultMat1P2D.s" "Torsobottom_low_defaultMat1F.s";
+connectAttr "Torsobottom_low_defaultMat1P2D.wu" "Torsobottom_low_defaultMat1F.wu"
+		;
+connectAttr "Torsobottom_low_defaultMat1P2D.wv" "Torsobottom_low_defaultMat1F.wv"
+		;
+connectAttr "Torsobottom_low_defaultMat1P2D.re" "Torsobottom_low_defaultMat1F.re"
+		;
+connectAttr "Torsobottom_low_defaultMat1P2D.of" "Torsobottom_low_defaultMat1F.of"
+		;
+connectAttr "Torsobottom_low_defaultMat1P2D.r" "Torsobottom_low_defaultMat1F.ro"
+		;
+connectAttr "Torsobottom_low_defaultMat1P2D.o" "Torsobottom_low_defaultMat1F.uv"
+		;
+connectAttr "Torsobottom_low_defaultMat1P2D.ofs" "Torsobottom_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Torsobottom_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Torsobottom_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Torsobottom_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Torsobottom_low_defaultMat1F.ws";
+connectAttr "Torsochestmiddle_low_defaultMat1.oc" "Torsochestmiddle_low_defaultMat.ss"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat.msg" "Torsochestmiddle_low_materialInfo1.sg"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1.msg" "Torsochestmiddle_low_materialInfo1.m"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1F.msg" "Torsochestmiddle_low_materialInfo1.t"
+		 -na;
+connectAttr "Torsochestmiddle_low_defaultMat1F.oc" "Torsochestmiddle_low_defaultMat1.c"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.c" "Torsochestmiddle_low_defaultMat1F.c"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.tf" "Torsochestmiddle_low_defaultMat1F.tf"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.rf" "Torsochestmiddle_low_defaultMat1F.rf"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.s" "Torsochestmiddle_low_defaultMat1F.s"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.wu" "Torsochestmiddle_low_defaultMat1F.wu"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.wv" "Torsochestmiddle_low_defaultMat1F.wv"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.re" "Torsochestmiddle_low_defaultMat1F.re"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.of" "Torsochestmiddle_low_defaultMat1F.of"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.r" "Torsochestmiddle_low_defaultMat1F.ro"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.o" "Torsochestmiddle_low_defaultMat1F.uv"
+		;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.ofs" "Torsochestmiddle_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Torsochestmiddle_low_defaultMat1F.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Torsochestmiddle_low_defaultMat1F.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Torsochestmiddle_low_defaultMat1F.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Torsochestmiddle_low_defaultMat1F.ws"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1.oc" "Torsofrontangle_low_defaultMat.ss"
+		;
+connectAttr "Torsofrontangle_low_defaultMat.msg" "Torsofrontangle_low_materialInfo1.sg"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1.msg" "Torsofrontangle_low_materialInfo1.m"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1F.msg" "Torsofrontangle_low_materialInfo1.t"
+		 -na;
+connectAttr "Torsofrontangle_low_defaultMat1F.oc" "Torsofrontangle_low_defaultMat1.c"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.c" "Torsofrontangle_low_defaultMat1F.c"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.tf" "Torsofrontangle_low_defaultMat1F.tf"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.rf" "Torsofrontangle_low_defaultMat1F.rf"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.s" "Torsofrontangle_low_defaultMat1F.s"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.wu" "Torsofrontangle_low_defaultMat1F.wu"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.wv" "Torsofrontangle_low_defaultMat1F.wv"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.re" "Torsofrontangle_low_defaultMat1F.re"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.of" "Torsofrontangle_low_defaultMat1F.of"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.r" "Torsofrontangle_low_defaultMat1F.ro"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.o" "Torsofrontangle_low_defaultMat1F.uv"
+		;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.ofs" "Torsofrontangle_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Torsofrontangle_low_defaultMat1F.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "Torsofrontangle_low_defaultMat1F.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Torsofrontangle_low_defaultMat1F.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Torsofrontangle_low_defaultMat1F.ws";
+connectAttr "Torsofrontmain_low_defaultMat1.oc" "Torsofrontmain_low_defaultMat.ss"
+		;
+connectAttr "Torsofrontmain_low_defaultMat.msg" "Torsofrontmain_low_materialInfo1.sg"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1.msg" "Torsofrontmain_low_materialInfo1.m"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1F.msg" "Torsofrontmain_low_materialInfo1.t"
+		 -na;
+connectAttr "Torsofrontmain_low_defaultMat1F.oc" "Torsofrontmain_low_defaultMat1.c"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.c" "Torsofrontmain_low_defaultMat1F.c"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.tf" "Torsofrontmain_low_defaultMat1F.tf"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.rf" "Torsofrontmain_low_defaultMat1F.rf"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.s" "Torsofrontmain_low_defaultMat1F.s"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.wu" "Torsofrontmain_low_defaultMat1F.wu"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.wv" "Torsofrontmain_low_defaultMat1F.wv"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.re" "Torsofrontmain_low_defaultMat1F.re"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.of" "Torsofrontmain_low_defaultMat1F.of"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.r" "Torsofrontmain_low_defaultMat1F.ro"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.o" "Torsofrontmain_low_defaultMat1F.uv"
+		;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.ofs" "Torsofrontmain_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Torsofrontmain_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Torsofrontmain_low_defaultMat1F.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Torsofrontmain_low_defaultMat1F.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Torsofrontmain_low_defaultMat1F.ws";
+connectAttr "Torsoside_low_defaultMat1.oc" "Torsoside_low_defaultMat.ss";
+connectAttr "Torsoside_low_defaultMat.msg" "Torsoside_low_materialInfo1.sg";
+connectAttr "Torsoside_low_defaultMat1.msg" "Torsoside_low_materialInfo1.m";
+connectAttr "Torsoside_low_defaultMat1F.msg" "Torsoside_low_materialInfo1.t" -na
+		;
+connectAttr "Torsoside_low_defaultMat1F.oc" "Torsoside_low_defaultMat1.c";
+connectAttr "Torsoside_low_defaultMat1P2D.c" "Torsoside_low_defaultMat1F.c";
+connectAttr "Torsoside_low_defaultMat1P2D.tf" "Torsoside_low_defaultMat1F.tf";
+connectAttr "Torsoside_low_defaultMat1P2D.rf" "Torsoside_low_defaultMat1F.rf";
+connectAttr "Torsoside_low_defaultMat1P2D.s" "Torsoside_low_defaultMat1F.s";
+connectAttr "Torsoside_low_defaultMat1P2D.wu" "Torsoside_low_defaultMat1F.wu";
+connectAttr "Torsoside_low_defaultMat1P2D.wv" "Torsoside_low_defaultMat1F.wv";
+connectAttr "Torsoside_low_defaultMat1P2D.re" "Torsoside_low_defaultMat1F.re";
+connectAttr "Torsoside_low_defaultMat1P2D.of" "Torsoside_low_defaultMat1F.of";
+connectAttr "Torsoside_low_defaultMat1P2D.r" "Torsoside_low_defaultMat1F.ro";
+connectAttr "Torsoside_low_defaultMat1P2D.o" "Torsoside_low_defaultMat1F.uv";
+connectAttr "Torsoside_low_defaultMat1P2D.ofs" "Torsoside_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Torsoside_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Torsoside_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Torsoside_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Torsoside_low_defaultMat1F.ws";
+connectAttr "Torsosidevents_low_defaultMat1.oc" "Torsosidevents_low_defaultMat.ss"
+		;
+connectAttr "Torsosidevents_low_defaultMat.msg" "Torsosidevents_low_materialInfo1.sg"
+		;
+connectAttr "Torsosidevents_low_defaultMat1.msg" "Torsosidevents_low_materialInfo1.m"
+		;
+connectAttr "Torsosidevents_low_defaultMat1F.msg" "Torsosidevents_low_materialInfo1.t"
+		 -na;
+connectAttr "Torsosidevents_low_defaultMat1F.oc" "Torsosidevents_low_defaultMat1.c"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.c" "Torsosidevents_low_defaultMat1F.c"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.tf" "Torsosidevents_low_defaultMat1F.tf"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.rf" "Torsosidevents_low_defaultMat1F.rf"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.s" "Torsosidevents_low_defaultMat1F.s"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.wu" "Torsosidevents_low_defaultMat1F.wu"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.wv" "Torsosidevents_low_defaultMat1F.wv"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.re" "Torsosidevents_low_defaultMat1F.re"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.of" "Torsosidevents_low_defaultMat1F.of"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.r" "Torsosidevents_low_defaultMat1F.ro"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.o" "Torsosidevents_low_defaultMat1F.uv"
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.ofs" "Torsosidevents_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Torsosidevents_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Torsosidevents_low_defaultMat1F.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "Torsosidevents_low_defaultMat1F.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "Torsosidevents_low_defaultMat1F.ws";
+connectAttr "Vestbase_low_defaultMat1.oc" "Vestbase_low_defaultMat.ss";
+connectAttr "Vestbase_low_defaultMat.msg" "Vestbase_low_materialInfo1.sg";
+connectAttr "Vestbase_low_defaultMat1.msg" "Vestbase_low_materialInfo1.m";
+connectAttr "Vestbase_low_defaultMat1F.msg" "Vestbase_low_materialInfo1.t" -na;
+connectAttr "Vestbase_low_defaultMat1F.oc" "Vestbase_low_defaultMat1.c";
+connectAttr "Vestbase_low_defaultMat1P2D.c" "Vestbase_low_defaultMat1F.c";
+connectAttr "Vestbase_low_defaultMat1P2D.tf" "Vestbase_low_defaultMat1F.tf";
+connectAttr "Vestbase_low_defaultMat1P2D.rf" "Vestbase_low_defaultMat1F.rf";
+connectAttr "Vestbase_low_defaultMat1P2D.s" "Vestbase_low_defaultMat1F.s";
+connectAttr "Vestbase_low_defaultMat1P2D.wu" "Vestbase_low_defaultMat1F.wu";
+connectAttr "Vestbase_low_defaultMat1P2D.wv" "Vestbase_low_defaultMat1F.wv";
+connectAttr "Vestbase_low_defaultMat1P2D.re" "Vestbase_low_defaultMat1F.re";
+connectAttr "Vestbase_low_defaultMat1P2D.of" "Vestbase_low_defaultMat1F.of";
+connectAttr "Vestbase_low_defaultMat1P2D.r" "Vestbase_low_defaultMat1F.ro";
+connectAttr "Vestbase_low_defaultMat1P2D.o" "Vestbase_low_defaultMat1F.uv";
+connectAttr "Vestbase_low_defaultMat1P2D.ofs" "Vestbase_low_defaultMat1F.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Vestbase_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Vestbase_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Vestbase_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Vestbase_low_defaultMat1F.ws";
+connectAttr "Vestbuttons_low_defaultMat1.oc" "Vestbuttons_low_defaultMat.ss";
+connectAttr "Vestbuttons_low_defaultMat.msg" "Vestbuttons_low_materialInfo1.sg";
+connectAttr "Vestbuttons_low_defaultMat1.msg" "Vestbuttons_low_materialInfo1.m";
+connectAttr "Vestbuttons_low_defaultMat1F.msg" "Vestbuttons_low_materialInfo1.t"
+		 -na;
+connectAttr "Vestbuttons_low_defaultMat1F.oc" "Vestbuttons_low_defaultMat1.c";
+connectAttr "Vestbuttons_low_defaultMat1P2D.c" "Vestbuttons_low_defaultMat1F.c";
+connectAttr "Vestbuttons_low_defaultMat1P2D.tf" "Vestbuttons_low_defaultMat1F.tf"
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.rf" "Vestbuttons_low_defaultMat1F.rf"
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.s" "Vestbuttons_low_defaultMat1F.s";
+connectAttr "Vestbuttons_low_defaultMat1P2D.wu" "Vestbuttons_low_defaultMat1F.wu"
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.wv" "Vestbuttons_low_defaultMat1F.wv"
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.re" "Vestbuttons_low_defaultMat1F.re"
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.of" "Vestbuttons_low_defaultMat1F.of"
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.r" "Vestbuttons_low_defaultMat1F.ro"
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.o" "Vestbuttons_low_defaultMat1F.uv"
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.ofs" "Vestbuttons_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Vestbuttons_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Vestbuttons_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Vestbuttons_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Vestbuttons_low_defaultMat1F.ws";
+connectAttr "Vestconnect_low_defaultMat1.oc" "Vestconnect_low_defaultMat.ss";
+connectAttr "Vestconnect_low_defaultMat.msg" "Vestconnect_low_materialInfo1.sg";
+connectAttr "Vestconnect_low_defaultMat1.msg" "Vestconnect_low_materialInfo1.m";
+connectAttr "Vestconnect_low_defaultMat1F.msg" "Vestconnect_low_materialInfo1.t"
+		 -na;
+connectAttr "Vestconnect_low_defaultMat1F.oc" "Vestconnect_low_defaultMat1.c";
+connectAttr "Vestconnect_low_defaultMat1P2D.c" "Vestconnect_low_defaultMat1F.c";
+connectAttr "Vestconnect_low_defaultMat1P2D.tf" "Vestconnect_low_defaultMat1F.tf"
+		;
+connectAttr "Vestconnect_low_defaultMat1P2D.rf" "Vestconnect_low_defaultMat1F.rf"
+		;
+connectAttr "Vestconnect_low_defaultMat1P2D.s" "Vestconnect_low_defaultMat1F.s";
+connectAttr "Vestconnect_low_defaultMat1P2D.wu" "Vestconnect_low_defaultMat1F.wu"
+		;
+connectAttr "Vestconnect_low_defaultMat1P2D.wv" "Vestconnect_low_defaultMat1F.wv"
+		;
+connectAttr "Vestconnect_low_defaultMat1P2D.re" "Vestconnect_low_defaultMat1F.re"
+		;
+connectAttr "Vestconnect_low_defaultMat1P2D.of" "Vestconnect_low_defaultMat1F.of"
+		;
+connectAttr "Vestconnect_low_defaultMat1P2D.r" "Vestconnect_low_defaultMat1F.ro"
+		;
+connectAttr "Vestconnect_low_defaultMat1P2D.o" "Vestconnect_low_defaultMat1F.uv"
+		;
+connectAttr "Vestconnect_low_defaultMat1P2D.ofs" "Vestconnect_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Vestconnect_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Vestconnect_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Vestconnect_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Vestconnect_low_defaultMat1F.ws";
+connectAttr "Veststraps_low_defaultMat1.oc" "Veststraps_low_defaultMat.ss";
+connectAttr "Veststraps_low_defaultMat.msg" "Veststraps_low_materialInfo1.sg";
+connectAttr "Veststraps_low_defaultMat1.msg" "Veststraps_low_materialInfo1.m";
+connectAttr "Veststraps_low_defaultMat1F.msg" "Veststraps_low_materialInfo1.t" -na
+		;
+connectAttr "Veststraps_low_defaultMat1F.oc" "Veststraps_low_defaultMat1.c";
+connectAttr "Veststraps_low_defaultMat1P2D.c" "Veststraps_low_defaultMat1F.c";
+connectAttr "Veststraps_low_defaultMat1P2D.tf" "Veststraps_low_defaultMat1F.tf";
+connectAttr "Veststraps_low_defaultMat1P2D.rf" "Veststraps_low_defaultMat1F.rf";
+connectAttr "Veststraps_low_defaultMat1P2D.s" "Veststraps_low_defaultMat1F.s";
+connectAttr "Veststraps_low_defaultMat1P2D.wu" "Veststraps_low_defaultMat1F.wu";
+connectAttr "Veststraps_low_defaultMat1P2D.wv" "Veststraps_low_defaultMat1F.wv";
+connectAttr "Veststraps_low_defaultMat1P2D.re" "Veststraps_low_defaultMat1F.re";
+connectAttr "Veststraps_low_defaultMat1P2D.of" "Veststraps_low_defaultMat1F.of";
+connectAttr "Veststraps_low_defaultMat1P2D.r" "Veststraps_low_defaultMat1F.ro";
+connectAttr "Veststraps_low_defaultMat1P2D.o" "Veststraps_low_defaultMat1F.uv";
+connectAttr "Veststraps_low_defaultMat1P2D.ofs" "Veststraps_low_defaultMat1F.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "Veststraps_low_defaultMat1F.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Veststraps_low_defaultMat1F.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Veststraps_low_defaultMat1F.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Veststraps_low_defaultMat1F.ws";
+connectAttr "groupId85.msg" "set1.gn" -na;
+connectAttr "BarbellShape.iog.og[1]" "set1.dsm" -na;
+connectAttr "barbell.oc" "lambert19SG.ss";
+connectAttr "BarbellShape.iog" "lambert19SG.dsm" -na;
+connectAttr "lambert19SG.msg" "materialInfo20.sg";
+connectAttr "barbell.msg" "materialInfo20.m";
+connectAttr "metalCan.oc" "lambert20SG.ss";
+connectAttr "groupId89.msg" "lambert20SG.gn" -na;
+connectAttr "BlueCowShape.iog.og[1]" "lambert20SG.dsm" -na;
+connectAttr "lambert20SG.msg" "materialInfo21.sg";
+connectAttr "metalCan.msg" "materialInfo21.m";
+connectAttr "lambert21.oc" "lambert21SG.ss";
+connectAttr "lambert21SG.msg" "materialInfo22.sg";
+connectAttr "lambert21.msg" "materialInfo22.m";
+connectAttr "redCan.oc" "lambert22SG.ss";
+connectAttr "BlueCowShape.iog.og[2]" "lambert22SG.dsm" -na;
+connectAttr "groupId90.msg" "lambert22SG.gn" -na;
+connectAttr "lambert22SG.msg" "materialInfo23.sg";
+connectAttr "redCan.msg" "materialInfo23.m";
+connectAttr "blueCan.oc" "lambert23SG.ss";
+connectAttr "BlueCowShape.iog.og[0]" "lambert23SG.dsm" -na;
+connectAttr "groupId88.msg" "lambert23SG.gn" -na;
+connectAttr "lambert23SG.msg" "materialInfo24.sg";
+connectAttr "blueCan.msg" "materialInfo24.m";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
@@ -9279,6 +11580,49 @@ connectAttr "lambert15SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert16SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert17SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert18SG.pa" ":renderPartition.st" -na;
+connectAttr "Backbox_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Chestarmour_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Cuerpo_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Eyelashes_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Eyes_low_copy2_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Eyes_low_copy3_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Head_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Headback_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Headbottom_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Headcylinder_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Headsides_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Headtop_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Headvent_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Headtop_low_defaultMat2.pa" ":renderPartition.st" -na;
+connectAttr "Leglower_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Legupper_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Neckarmour_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Shoesbottom_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Shoescontact_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Shoesheel_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Shoesmiddle_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Shoessoles_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Shoesstrapsfront_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Shoestrapssides_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Shoestuds_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Skirt_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Torsoback_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Torsobackbottom_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Torsobottom_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Torsochestmiddle_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Torsofrontangle_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Torsofrontmain_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Torsoside_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Torsosidevents_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Vestbase_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Vestbuttons_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Vestconnect_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "Veststraps_low_defaultMat.pa" ":renderPartition.st" -na;
+connectAttr "lambert19SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert20SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert21SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert22SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert23SG.pa" ":renderPartition.st" -na;
 connectAttr "M_Conveyer_Body.msg" ":defaultShaderList1.s" -na;
 connectAttr "M_Conveyer_Wheels.msg" ":defaultShaderList1.s" -na;
 connectAttr "M_Conveyer_Treads.msg" ":defaultShaderList1.s" -na;
@@ -9298,9 +11642,168 @@ connectAttr "M_Flour_Red.msg" ":defaultShaderList1.s" -na;
 connectAttr "M_Flour_White.msg" ":defaultShaderList1.s" -na;
 connectAttr "maskMain.msg" ":defaultShaderList1.s" -na;
 connectAttr "maskStrings.msg" ":defaultShaderList1.s" -na;
+connectAttr "Backbox_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Chestarmour_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Cuerpo_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Eyelashes_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Eyes_low_copy2_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Eyes_low_copy3_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Head_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Headback_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Headbottom_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Headcylinder_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Headsides_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Headtop_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Headvent_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Headtop_low_defaultMat3.msg" ":defaultShaderList1.s" -na;
+connectAttr "Leglower_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Legupper_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Neckarmour_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shoesbottom_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shoescontact_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shoesheel_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shoesmiddle_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shoessoles_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shoesstrapsfront_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shoestrapssides_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Shoestuds_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Skirt_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Torsoback_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Torsobackbottom_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Torsobottom_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Torsochestmiddle_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Torsofrontangle_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Torsofrontmain_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Torsoside_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Torsosidevents_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Vestbase_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Vestbuttons_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Vestconnect_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Veststraps_low_defaultMat1.msg" ":defaultShaderList1.s" -na;
+connectAttr "barbell.msg" ":defaultShaderList1.s" -na;
+connectAttr "metalCan.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert21.msg" ":defaultShaderList1.s" -na;
+connectAttr "redCan.msg" ":defaultShaderList1.s" -na;
+connectAttr "blueCan.msg" ":defaultShaderList1.s" -na;
+connectAttr "Backbox_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Chestarmour_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "Cuerpo_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Eyelashes_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Eyes_low_copy2_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Eyes_low_copy3_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Head_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Headback_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Headbottom_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Headcylinder_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Headsides_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Headtop_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Headvent_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Headtop_low_defaultMat1P2D1.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Leglower_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Legupper_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Neckarmour_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Shoesbottom_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "Shoescontact_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Shoesheel_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Shoesmiddle_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "Shoessoles_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Shoesstrapsfront_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Shoestrapssides_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Shoestuds_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Skirt_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Torsoback_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Torsobackbottom_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Torsobottom_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "Torsochestmiddle_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Torsofrontangle_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Torsofrontmain_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Torsoside_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Torsosidevents_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Vestbase_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
+connectAttr "Vestbuttons_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "Vestconnect_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" 
+		-na;
+connectAttr "Veststraps_low_defaultMat1P2D.msg" ":defaultRenderUtilityList1.u" -na
+		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "Backbox_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Chestarmour_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Cuerpo_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Eyelashes_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Eyes_low_copy2_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Eyes_low_copy3_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Head_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Headback_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Headbottom_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Headcylinder_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Headsides_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Headtop_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Headvent_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Headtop_low_defaultMat1F1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Leglower_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Legupper_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Neckarmour_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Shoesbottom_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Shoescontact_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Shoesheel_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Shoesmiddle_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Shoessoles_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Shoesstrapsfront_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Shoestrapssides_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Shoestuds_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Skirt_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Torsoback_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Torsobackbottom_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Torsobottom_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Torsochestmiddle_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Torsofrontangle_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na
+		;
+connectAttr "Torsofrontmain_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Torsoside_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Torsosidevents_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Vestbase_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Vestbuttons_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Vestconnect_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Veststraps_low_defaultMat1F.msg" ":defaultTextureList1.tx" -na;
 connectAttr "HandSanitizerShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "BlueCowShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId22.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId87.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId18.msg" ":defaultLastHiddenSet.gn" -na;
 connectAttr "groupId75.msg" ":defaultLastHiddenSet.gn" -na;
 connectAttr "Sotrage_RackShape.iog.og[2]" ":defaultLastHiddenSet.dsm" -na;
