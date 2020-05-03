@@ -6,11 +6,13 @@ public class ItemController : MonoBehaviour
 {
     public int itemId;
     public bool wasDropped;
+    public bool isRack;
+    private Sprite icon;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
