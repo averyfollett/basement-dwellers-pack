@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 3578477049505052455}
   m_Layer: 0
   m_Name: SM_ConveyerBelt_Anim
-  m_TagString: Untagged
+  m_TagString: Conveyor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,6 +439,13 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   xVel: 0
+  speed: 1
+  speedLookup:
+  - 0.0005
+  - 0.0008
+  - 0.001
+  - 0.0015
+  - 0.002
   nextConv: {fileID: 0}
 --- !u!65 &3578477049505052455
 BoxCollider:
