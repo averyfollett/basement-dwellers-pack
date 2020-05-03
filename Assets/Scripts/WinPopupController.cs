@@ -11,10 +11,10 @@ public class WinPopupController : MonoBehaviour
 
     public void UpdateText(int completedBoxes, int totalNumBoxes)
     {
-        successfulOrdersText.text = completedBoxes + " Successful Orders";
-        totalOrdersText.text = totalNumBoxes + " Total Orders";
-        successfulRateText.text = ((float)completedBoxes / (float)totalNumBoxes) * 100 + "% Successful Rate";
-        gradeText.text = "Grade " + GetGrade(((float)completedBoxes / (float)totalNumBoxes) * 100);
+        successfulOrdersText.text = completedBoxes.ToString();
+        totalOrdersText.text = totalNumBoxes.ToString();
+        successfulRateText.text = ((float)completedBoxes / (float)totalNumBoxes) * 100 + "%";
+        gradeText.text = GetGrade(((float)completedBoxes / (float)totalNumBoxes) * 100);
     }
 
     private string GetGrade(float completedPercentage)
