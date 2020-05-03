@@ -13,7 +13,7 @@ public class UiManager : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         selected = GameObject.Find("CurrentlySelected").GetComponent<Image>();
         string itemName;

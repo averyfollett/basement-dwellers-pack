@@ -439,13 +439,13 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   xVel: 0
-  speed: 5
+  speed: 2
   speedLookup:
   - 0.0005
   - 0.0008
   - 0.001
   - 0.0015
-  - 0.003
+  - 0.75
   nextConv: {fileID: 0}
 --- !u!65 &3578477049505052455
 BoxCollider:

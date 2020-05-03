@@ -45,21 +45,14 @@ public class GameController : MonoBehaviour
 	public GameObject[] convSpawnPoints = new GameObject[2];
 	public int num = 0;
 
-    void Start()
+    public void Start()
     {
         startConv = GameObject.FindGameObjectWithTag("FirstConveyor");
-        if(multipleSpawn)
-        {
-            GameObject[] objs = GameObject.FindGameObjectsWithTag("FirstConveyor");
-            for(int i = 0; i < convSpawnPoints.Length; i++)
-            {
-                convSpawnPoints[i] = objs[i];
-            }
-        }
+        
         if(SceneManager.GetActiveScene().name == "Level_1")
         {
             numBoxes = 5;
-            interval = 20;
+            interval = 10;
         }
         else if(SceneManager.GetActiveScene().name == "Level_2")
         {
@@ -68,12 +61,24 @@ public class GameController : MonoBehaviour
         }
         else if(SceneManager.GetActiveScene().name == "Level_3")
         {
+            multipleSpawn = true;
             numBoxes = 15;
             interval = 12;
+        }
+        if(multipleSpawn)
+        {
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("FirstConveyor");
+            for(int i = 0; i < convSpawnPoints.Length; i++)
+            {
+                convSpawnPoints[i] = objs[i];
+            }
         }
         winPopup = GameObject.Find("EmployeeReportPopup");
         winPopup.SetActive(false);
         totalNumBoxes = numBoxes;
+        completedBoxes = 0;
+        failedBoxes = 0;
+        won = false;
         sendingBoxes = true;
         timer = this.GetComponent<GameTimer>();
         originalInterval = interval;

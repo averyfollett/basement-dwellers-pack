@@ -116,7 +116,7 @@ public class Conveyer : MonoBehaviour
             boxNode.SetActive(true);
             isMoving = true;
             boxNode.transform.localPosition = startPos;
-            xVel = -speedLookup[speed - 1];
+            xVel = -speedLookup[speed - 1] * Time.deltaTime;
         }
     }
 }

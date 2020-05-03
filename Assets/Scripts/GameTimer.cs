@@ -8,7 +8,7 @@ public class GameTimer : MonoBehaviour
     private float timeRemaining;
     public bool isTimerRunning;
 
-    private void Start()
+    public void Start()
     {
         timeRemaining = timerStartingTime;
         StartTimer();

@@ -2427,17 +2427,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1924144555}
     m_Modifications:
-    - target: {fileID: 530373502472052057, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5207894577912220132, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
       propertyPath: m_Name
       value: SM_ConveyerBelt_Anim (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5207894577912220132, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
-      propertyPath: m_TagString
-      value: Conveyor
       objectReference: {fileID: 0}
     - target: {fileID: 9087544272847305719, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2931,7 +2923,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 530373502472052057, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
       propertyPath: speed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5207894577912220132, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
       propertyPath: m_Name
@@ -3403,17 +3395,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1924144555}
     m_Modifications:
-    - target: {fileID: 530373502472052057, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5207894577912220132, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
       propertyPath: m_Name
       value: SM_ConveyerBelt_Anim (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5207894577912220132, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
-      propertyPath: m_TagString
-      value: Conveyor
       objectReference: {fileID: 0}
     - target: {fileID: 9087544272847305719, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
       propertyPath: m_LocalPosition.x
