@@ -18,8 +18,13 @@ public class UiManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         inv = GameObject.Find("Player").GetComponent<PickupItem>();
 		timer = this.gameObject.GetComponent<GameTimer>();
+=======
+        inv = GameObject.FindGameObjectWithTag("Player").GetComponent<PickupItem>();
+
+>>>>>>> b2b29599624c97aec74a8ec853907b134e98778d
         for(int i = 0; i < 9; i++)
         {
             itemCount[i].fontSize = 20;

@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
             dust.Stop();
             anim.SetBool("isMoving", false);
         }
+
+        
     }
 
     void Move()
