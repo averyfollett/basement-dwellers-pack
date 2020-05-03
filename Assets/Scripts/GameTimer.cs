@@ -7,9 +7,11 @@ public class GameTimer : MonoBehaviour
     public float timerStartingTime;
     private float timeRemaining;
     public bool isTimerRunning;
+	public UiManager ui;
 
     private void Start()
     {
+		ui = GameObject.Find("GameManager").GetComponent<UiManager>();
         timeRemaining = timerStartingTime;
         StartTimer();
     }
@@ -39,6 +41,7 @@ public class GameTimer : MonoBehaviour
         if (isTimerRunning && timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
+			ui.updateTimer(timeRemaining);
         }
         //Debug.Log(timeRemaining);
     }
