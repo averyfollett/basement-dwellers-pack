@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 285161089750978088}
   m_Layer: 0
   m_Name: Item_Tissues
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
