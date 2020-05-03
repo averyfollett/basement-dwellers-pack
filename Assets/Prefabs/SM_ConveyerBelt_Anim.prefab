@@ -380,7 +380,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5207894577912220132}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.304165, y: 1.078589, z: 2.1727972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -439,13 +439,13 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   xVel: 0
-  speed: 1
+  speed: 5
   speedLookup:
   - 0.0005
   - 0.0008
   - 0.001
   - 0.0015
-  - 0.002
+  - 0.003
   nextConv: {fileID: 0}
 --- !u!65 &3578477049505052455
 BoxCollider:

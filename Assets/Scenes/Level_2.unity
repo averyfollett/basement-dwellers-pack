@@ -579,7 +579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214684248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.815, y: 1.508, z: 8.05}
+  m_LocalPosition: {x: 15.45, y: 1.26, z: 8.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3788,7 +3788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22edc6a9b94be7b4db7d1532e3937809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerStartingTime: 60
+  timerStartingTime: 500
   isTimerRunning: 0
 --- !u!114 &1134589503
 MonoBehaviour:
@@ -3804,7 +3804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxPrefab: {fileID: 8695107017400563035, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
   startConv: {fileID: 248413541}
-  numBoxes: 3
+  numBoxes: 7
   interval: 10
   sendingBoxes: 0
   score: 0
@@ -4229,7 +4229,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 530373502472052057, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
       propertyPath: speed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5207894577912220132, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
       propertyPath: m_Name
