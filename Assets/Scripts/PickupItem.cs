@@ -21,6 +21,7 @@ public class PickupItem : MonoBehaviour
 	public AudioSource box1;
 	public AudioSource box2;
 	public AudioSource box3;
+	public AudioSource click;
 	
 	void Start()
 	{
@@ -112,10 +113,16 @@ public class PickupItem : MonoBehaviour
 		float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0)
         {
-            if (scroll > 0)
-                selected++;
-            else
-                selected--;
+			if (scroll > 0)
+			{
+				selected++;
+				invClick();
+			}
+			else
+			{
+				selected--;
+				invClick();
+			}
 
             if (selected > inventorySize.Length - 1)
                 selected = 0;
@@ -237,6 +244,11 @@ public class PickupItem : MonoBehaviour
 		if (randomValue == 2)
 			box3.Play();
 
+	}
+
+	public void invClick()
+	{
+		click.Play();
 	}
 }
 
