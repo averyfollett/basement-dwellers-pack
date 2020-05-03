@@ -35,6 +35,11 @@ public class GameController : MonoBehaviour
     public int failedBoxes;
     public GameObject winPopup;
     public GameObject lossPopup;
+	
+		
+	public bool multipleSpawn = false;
+	public GameObject[] convSpawnPoints = new GameObject[2];
+	public int num = 0;
 
     void Start()
     {
