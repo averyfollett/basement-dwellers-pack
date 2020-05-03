@@ -59,7 +59,18 @@ public class GameController : MonoBehaviour
             {
                 prevTime = Mathf.FloorToInt(timer.GetTimeRemaining());
                 GameObject box = Instantiate(boxPrefab);
-                startConv.GetComponent<Conveyer>().box = box;
+				if(multipleSpawn == true)
+				{  
+					convSpawnPoints[num].GetComponent<Conveyer>().box = box;
+					if(num < convSpawnPoints.Length - 1)
+					{
+						num = num + 1;
+					} else {
+						num = 0;
+					}
+				} else {
+					startConv.GetComponent<Conveyer>().box = box;
+				}
                 numBoxes--;
 
                 interval = originalInterval;
