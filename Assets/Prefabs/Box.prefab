@@ -131,6 +131,9 @@ MonoBehaviour:
   smallBoxMesh: {fileID: 7982939208185282332, guid: 5c62c94af60c04443a3ff719de2d44d9, type: 3}
   mediumBoxMesh: {fileID: 1706219170432718242, guid: cc44c8502c6c3b84d9823102aabfd1fa, type: 3}
   largeBoxMesh: {fileID: -8200947965567913791, guid: 0deba34cf9ec2bd4583cf85f10bcf6dc, type: 3}
+  smallBoxClosed: {fileID: 3203726616657302205, guid: 22952a89544f03b46a5479de235d7837, type: 3}
+  mediumBoxClosed: {fileID: 3887095327089856050, guid: ee81e6d14eb2bf048a504bc6c1e9e01f, type: 3}
+  largeBoxClosed: {fileID: -6595303523064130373, guid: 8cd17d46c2e55c545803307fb60230f3, type: 3}
   orderCompleted: 0
 --- !u!114 &8013560066336775151
 MonoBehaviour:
