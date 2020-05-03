@@ -6,19 +6,36 @@ public class ItemController : MonoBehaviour
 {
     public int itemId;
     public bool wasDropped;
-    public bool isRack;
-    private Sprite icon;
+    public bool isRack = true;
+    private GameObject obj;
+    public GameObject sprite;
+    private GameObject cam;
 
     // Start is called before the first frame update
     void Start()
     {
+        cam = GameObject.Find("Camera");
+        if(isRack)
+        {
+            obj = Instantiate(sprite, new Vector3(transform.position.x, 3.5f, transform.position.z), Quaternion.identity);
+            obj.transform.SetParent(this.transform);
+            obj.transform.localScale = new Vector3(1f, 1f, 1f);
 
+
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(isRack)  
+            UpdateSprite();
+    }
+
+    void UpdateSprite()
+    {
+        obj.transform.LookAt(cam.transform);
     }
 
     public int GetItemId() { return itemId; }
