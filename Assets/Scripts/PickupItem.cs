@@ -30,80 +30,6 @@ public class PickupItem : MonoBehaviour
 
     void Update()
     {		
-		/*
-		if (Input.GetMouseButtonDown(0) && trigger == true) // if left mouse and colliding
-        {
-			if(col != null) //if the object you are colliding with exists
-			// I know its dumb, but I get a nullobjectref if I dont have this because of string tag = col.tag is null
-			{
-				string tag = col.tag;
-				print(col);
-				if(tag == "Item") //get and check if collider is an item
-				{
-					int id = col.gameObject.GetComponent<ItemController>().GetItemId();
-					int count = inventorySize[id];
-					if(count < inventory.GetLength(1)) // get the item id from col, and check if the items in the
-					// array are exceeding length
-					{
-						inventory[id,count] = 1; // 1 is full, 0 is empty
-						count += 1;
-					}
-					inventorySize[id] = count;
-					if(col != null && col.gameObject.GetComponent<ItemController>().GetWasDropped())
-					{
-						Destroy(col.gameObject); // if the item has been dropped before, destroy it when picked up
-					}
-				}
-			}
-			ui.updateInv();
-        } 
-		
-		for(int i = 0; i < 9; i++)
-		{
-			if(col != null && Input.GetKeyDown(arr[i]) && col.tag == "Box") // if key down is 1-9, based on KeyCode array above
-			{
-				int change = inventorySize[i];
-				int amount = col.gameObject.GetComponent<OrderSystem>().itemUnitValue[i];
-				col.gameObject.GetComponent<BoxController>().currentBoxCapacity = 0;
-				int currBox = col.gameObject.GetComponent<BoxController>().currentBoxCapacity;
-				int boxCap = col.gameObject.GetComponent<BoxController>().maxBoxCapacity;
-				if(inventorySize[i] > 0 && currBox != boxCap) // while there are items to drop
-				{
-					if(currBox + amount <= boxCap)
-					{
-						currBox = currBox + amount;
-						col.gameObject.GetComponent<BoxController>().currentBoxCapacity = currBox;
-						col.gameObject.GetComponent<OrderSystem>().orderList.Remove(i);
-						Debug.Log("Removing item from order list");
-						List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
-						foreach(GameObject g in spawnedSprites)
-						{
-							Destroy(g);
-						}
-						col.gameObject.GetComponent<OrderText>().spawnedSprites = new List<GameObject>();
-					}
-					inventory[i,change - 1] = 0;
-					inventorySize[i] = inventorySize[i] - 1;
-				}
-				ui.updateInv();
-			}else if(Input.GetKeyDown(arr[i])) // if key down is 1-9, based on KeyCode array above
-			{
-				int change = inventorySize[i];
-				Vector3 pos = transform.position;
-				if(inventorySize[i] > 0) // while there are items to drop
-				{
-					GameObject item = Instantiate(lookupTable[i], new Vector3(pos.x, pos.y + 0.5f, pos.z), Quaternion.identity);
-					item.gameObject.GetComponent<ItemController>().setWasDropped(true);
-					// inst the itme, then change droppped to true
-					inventory[i,change - 1] = 0;
-					inventorySize[i] = inventorySize[i] - 1;
-					// set the array index to 0, meaning off 
-					// subtract the length of the 2nd index of the 2d array to one less
-				}
-				ui.updateInv();
-			}
-		}
-		*/
 		CheckInput();
 		ui.updateInv(selected);
     }
@@ -111,14 +37,12 @@ public class PickupItem : MonoBehaviour
 	public void CheckInput()
 	{
 		float scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll != 0)
-        {
-			if (scroll > 0)
+			if (scroll > 0 || Input.GetKeyDown(KeyCode.X))
 			{
 				selected++;
 				invClick();
 			}
-			else
+			else if(scroll < 0 || Input.GetKeyDown(KeyCode.Z))
 			{
 				selected--;
 				invClick();
@@ -128,8 +52,7 @@ public class PickupItem : MonoBehaviour
                 selected = 0;
             if (selected < 0)
                 selected = inventorySize.Length - 1;
-		}
-		if(trigger && Input.GetMouseButtonDown(0))
+		if(trigger && Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
 		{
 			Debug.Log("mouseButton down and trigger");
 			if (col != null)
@@ -158,30 +81,34 @@ public class PickupItem : MonoBehaviour
 					break;
 					case "Box":
 					//if mouse button down and collliding with box
-					int change = inventorySize[selected];
-					int amount = col.gameObject.GetComponent<OrderSystem>().itemUnitValue[selected];
-					col.gameObject.GetComponent<BoxController>().currentBoxCapacity = 0;
-					int currBox = col.gameObject.GetComponent<BoxController>().currentBoxCapacity;
-					int boxCap = col.gameObject.GetComponent<BoxController>().maxBoxCapacity;
-					if(inventorySize[selected] > 0 && currBox != boxCap) // while there are items to drop
+					if(!col.gameObject.GetComponent<BoxController>().boxClosed)
 					{
-						if(currBox + amount <= boxCap)
+						int change = inventorySize[selected];
+						int amount = col.gameObject.GetComponent<OrderSystem>().itemUnitValue[selected];
+						col.gameObject.GetComponent<BoxController>().currentBoxCapacity = 0;
+						int currBox = col.gameObject.GetComponent<BoxController>().currentBoxCapacity;
+						int boxCap = col.gameObject.GetComponent<BoxController>().maxBoxCapacity;
+						if(inventorySize[selected] > 0 && currBox != boxCap) // while there are items to drop
 						{
-							currBox = currBox + amount;
-							col.gameObject.GetComponent<BoxController>().currentBoxCapacity = currBox;
-							col.gameObject.GetComponent<OrderSystem>().orderList.Remove(selected);
-							Debug.Log("Removing item from order list");
-							List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
-							foreach(GameObject g in spawnedSprites)
+							if(currBox + amount <= boxCap)
 							{
-								Destroy(g);
+								currBox = currBox + amount;
+								col.gameObject.GetComponent<BoxController>().currentBoxCapacity = currBox;
+								col.gameObject.GetComponent<OrderSystem>().orderList.Remove(selected);
+								Debug.Log("Removing item from order list");
+								List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
+								foreach(GameObject g in spawnedSprites)
+								{
+									Destroy(g);
+								}
+								col.gameObject.GetComponent<OrderText>().spawnedSprites = new List<GameObject>();
 							}
-							col.gameObject.GetComponent<OrderText>().spawnedSprites = new List<GameObject>();
+							inventory[selected,change - 1] = 0;
+							inventorySize[selected] = inventorySize[selected] - 1;
+							PlayBox();
 						}
-						inventory[selected,change - 1] = 0;
-						inventorySize[selected] = inventorySize[selected] - 1;
-						PlayBox();
 					}
+					
 					break;
 					default:
 						Debug.Log("ni");
@@ -189,7 +116,7 @@ public class PickupItem : MonoBehaviour
 				}
 			}
 		} 
-		else if(Input.GetMouseButtonDown(0))
+		else if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
 		{
 			PlayMiss();
 			Debug.Log("mouseButton down and no trigger");
@@ -207,6 +134,27 @@ public class PickupItem : MonoBehaviour
 				// set the array index to 0, meaning off 
 				// subtract the length of the 2nd index of the 2d array to one less
 			}
+		}
+		if(Input.GetMouseButtonDown(1)|| Input.GetKeyDown(KeyCode.F) && trigger)
+		{
+			if (col != null)
+			{
+				string tag = col.tag;
+
+				if(tag == "Box")
+				{
+					if(!col.gameObject.GetComponent<BoxController>().boxClosed)
+					{
+						List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
+					foreach(GameObject g in spawnedSprites)
+					{
+						Destroy(g);
+					}
+					col.gameObject.GetComponent<BoxController>().closeBox();
+					}
+				}
+			}
+
 		}
 	}
 	
