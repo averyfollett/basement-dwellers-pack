@@ -41,9 +41,11 @@ public class Conveyer : MonoBehaviour
 
         if (hasBox == true)
         {
+            
             animate();
             moveBox();
             checkBounds();
+
         }  
 
     }
