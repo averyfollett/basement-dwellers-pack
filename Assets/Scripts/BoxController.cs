@@ -21,6 +21,7 @@ public class BoxController : MonoBehaviour
     public AudioSource tape1;
     public AudioSource tape2;
     public AudioSource tape3;
+    public int localRot;
 
     private void Start()
     {
@@ -34,9 +35,9 @@ public class BoxController : MonoBehaviour
             if (t.name == "Tape3")
                 tape3 = t.GetComponent<AudioSource>();
         }
-            maxBoxCapacity = Random.Range(4, 15);
-
-        transform.Rotate(new Vector3(0.0f, Random.Range(0, 360), 0.0f));
+        maxBoxCapacity = Random.Range(4, 15);
+        localRot = Random.Range(0, 360);
+        transform.Rotate(new Vector3(0.0f, localRot, 0.0f));
 
         if (maxBoxCapacity <= 5)
         {

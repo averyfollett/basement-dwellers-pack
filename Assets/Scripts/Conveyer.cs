@@ -35,6 +35,9 @@ public class Conveyer : MonoBehaviour
         {
             box.transform.SetParent(boxNode.transform);
             box.transform.localPosition = new Vector3(0, 0, 0);
+            box.transform.rotation = boxNode.transform.rotation;
+
+            box.transform.Rotate(new Vector3(0, box.GetComponent<BoxController>().localRot - transform.eulerAngles.y, 0));
             hasBox = true;
             initialized = true;
         }

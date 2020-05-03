@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 3578477049505052455}
   m_Layer: 0
   m_Name: SM_ConveyerBelt_Anim
-  m_TagString: Untagged
+  m_TagString: Conveyor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
