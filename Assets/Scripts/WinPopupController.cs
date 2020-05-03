@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WinPopupController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class WinPopupController : MonoBehaviour
     public TMPro.TextMeshProUGUI successfulOrdersText;
     public TMPro.TextMeshProUGUI successfulRateText;
     public TMPro.TextMeshProUGUI gradeText;
+    public Button NextButton;
+    public GameObject nextPopup;
 
     public void UpdateText(int completedBoxes, int totalNumBoxes)
     {
@@ -47,5 +50,12 @@ public class WinPopupController : MonoBehaviour
             return "F";
         else
             return "F-";
+    }
+
+    public void NextButtonClick()
+    {
+        nextPopup.SetActive(true);
+        nextPopup.GetComponent<StockReportPopupController>().UpdateText();
+        gameObject.SetActive(false);
     }
 }
