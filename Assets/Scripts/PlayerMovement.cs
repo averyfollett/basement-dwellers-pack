@@ -12,9 +12,6 @@ public class PlayerMovement : MonoBehaviour
 
     public ParticleSystem dust;
 
-    float randomWalk;
-    public AudioSource walk;
-
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -80,13 +77,5 @@ public class PlayerMovement : MonoBehaviour
     public void dustParticles()
     {
         dust.Play();
-    }
-
-    public void walkSound()
-    {
-        randomWalk = Random.Range(0.0f, 5.7f);
-        walk.time = randomWalk;
-        walk.Play();
-        walk.SetScheduledEndTime(AudioSettings.dspTime + ((randomWalk+.4f) - (randomWalk)));
     }
 }

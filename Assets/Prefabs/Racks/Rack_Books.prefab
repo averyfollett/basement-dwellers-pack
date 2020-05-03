@@ -117,9 +117,7 @@ MonoBehaviour:
   itemId: 7
   wasDropped: 0
   isRack: 1
-  obj: {fileID: 0}
   sprite: {fileID: 1737697634281942043, guid: 46dbc4b1f1db4674dbe3e92cd1f73f7a, type: 3}
-  cam: {fileID: 0}
 --- !u!65 &1609962749
 BoxCollider:
   m_ObjectHideFlags: 0
