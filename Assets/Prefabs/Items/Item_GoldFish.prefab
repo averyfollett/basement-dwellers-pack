@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 9031130021867556528}
   - component: {fileID: 6790280313586280056}
   - component: {fileID: 1224394075290392529}
+  - component: {fileID: 1126453552658794955}
+  - component: {fileID: 6661592177075761804}
   m_Layer: 0
   m_Name: Item_GoldFish
   m_TagString: Item
@@ -111,3 +113,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.366792, y: 0.6096237, z: 0.36679167}
   m_Center: {x: 0, y: 0.30481184, z: -0.000000007450581}
+--- !u!65 &1126453552658794955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692969657351250150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19297886, y: 0.6096237, z: 0.20119429}
+  m_Center: {x: 0.01784277, y: 0.30481184, z: -0.0041451454}
+--- !u!54 &6661592177075761804
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692969657351250150}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
