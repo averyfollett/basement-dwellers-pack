@@ -139,7 +139,7 @@ public class PickupItem : MonoBehaviour
 		} 
 		else if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
 		{
-			PlayMiss();
+			
 			Debug.Log("mouseButton down and no trigger");
 			//if mouse button down and not colliding with item
 			int change = inventorySize[selected];
@@ -156,6 +156,8 @@ public class PickupItem : MonoBehaviour
 				// set the array index to 0, meaning off 
 				// subtract the length of the 2nd index of the 2d array to one less
 			}
+			else
+				PlayMiss();
 		}
 		if(Input.GetMouseButtonDown(1)|| Input.GetKeyDown(KeyCode.F) && trigger)
 		{
