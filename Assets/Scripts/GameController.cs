@@ -35,6 +35,10 @@ public class GameController : MonoBehaviour
     public int failedBoxes;
     public GameObject winPopup;
     public GameObject lossPopup;
+    public int pointsNeededToWin;
+    public int totalPointsGained; //across all levels
+
+    private bool won;
 	
 		
 	public bool multipleSpawn = false;
@@ -53,7 +57,8 @@ public class GameController : MonoBehaviour
     {
         CheckSpawnBox();
 
-        CheckWinCondition();
+        if (!won)
+            CheckWinCondition();
     }
 
     private void CheckSpawnBox()
@@ -86,16 +91,14 @@ public class GameController : MonoBehaviour
 
     private void CheckWinCondition()
     {
-        if (completedBoxes == totalNumBoxes)
+        if (completedBoxes == totalNumBoxes || completedBoxes + failedBoxes == totalNumBoxes)
         {
             // WIN
             // Display win popup
-            winPopup.GetComponent<Canvas>().enabled = true;
+            winPopup.SetActive(true);
             winPopup.GetComponent<WinPopupController>().UpdateText(completedBoxes, totalNumBoxes);
-        }
-        else if (completedBoxes + failedBoxes == totalNumBoxes)
-        {
-            // LOSE
+
+            won = true;
         }
     }
 }
