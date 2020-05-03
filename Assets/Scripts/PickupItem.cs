@@ -84,30 +84,34 @@ public class PickupItem : MonoBehaviour
 					break;
 					case "Box":
 					//if mouse button down and collliding with box
-					int change = inventorySize[selected];
-					int amount = col.gameObject.GetComponent<OrderSystem>().itemUnitValue[selected];
-					col.gameObject.GetComponent<BoxController>().currentBoxCapacity = 0;
-					int currBox = col.gameObject.GetComponent<BoxController>().currentBoxCapacity;
-					int boxCap = col.gameObject.GetComponent<BoxController>().maxBoxCapacity;
-					if(inventorySize[selected] > 0 && currBox != boxCap) // while there are items to drop
+					if(!col.gameObject.GetComponent<BoxController>().boxClosed)
 					{
-						if(currBox + amount <= boxCap)
+						int change = inventorySize[selected];
+						int amount = col.gameObject.GetComponent<OrderSystem>().itemUnitValue[selected];
+						col.gameObject.GetComponent<BoxController>().currentBoxCapacity = 0;
+						int currBox = col.gameObject.GetComponent<BoxController>().currentBoxCapacity;
+						int boxCap = col.gameObject.GetComponent<BoxController>().maxBoxCapacity;
+						if(inventorySize[selected] > 0 && currBox != boxCap) // while there are items to drop
 						{
-							currBox = currBox + amount;
-							col.gameObject.GetComponent<BoxController>().currentBoxCapacity = currBox;
-							col.gameObject.GetComponent<OrderSystem>().orderList.Remove(selected);
-							Debug.Log("Removing item from order list");
-							List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
-							foreach(GameObject g in spawnedSprites)
+							if(currBox + amount <= boxCap)
 							{
-								Destroy(g);
+								currBox = currBox + amount;
+								col.gameObject.GetComponent<BoxController>().currentBoxCapacity = currBox;
+								col.gameObject.GetComponent<OrderSystem>().orderList.Remove(selected);
+								Debug.Log("Removing item from order list");
+								List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
+								foreach(GameObject g in spawnedSprites)
+								{
+									Destroy(g);
+								}
+								col.gameObject.GetComponent<OrderText>().spawnedSprites = new List<GameObject>();
 							}
-							col.gameObject.GetComponent<OrderText>().spawnedSprites = new List<GameObject>();
+							inventory[selected,change - 1] = 0;
+							inventorySize[selected] = inventorySize[selected] - 1;
+							PlayBox();
 						}
-						inventory[selected,change - 1] = 0;
-						inventorySize[selected] = inventorySize[selected] - 1;
-						PlayBox();
 					}
+					
 					break;
 					default:
 						Debug.Log("ni");
@@ -142,12 +146,15 @@ public class PickupItem : MonoBehaviour
 
 				if(tag == "Box")
 				{
-					List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
+					if(!col.gameObject.GetComponent<BoxController>().boxClosed)
+					{
+						List<GameObject> spawnedSprites = col.gameObject.GetComponent<OrderText>().spawnedSprites;
 					foreach(GameObject g in spawnedSprites)
 					{
 						Destroy(g);
 					}
 					col.gameObject.GetComponent<BoxController>().closeBox();
+					}
 				}
 			}
 
