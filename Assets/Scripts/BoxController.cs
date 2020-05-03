@@ -16,6 +16,7 @@ public class BoxController : MonoBehaviour
     public bool orderCompleted;
     public bool boxClosed = false;
 
+    private GameObject cam;
     int randomValue = 0;
     public AudioSource tape1;
     public AudioSource tape2;
@@ -23,7 +24,17 @@ public class BoxController : MonoBehaviour
 
     private void Start()
     {
-        maxBoxCapacity = Random.Range(4, 15);
+        cam = GameObject.Find("Camera");
+        foreach (Transform t in cam.transform)
+        {
+            if (t.name == "Tape1")
+                tape1 = t.GetComponent<AudioSource>();
+            if (t.name == "Tape2")
+                tape2 = t.GetComponent<AudioSource>();
+            if (t.name == "Tape3")
+                tape3 = t.GetComponent<AudioSource>();
+        }
+            maxBoxCapacity = Random.Range(4, 15);
 
         transform.Rotate(new Vector3(0.0f, Random.Range(0, 360), 0.0f));
 

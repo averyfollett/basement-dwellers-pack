@@ -14,6 +14,8 @@ public class PickupItem : MonoBehaviour
 	public UiManager ui;
 	public int selected = 0;
 
+	private GameObject cam;
+
 	int randomValue = 0;
 	public AudioSource pickUp;
 	public AudioSource miss;
@@ -26,6 +28,25 @@ public class PickupItem : MonoBehaviour
 	void Start()
 	{
 		ui = GameObject.Find("GameManager").GetComponent<UiManager>();
+		cam = GameObject.Find("Camera");
+		foreach(Transform t in cam.transform)
+		{
+			if (t.name == "Pickup")
+				pickUp = t.GetComponent<AudioSource>();
+			if (t.name == "Miss")
+				miss = t.GetComponent<AudioSource>();
+			if (t.name == "Drop")
+				drop = t.GetComponent<AudioSource>();
+			if (t.name == "Box1")
+				box1 = t.GetComponent<AudioSource>();
+			if (t.name == "Box2")
+				box2 = t.GetComponent<AudioSource>();
+			if (t.name == "Box3")
+				box3 = t.GetComponent<AudioSource>();
+			if (t.name == "InventoryClick")
+				click = t.GetComponent<AudioSource>();
+
+		}
 	}
 
     void Update()
@@ -128,6 +149,7 @@ public class PickupItem : MonoBehaviour
 				PlayDrop();
 				GameObject item = Instantiate(lookupTable[selected], new Vector3(pos.x, pos.y + 0.5f, pos.z), Quaternion.identity);
 				item.gameObject.GetComponent<ItemController>().setWasDropped(true);
+				item.gameObject.GetComponent<ItemController>().setIsOnShelf(false);
 				// inst the itme, then change droppped to true
 				inventory[selected,change - 1] = 0;
 				inventorySize[selected] = inventorySize[selected] - 1;
