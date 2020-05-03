@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class GameController : MonoBehaviour
     public GameObject boxPrefab;
     public GameObject startConv;
     public int numBoxes;
+    public int totalNumBoxes;
     public int interval;
     public bool sendingBoxes;
     public int score = 0;
@@ -31,19 +33,29 @@ public class GameController : MonoBehaviour
     private int originalInterval;
     public int completedBoxes;
     public int failedBoxes;
+    public GameObject winPopup;
+    public GameObject lossPopup;
 
     void Start()
     {
         sendingBoxes = true;
         timer = this.GetComponent<GameTimer>();
         originalInterval = interval;
+        totalNumBoxes = numBoxes;
     }
 
     void Update()
     {
+        CheckSpawnBox();
+
+        CheckWinCondition();
+    }
+
+    private void CheckSpawnBox()
+    {
         if (sendingBoxes && numBoxes > 0)
         {
-            if(Mathf.FloorToInt(timer.GetTimeRemaining()) % interval == 0 && prevTime != Mathf.FloorToInt(timer.GetTimeRemaining()))
+            if (Mathf.FloorToInt(timer.GetTimeRemaining()) % interval == 0 && prevTime != Mathf.FloorToInt(timer.GetTimeRemaining()))
             {
                 prevTime = Mathf.FloorToInt(timer.GetTimeRemaining());
                 GameObject box = Instantiate(boxPrefab);
@@ -58,13 +70,14 @@ public class GameController : MonoBehaviour
 
     private void CheckWinCondition()
     {
-        if (completedBoxes == numBoxes)
+        if (completedBoxes == totalNumBoxes)
         {
             // WIN
             // Display win popup
-
+            winPopup.GetComponent<Canvas>().enabled = true;
+            winPopup.GetComponent<WinPopupController>().UpdateText(completedBoxes, totalNumBoxes);
         }
-        else if (completedBoxes + failedBoxes == numBoxes)
+        else if (completedBoxes + failedBoxes == totalNumBoxes)
         {
             // LOSE
         }
