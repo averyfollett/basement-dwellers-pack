@@ -13,6 +13,14 @@ public class PickupItem : MonoBehaviour
 	public KeyCode[] arr = new KeyCode[9]{KeyCode.Alpha1,KeyCode.Alpha2,KeyCode.Alpha3,KeyCode.Alpha4,KeyCode.Alpha5,KeyCode.Alpha6,KeyCode.Alpha7,KeyCode.Alpha8,KeyCode.Alpha9};
 	public UiManager ui;
 	public int selected = 0;
+
+	int randomValue = 0;
+	public AudioSource pickUp;
+	public AudioSource miss;
+	public AudioSource drop;
+	public AudioSource box1;
+	public AudioSource box2;
+	public AudioSource box3;
 	
 	void Start()
 	{
@@ -117,17 +125,18 @@ public class PickupItem : MonoBehaviour
 		if(trigger && Input.GetMouseButtonDown(0))
 		{
 			Debug.Log("mouseButton down and trigger");
-			if(col != null)
+			if (col != null)
 			{
 				string tag = col.tag;
 
 				switch(tag)
 				{
 					case "Item":
+					PlayPickup();
 					//if mouse button down and collliding with item
 					int id = col.gameObject.GetComponent<ItemController>().GetItemId();
 					int count = inventorySize[id];
-					if(count < inventory.GetLength(1)) // get the item id from col, and check if the items in the
+					if (count < inventory.GetLength(1)) // get the item id from col, and check if the items in the
 					// array are exceeding length
 					{
 						inventory[id,count] = 1; // 1 is full, 0 is empty
@@ -164,6 +173,7 @@ public class PickupItem : MonoBehaviour
 						}
 						inventory[selected,change - 1] = 0;
 						inventorySize[selected] = inventorySize[selected] - 1;
+						PlayBox();
 					}
 					break;
 					default:
@@ -172,14 +182,16 @@ public class PickupItem : MonoBehaviour
 				}
 			}
 		} 
-		else if(Input.GetMouseButtonDown(0)) 
+		else if(Input.GetMouseButtonDown(0))
 		{
+			PlayMiss();
 			Debug.Log("mouseButton down and no trigger");
 			//if mouse button down and not colliding with item
 			int change = inventorySize[selected];
 			Vector3 pos = transform.position;
 			if(inventorySize[selected] > 0) // while there are items to drop
 			{
+				PlayDrop();
 				GameObject item = Instantiate(lookupTable[selected], new Vector3(pos.x, pos.y + 0.5f, pos.z), Quaternion.identity);
 				item.gameObject.GetComponent<ItemController>().setWasDropped(true);
 				// inst the itme, then change droppped to true
@@ -202,6 +214,30 @@ public class PickupItem : MonoBehaviour
 		trigger = false;
 		col = null;
     }
+
+	public void PlayPickup()
+	{
+		pickUp.Play();
+	}
+	public void PlayMiss()
+	{
+		miss.Play();
+	}
+	public void PlayDrop()
+	{
+		drop.Play();
+	}
+	public void PlayBox()
+	{
+		randomValue = Random.Range(0, 3);
+		if (randomValue == 0)
+			box1.Play();
+		if (randomValue == 1)
+			box2.Play();
+		if (randomValue == 2)
+			box3.Play();
+
+	}
 }
 
 // complete - add 9 specific objects, with a specific amount total
