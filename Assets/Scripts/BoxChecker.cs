@@ -14,11 +14,12 @@ public class BoxChecker : MonoBehaviour
             {
                 // Box with correct order
                 GameController.instance.score++;
+                GameController.instance.completedBoxes++;
             }
             else
             {
                 // Box with incorrect/incomplete order
-
+                GameController.instance.failedBoxes++;
             }
 
             Destroy(other.gameObject);

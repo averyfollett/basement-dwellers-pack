@@ -29,6 +29,8 @@ public class GameController : MonoBehaviour
     private GameTimer timer;
     private int prevTime;
     private int originalInterval;
+    public int completedBoxes;
+    public int failedBoxes;
 
     void Start()
     {
@@ -51,6 +53,20 @@ public class GameController : MonoBehaviour
                 interval = originalInterval;
                 //interval = Random.Range(interval, interval + 2);
             }
+        }
+    }
+
+    private void CheckWinCondition()
+    {
+        if (completedBoxes == numBoxes)
+        {
+            // WIN
+            // Display win popup
+
+        }
+        else if (completedBoxes + failedBoxes == numBoxes)
+        {
+            // LOSE
         }
     }
 }
