@@ -151,6 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   wasDropped: 0
+  isRack: 1
+  sprite: {fileID: 446229796372238174, guid: 4278edf5ca2e1214d8b209a94020c9ba, type: 3}
 --- !u!65 &1646410006388019361
 BoxCollider:
   m_ObjectHideFlags: 0
