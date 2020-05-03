@@ -37,14 +37,12 @@ public class PickupItem : MonoBehaviour
 	public void CheckInput()
 	{
 		float scroll = Input.GetAxis("Mouse ScrollWheel");
-        if (scroll != 0)
-        {
-			if (scroll > 0)
+			if (scroll > 0 || Input.GetKeyDown(KeyCode.X))
 			{
 				selected++;
 				invClick();
 			}
-			else
+			else if(scroll < 0 || Input.GetKeyDown(KeyCode.Z))
 			{
 				selected--;
 				invClick();
@@ -54,8 +52,7 @@ public class PickupItem : MonoBehaviour
                 selected = 0;
             if (selected < 0)
                 selected = inventorySize.Length - 1;
-		}
-		if(trigger && Input.GetMouseButtonDown(0))
+		if(trigger && Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
 		{
 			Debug.Log("mouseButton down and trigger");
 			if (col != null)
@@ -119,7 +116,7 @@ public class PickupItem : MonoBehaviour
 				}
 			}
 		} 
-		else if(Input.GetMouseButtonDown(0))
+		else if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
 		{
 			PlayMiss();
 			Debug.Log("mouseButton down and no trigger");
@@ -138,7 +135,7 @@ public class PickupItem : MonoBehaviour
 				// subtract the length of the 2nd index of the 2d array to one less
 			}
 		}
-		if(Input.GetMouseButtonDown(1) && trigger)
+		if(Input.GetMouseButtonDown(1)|| Input.GetKeyDown(KeyCode.F) && trigger)
 		{
 			if (col != null)
 			{
