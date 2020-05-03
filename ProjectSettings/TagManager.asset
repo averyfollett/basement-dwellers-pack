@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Box
   - Conveyor
+  - FirstConveyor
   layers:
   - Default
   - TransparentFX

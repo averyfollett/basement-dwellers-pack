@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour
     public GameObject lossPopup;
     public int pointsNeededToWin;
     public int totalPointsGained; //across all levels
+    public int totalNumBoxes;
 
     private bool won;
 	
@@ -45,6 +47,32 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        startConv = GameObject.FindGameObjectWithTag("FirstConveyor");
+        if(multipleSpawn)
+        {
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("FirstConveyor");
+            for(int i = 0; i < convSpawnPoints.Length; i++)
+            {
+                convSpawnPoints[i] = objs[i];
+            }
+        }
+        if(SceneManager.GetActiveScene().name == "Level_1")
+        {
+            numBoxes = 5;
+            interval = 20;
+        }
+        else if(SceneManager.GetActiveScene().name == "Level_2")
+        {
+            numBoxes = 7;
+            interval = 10;
+        }
+        else if(SceneManager.GetActiveScene().name == "Level_3")
+        {
+            numBoxes = 15;
+            interval = 12;
+        }
+        winPopup = GameObject.Find("EmployeeReportPopup");
+        totalNumBoxes = numBoxes;
         sendingBoxes = true;
         timer = this.GetComponent<GameTimer>();
         originalInterval = interval;
