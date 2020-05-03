@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: b98d83fa007fff34f891ae771fcfbba1
+guid: 7bdb02fd4d0690c42bd126e5c06001f6
 ModelImporter:
   serializedVersion: 20100
   internalIDToNameTable:
   - first:
-      74: 2667949614841947897
-    second: Walk
+      74: 1358262452650834379
+    second: Move
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
-      takeName: Walk
+      name: Move
+      takeName: Move
       internalID: 0
       firstFrame: 1
-      lastFrame: 39
+      lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

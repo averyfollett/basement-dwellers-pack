@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 forward, right;
 
+    public ParticleSystem dust;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -21,13 +23,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKey)
+        if (Input.GetKey(KeyCode.W)||
+            Input.GetKey(KeyCode.A) ||
+            Input.GetKey(KeyCode.S) ||
+            Input.GetKey(KeyCode.D))
         {
             anim.SetBool("isMoving", true);
             Move();
         }
         else
+        {
+            dust.Stop();
             anim.SetBool("isMoving", false);
+        }
     }
 
     void Move()
@@ -59,6 +67,13 @@ public class PlayerMovement : MonoBehaviour
             transform.right = -heading;
             transform.position += rightMovement;
             transform.position += upMovement;
+
         }
+
+    }
+
+    public void dustParticles()
+    {
+        dust.Play();
     }
 }
