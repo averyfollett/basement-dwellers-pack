@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  dust: {fileID: 0}
+  dust: {fileID: 122719227779217098, guid: a7488bb73cc9cf948b989ea85d00e043, type: 3}
 --- !u!1 &2595307667910533369
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class UiManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inv = GameObject.Find("Player").GetComponent<PickupItem>();
+        inv = GameObject.FindGameObjectWithTag("Player").GetComponent<PickupItem>();
 
         for(int i = 0; i < 9; i++)
         {
