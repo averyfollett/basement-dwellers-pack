@@ -14,7 +14,7 @@ public class BoxController : MonoBehaviour
     public Mesh mediumBoxClosed;
     public Mesh largeBoxClosed;
     public bool orderCompleted;
-    bool boxClosed = false;
+    public bool boxClosed = false;
 
     int randomValue = 0;
     public AudioSource tape1;
@@ -47,19 +47,14 @@ public class BoxController : MonoBehaviour
     }
     private void Update()
     {
-        if (boxClosed == false)
-            checkComplete();
-            
 
     }
 
-    private void checkComplete()
+    public void closeBox()
     {
-        if(orderCompleted)
-        {
-            boxClosed = true;
-            TapeItUp();
-            if (maxBoxCapacity <= 5)
+        boxClosed = true;
+        TapeItUp();
+        if (maxBoxCapacity <= 5)
             {
                 // Small Box
                 GetComponent<MeshFilter>().mesh = smallBoxClosed;
@@ -74,7 +69,6 @@ public class BoxController : MonoBehaviour
                 // Large Box
                 GetComponent<MeshFilter>().mesh = largeBoxClosed;
             }
-        }
     }
 
     public void TapeItUp()
