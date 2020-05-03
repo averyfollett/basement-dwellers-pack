@@ -138,9 +138,11 @@ MonoBehaviour:
   mediumBoxClosed: {fileID: 3887095327089856050, guid: ee81e6d14eb2bf048a504bc6c1e9e01f, type: 3}
   largeBoxClosed: {fileID: -6595303523064130373, guid: 8cd17d46c2e55c545803307fb60230f3, type: 3}
   orderCompleted: 0
+  boxClosed: 0
   tape1: {fileID: 3533724947473846371}
   tape2: {fileID: 2432610087088165708}
   tape3: {fileID: 6443704933834154979}
+  localRot: 0
 --- !u!114 &8013560066336775151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +167,7 @@ MonoBehaviour:
   - {fileID: 1737697634281942043, guid: 46dbc4b1f1db4674dbe3e92cd1f73f7a, type: 3}
   - {fileID: 623189184381449396, guid: 1b066dae0d5ff6748b82acb7136a84e3, type: 3}
   spawnedSprites: []
+  holder: {fileID: 2797424987004464086, guid: cfa9824b65e8c384685fbc2052221018, type: 3}
 --- !u!54 &1308044473187309228
 Rigidbody:
   m_ObjectHideFlags: 0
