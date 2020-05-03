@@ -72,6 +72,7 @@ public class GameController : MonoBehaviour
             interval = 12;
         }
         winPopup = GameObject.Find("EmployeeReportPopup");
+        winPopup.SetActive(false);
         totalNumBoxes = numBoxes;
         sendingBoxes = true;
         timer = this.GetComponent<GameTimer>();
