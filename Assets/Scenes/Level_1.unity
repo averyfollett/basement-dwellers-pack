@@ -2549,7 +2549,6 @@ MonoBehaviour:
   boxPrefab: {fileID: 8695107017400563035, guid: 022c2ee718fc8d74ca8b94f6410f6c2d, type: 3}
   startConv: {fileID: 248413541}
   numBoxes: 3
-  totalNumBoxes: 0
   interval: 10
   sendingBoxes: 0
   score: 0
@@ -2626,11 +2625,6 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9087544272847305719, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
   m_PrefabInstance: {fileID: 790058170}
-  m_PrefabAsset: {fileID: 0}
---- !u!102 &1189147211 stripped
-TextMesh:
-  m_CorrespondingSourceObject: {fileID: 3576123164089808113, guid: 6e7fd505c9f52be47a5433498795e2cd, type: 3}
-  m_PrefabInstance: {fileID: 3576123165355580561}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1198067690 stripped
 MonoBehaviour:
@@ -2895,25 +2889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1282432442 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4792142283795837186, guid: 6e7fd505c9f52be47a5433498795e2cd, type: 3}
-  m_PrefabInstance: {fileID: 3576123165355580561}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1282432447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282432442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 511b1919f92ad124b9dfcd57af934ba0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tvText: {fileID: 1189147211}
-  animationTime: 1
 --- !u!4 &1320368149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9087544272847305719, guid: 5c81e130004bc8046ad4e3f8406bb521, type: 3}
@@ -4560,10 +4535,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3576123164089808113, guid: 6e7fd505c9f52be47a5433498795e2cd, type: 3}
-      propertyPath: m_FontSize
-      value: 39
-      objectReference: {fileID: 0}
     - target: {fileID: 4792142283795837186, guid: 6e7fd505c9f52be47a5433498795e2cd, type: 3}
       propertyPath: m_Name
       value: SM_TV
