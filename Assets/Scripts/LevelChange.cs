@@ -26,4 +26,14 @@ public class LevelChange : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("MenuHTP");
+    }
 }
