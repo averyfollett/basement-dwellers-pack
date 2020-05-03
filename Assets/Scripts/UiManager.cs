@@ -37,7 +37,7 @@ public class UiManager : MonoBehaviour
         {
             itemCount[i].text = invSize[i].ToString();
         }
-        selected.transform.position = items[s].transform.position + new Vector3(-17f, 10f, 0);
+        selected.transform.position = items[s].transform.position + new Vector3(-8f, 5f, 0);
     }
 
 }
