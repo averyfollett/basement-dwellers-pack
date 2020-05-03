@@ -9,10 +9,12 @@ public class OrderText : MonoBehaviour
     public List<int> order;
     public GameObject[] spritePrefabs;
     public List<GameObject> spawnedSprites = new List<GameObject>();
+    private BoxController b;
 
     private void Start()
     {
         cam = FindObjectOfType<Camera>();
+        b = GetComponent<BoxController>();
         lookupTable = GameObject.FindGameObjectWithTag("Player").GetComponent<PickupItem>().lookupTable;
     }
 
@@ -20,7 +22,7 @@ public class OrderText : MonoBehaviour
     {
         order = GetComponent<OrderSystem>().orderList;
         UpdateOrderText();
-		if(order.Count == 0)
+		if(order.Count == 0 && b.boxClosed)
 		{
 			this.GetComponent<BoxController>().orderCompleted = true;
 		} else {
