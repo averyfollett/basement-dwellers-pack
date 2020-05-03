@@ -20,9 +20,8 @@ public class ItemController : MonoBehaviour
             obj = Instantiate(sprite, new Vector3(transform.position.x, 3.5f, transform.position.z), Quaternion.identity);
             obj.transform.SetParent(this.transform);
             obj.transform.localScale = new Vector3(1f, 1f, 1f);
-
-
         }
+
         
     }
 
@@ -43,6 +42,9 @@ public class ItemController : MonoBehaviour
 
     public bool GetWasDropped() { return wasDropped; }
     public void setWasDropped(bool b) { wasDropped = b; }
+
+    public bool GetIsOnShelf() { return isRack; }
+    public void setIsOnShelf(bool b) { isRack = b; }
 
 
 

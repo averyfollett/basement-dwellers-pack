@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5601089768230928776}
   - component: {fileID: 627714122026518314}
   - component: {fileID: 5399446506776732067}
+  - component: {fileID: 6410742002341797382}
+  - component: {fileID: 3141520112631307492}
   m_Layer: 0
   m_Name: Item_Flour
   m_TagString: Item
@@ -48,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 0
   wasDropped: 0
+  isRack: 1
+  sprite: {fileID: 2971612299413498717, guid: 57591a915b297d846b03cd66d4c37a4c, type: 3}
 --- !u!33 &5601089768230928776
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -111,3 +115,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.48825043, y: 0.56164414, z: 0.35080332}
   m_Center: {x: -0.01645127, y: 0.28082207, z: 0.0067891404}
+--- !u!65 &6410742002341797382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704775613940789983}
+  m_Material: {fileID: 13400000, guid: c791df27a2e0f804290bd7c6aa115836, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4056024, y: 1.4237795, z: 0.29142147}
+  m_Center: {x: -0.013666421, y: 0.71188974, z: 0.005639881}
+--- !u!54 &3141520112631307492
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704775613940789983}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0

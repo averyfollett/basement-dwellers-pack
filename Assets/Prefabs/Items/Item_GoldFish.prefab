@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   wasDropped: 0
+  isRack: 1
+  sprite: {fileID: 8692969657351250150}
 --- !u!33 &9031130021867556528
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -120,12 +122,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692969657351250150}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c791df27a2e0f804290bd7c6aa115836, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19297886, y: 0.6096237, z: 0.20119429}
-  m_Center: {x: 0.01784277, y: 0.30481184, z: -0.0041451454}
+  m_Size: {x: 0.19297886, y: 0.8688042, z: 0.20119429}
+  m_Center: {x: 0.01784277, y: 0.4344021, z: -0.0041451454}
 --- !u!54 &6661592177075761804
 Rigidbody:
   m_ObjectHideFlags: 0
