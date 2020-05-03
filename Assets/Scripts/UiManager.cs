@@ -19,7 +19,6 @@ public class UiManager : MonoBehaviour
 
         for(int i = 0; i < 9; i++)
         {
-            itemCount[i].transform.position = items[i].transform.position + new Vector3(-63, -39f, 0);
             itemCount[i].fontSize = 20;
             itemCount[i].font = f;
         }
